@@ -23,6 +23,7 @@ Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
 
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Toggle the side navigation

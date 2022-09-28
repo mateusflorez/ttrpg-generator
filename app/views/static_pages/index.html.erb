@@ -8,7 +8,17 @@
     </div>
 </form>
 &nbsp
-<%= link_to options_one_path, class: "btn btn-primary text-white", remote: true do %>
-    1
-<% end %>
+<div id="controlArea" style="display: flex;">
+<div id="Column" style="float: left; padding: 2px; height: 100%; overflow: auto; width: 100%">
+<div id="Row">
+<span>Conseguir resposta</span>
+<%= link_to "I", options_one_path(:param1 => "1"), class: "small btn btn-sm btn-primary text-white", title: 'Impossível', remote: true %>
+<%= link_to "MD", options_one_path(:param1 => "2"), class: "small btn btn-sm btn-primary text-white", title: 'Muito difícil', remote: true %>
+<%= link_to "D", options_one_path(:param1 => "3"), class: "small btn btn-sm btn-primary text-white", title: 'Difícil', remote: true %>
+<%= link_to "50/50", options_one_path(:param1 => "4"), class: "small btn btn-sm btn-primary text-white", title: '50/50', remote: true %>
+<%= link_to "F", options_one_path(:param1 => "5"), class: "small btn btn-sm btn-primary text-white", title: 'Fácil', remote: true %>
+<%= link_to "MF", options_one_path(:param1 => "6"), class: "small btn btn-sm btn-primary text-white", title: 'Muito fácil', remote: true %>
+<%= link_to "C", options_one_path(:param1 => "7"), class: "small btn btn-sm btn-primary text-white", title: 'Certeza', remote: true %>
+</div>
+</div>
 </div>

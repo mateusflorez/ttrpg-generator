@@ -1,19 +1,50 @@
 $(function(){
 
-    var dice = 2;
+    //Set dice
+    var dice = 20;
 
     //Randomize
     <%= render :partial => 'options/shared/randomizer' %>
 
-    //results
+    //Dificulty modifier
     var res;
-    switch (rndInt) {
+    switch (<%= @resp %>) {
         case 1:
-            res = "Acampamento";
+            res = rndInt-6;
             break;
         case 2:
-            res = "Cabana";
+            res = rndInt-4;
             break;
+        case 3:
+            res = rndInt-2;
+            break;
+        case 4:
+            res = rndInt;
+            break;
+        case 5:
+            res = rndInt+2;
+            break;
+        case 6:
+            res = rndInt+4;
+            break;
+        case 7:
+            res = rndInt+6;
+            break;
+    }
+
+    //results
+    if (<%= @resp %> === 4){
+        if (res <= 10){
+            res = "Não"
+        } else{
+            res = "Sim"
+        }
+    } else if (res <= 6){
+        res = "Não"
+    } else if (res > 6 && res < 13){
+        res = "Talvez"
+    } else {
+        res = "Sim"
     }
 
     //Set history

@@ -2,3 +2,7 @@ var print = JSON.parse(localStorage.getItem("history")).toString()
 print = print.replace(/['"]+/g, '')
 print = print.replace(/[|]+/g, '\r\n')
 $('#message-text').val(print);
+$(document).ready(function(){
+    var $textarea = $('#message-text');
+    $textarea.scrollTop($textarea[0].scrollHeight);
+});
