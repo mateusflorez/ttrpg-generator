@@ -1,9 +1,11 @@
 $(function(){
 
-    //Randomize
-    const rndInt = Math.floor(Math.random() * 2) + 1;
+    var dice = 2;
 
-    //Convert
+    //Randomize
+    <%= render :partial => 'options/shared/randomizer' %>
+
+    //results
     var res;
     switch (rndInt) {
         case 1:
@@ -15,23 +17,12 @@ $(function(){
     }
 
     //Set history
-    if (!localStorage.getItem("history")) {
-        localStorage.setItem("history", "[]");
-    }
+    <%= render :partial => 'options/shared/set_history' %>
 
     //Save
-    const history = JSON.parse(localStorage.getItem("history"));
-    if (history.length === 0){
-        history.push(JSON.stringify(res));
-    } else {
-        history.push(JSON.stringify("|"+res));
-    }
-    localStorage.setItem("history", JSON.stringify(history));
-    console.log(localStorage.getItem("history"));
+    <%= render :partial => 'options/shared/save' %>
 
     //Print
-    var print = JSON.parse(localStorage.getItem("history")).toString()
-    print = print.replace(/['"]+/g, '')
-    print = print.replace(/[|]+/g, '\r\n')
-    $('#message-text').val(print);
+    <%= render :partial => 'options/shared/print' %>
+
 });
