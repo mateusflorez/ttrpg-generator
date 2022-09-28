@@ -1,0 +1,37 @@
+$(function(){
+
+    //Randomize
+    const rndInt = Math.floor(Math.random() * 2) + 1;
+
+    //Convert
+    var res;
+    switch (rndInt) {
+        case 1:
+            res = "Acampamento";
+            break;
+        case 2:
+            res = "Cabana";
+            break;
+    }
+
+    //Set history
+    if (!localStorage.getItem("history")) {
+        localStorage.setItem("history", "[]");
+    }
+
+    //Save
+    const history = JSON.parse(localStorage.getItem("history"));
+    if (history.length === 0){
+        history.push(JSON.stringify(res));
+    } else {
+        history.push(JSON.stringify("|"+res));
+    }
+    localStorage.setItem("history", JSON.stringify(history));
+    console.log(localStorage.getItem("history"));
+
+    //Print
+    var print = JSON.parse(localStorage.getItem("history")).toString()
+    print = print.replace(/['"]+/g, '')
+    print = print.replace(/[|]+/g, '\r\n')
+    $('#message-text').val(print);
+});
