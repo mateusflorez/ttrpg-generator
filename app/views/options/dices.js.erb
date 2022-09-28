@@ -1,0 +1,21 @@
+$(function(){
+
+    //Set dice
+    var dice = <%= @resp %>;
+
+    //Randomize
+    <%= render :partial => 'options/shared/randomizer' %>
+
+    //Var set
+    var res = rndInt;
+
+    //Set history
+    <%= render :partial => 'options/shared/set_history' %>
+
+    //Save
+    <%= render :partial => 'options/shared/save' %>
+
+    //Print
+    <%= render :partial => 'options/shared/print' %>
+
+});
