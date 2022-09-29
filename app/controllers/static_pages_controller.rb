@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def tutorial
   end
+
+  def tables
+  end
 end

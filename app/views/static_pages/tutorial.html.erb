@@ -4,63 +4,46 @@
 <br>
 <br>
 <div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingOne">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        Dados
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">
-        Caso precise rodar um dado, selecione o botão com a quantidade de lados desejada!
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Mecânica de perguntas
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">
-        Faça uma pergunta, essa pergunta precisa ser formulada de forma que possa ser respondida com uma das três palavras a seguir: <b>sim</b>, <b>não</b>, <b>talvez</b>.
-        <br>
-        Dadas todas as circunstâncias, qual é a probabilidade da resposta ser sim? <b>Impossível?</b> Uma <b>certeza?</b>
-        <br>
-        Com a pergunta feita, clique no gerador de respostas e tenha a resposta para sua pergunta.
-        <br>
-        Caso a resposta precise ser respondida com <b>sim</b> ou <b>não</b> e tenha caído <b>talvez</b> em sua rolagem, rode a opção <b>50/50</b> para obter esta resposta.
-        <br>
-        Exemplo: "Eu sou perturbado por algo durante o acampamento?", caso tenha preparado um bom acampamento a chance é menor, então role a probabilidade <b>Difícil</b>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        Viagem
-      </button>
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">
-        Aqui seguem um conjunto de regras e informações para que possa viajar no seu mundo de fantasia. (Caso precise das tabelas, recomendo deixar uma aba no seu navegador com esta página aberta).
-        <br>
-        <h4>Modos de viagem</h4>
-          <div class="row justify-content-center">
-            <table class="table table-hover table-sm table-bordered w-75">
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-      </div>
-    </div>
-  </div>
+  <%= render "static_pages/shared/accordion_start", number: "One" %>
+    Dados
+  <%= render "static_pages/shared/accordion_mid", number: "One" %>
+    Caso precise rodar um dado, selecione o botão com a quantidade de lados desejada!
+  <%= render "static_pages/shared/accordion_end" %>
+  <%= render "static_pages/shared/accordion_start", number: "Two" %>
+    Mecânica de perguntas
+  <%= render "static_pages/shared/accordion_mid", number: "Two" %>
+    Faça uma pergunta, essa pergunta precisa ser formulada de forma que possa ser respondida com uma das três palavras a seguir: <b>sim</b>, <b>não</b>, <b>talvez</b>.
+    <br>
+    Dadas todas as circunstâncias, qual é a probabilidade da resposta ser sim? <b>Impossível?</b> Uma <b>certeza?</b>
+    <br>
+    Com a pergunta feita, clique no gerador de respostas e tenha a resposta para sua pergunta.
+    <br>
+    Caso a resposta precise ser respondida com <b>sim</b> ou <b>não</b> e tenha caído <b>talvez</b> em sua rolagem, rode a opção <b>50/50</b> para obter esta resposta.
+    <br>
+    Exemplo: "Eu sou perturbado por algo durante o acampamento?", caso tenha preparado um bom acampamento a chance é menor, então role a probabilidade <b>Difícil</b>
+  <%= render "static_pages/shared/accordion_end" %>
+  <%= render "static_pages/shared/accordion_start", number: "Three" %>
+    Viagem
+  <%= render "static_pages/shared/accordion_mid", number: "Three" %>
+    Aqui seguem um conjunto de regras e informações para que possa viajar no seu mundo de fantasia. (Recomendo deixar uma aba no seu navegador com a página de tabelas aberta).
+    <br><br>
+    <b>Forma de viagem</b><br>
+    Primeiro, defina a forma que seu personagem irá viajar (A pé, cavalo, etc), para mais informações confira os modos de viagem em <%= link_to "Tabelas", tables_path, style: "text-decoration: underline; color: black" %>.
+    <br><br>
+    <b>Clima</b><br>
+    Após isso, role o <i>clima</i> que estará fazendo durante a viagem.
+    <br><br>
+    <b>Encontros</b><br>
+    Após isso role 4 vezes para <i>encontros</i> caso esteja viajando durante o dia e 2 vezes caso esteja viajando a noite a cada 12 horas de viagem.
+    <br><br>
+    <b>Assentamentos</b><br>
+    Role 1d4, role <i>assentamentos</i> vezes o resultado do dado para ter a chance de encontrar assentamentos durante sua viagem. Caso encontre um assentamento use testes de <i>Perguntas/Respostas</i> para obter mais informações sobre ele!
+    <br><br>
+    <b>Acampamento</b><br>
+    Confira a <%= link_to "tabela", tables_path, style: "text-decoration: underline; color: black" %> de acampamento para saber a Classe de Dificuldade para encontrar acampamento no terreno em que está.
+    <br><br>
+    <b>Perturbações</b><br>
+    Faça um teste de <i>Perguntas/Respostas</i> para saber se seu personagem é perturbado durante o sono. Ajuste a probabilidade de acordo com a qualidade do acampamento.
+  <%= render "static_pages/shared/accordion_end" %>
 </div>
 </div>

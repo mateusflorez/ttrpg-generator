@@ -1,0 +1,108 @@
+<div class="p-5 bg-light rounded m-3">
+<h1 class="display-4 fw-normal text-center">Tabelas</h1>
+
+<br>
+<br>
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <%= render "static_pages/shared/accordion_start", number: "One" %>
+    Modos de viagem
+  <%= render "static_pages/shared/accordion_mid", number: "One" %>
+    <div class="row justify-content-center">
+      <table class="table table-hover table-sm table-bordered w-75">
+        <thead>
+          <tr class="table-info">
+            <th scope="col">Modo de viagem</th>
+            <th scope="col">Custo</th>
+            <th scope="col">Milhas por dia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Pé</th>
+            <td>0 po</td>
+            <td>24(30 com penalidade de -5 na percepção passiva)</td>
+          </tr>
+          <tr>
+            <th scope="row">Cavalo</th>
+            <td>50 po</td>
+            <td>30 (60 com novas montagens disponíveis a cada 8-10 milhas)</td>
+          </tr>
+          <tr>
+            <th scope="row">Cavalo de tração (para carroça)</th>
+            <td>75 po</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <th scope="row">Cavalo de Guerra</th>
+            <td>400 po</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <th scope="row">Burro/Mula</th>
+            <td>8 po</td>
+            <td>28</td>
+          </tr>
+          <tr>
+            <th scope="row">Carrinho (precisa de cavalos de tração)</th>
+            <td>15 po</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <th scope="row">Mastim (Cachorro gigante adequado para pequenos humanóides)</th>
+            <td>25 po</td>
+            <td>40</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <%= render "static_pages/shared/accordion_end" %>
+  <%= render "static_pages/shared/accordion_start", number: "Two" %>
+    Acampamento
+  <%= render "static_pages/shared/accordion_mid", number: "Two" %>
+    <div class="row justify-content-center">
+      <table class="table table-hover table-sm table-bordered w-25">
+        <thead>
+          <tr class="table-info">
+            <th scope="col">Terreno</th>
+            <th scope="col">CD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Floresta</th>
+            <td>6</td>
+          </tr>
+          <tr>
+            <th scope="row">Litoral</th>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row">Deserto</th>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row">Pradaria</th>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row">Colinas</th>
+            <td>6</td>
+          </tr>
+          <tr>
+            <th scope="row">Subterrâneo</th>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row">Pântano</th>
+            <td>12</td>
+          </tr>
+          <tr>
+            <th scope="row">Montanha/Gelo</th>
+            <td>14</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <%= render "static_pages/shared/accordion_end" %>
+</div>
+</div>
