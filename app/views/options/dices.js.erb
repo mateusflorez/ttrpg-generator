@@ -1,13 +1,13 @@
 $(function(){
 
     //Set dice
-    var dice = <%= @resp %>;
+    const dices = [<%= @resp %>];
 
     //Randomize
     <%= render :partial => 'options/shared/randomizer' %>
 
     //Var set
-    var res = rndInt;
+    var res = rndInt[1];
 
     //Set history
     <%= render :partial => 'options/shared/set_history' %>

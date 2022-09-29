@@ -1,1 +1,12 @@
-const rndInt = Math.floor(Math.random() * dice) + 1;
+//variables
+var cont = 0;
+const rndInt = [];
+
+//Randomizer
+dices.forEach(randomizer);
+function randomizer(dice) {
+  cont ++;
+  rndInt[cont] = Math.floor(Math.random() * dice) + 1;
+  console.log(cont);
+}
+
