@@ -7,6 +7,9 @@ dices.forEach(randomizer);
 function randomizer(dice) {
   cont ++;
   rndInt[cont] = Math.floor(Math.random() * dice) + 1;
-  console.log(cont);
 }
 
+//Randomizer with min and max numbers
+function minMaxRandomizer(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}

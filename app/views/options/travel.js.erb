@@ -1,7 +1,7 @@
 $(function(){
 
     //Set dice
-    const dices = [20, 100];
+    const dices = [20, 10, 100, 100];
 
     //Randomize
     <%= render :partial => 'options/shared/randomizer' %>
@@ -9,27 +9,16 @@ $(function(){
     //Option selector
     var res;
     switch (<%= @resp %>) {
-        //climate
+        //Climate
         case 1:
-            if (rndInt[1] === 1){
-                res = "Geada/Nevasca"
-            } else if (rndInt[1] > 1 && rndInt[1] < 5){
-                res = "Chuvoso"
-            } else if (rndInt[1] > 4 && rndInt[1] < 9){
-                res = "Nublado"
-            } else if (rndInt[1] > 8 && rndInt[1] < 12){
-                res = "Cáu limpo"
-            } else if (rndInt[1] > 11 && rndInt[1] < 19){
-                res = "Claro/Quente"
-            } else {
-                res = "Muito quente"
-            }
+            <%= render :partial => 'options/travel/climate' %>
             break;
         case 2:
             res = rndInt-4;
             break;
+        //Settlement
         case 3:
-            res = rndInt-2;
+            <%= render :partial => 'options/travel/settlement' %>
             break;
     }
 

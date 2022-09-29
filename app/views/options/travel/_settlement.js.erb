@@ -1,0 +1,39 @@
+if (rndInt[3] < 21){
+    if (rndInt[2] === 1){
+        if (rndInt[4] < 26){
+            res = "Você encontra um campamento abandonado!"
+        } else {
+            pop = minMaxRandomizer(1, 20)
+            res = "Você encontra um campamento! População: " + pop
+        }
+    } else if (rndInt[2] === 2){
+        pop = minMaxRandomizer(1, 10)
+        res = "Você encontra uma cabana! População: " + pop
+    } else if (rndInt[2] === 3){
+        pop = minMaxRandomizer(50, 100)
+        res = "Você encontra um campamento grande! População: " + pop
+    } else if (rndInt[2] === 4){
+        pop = minMaxRandomizer(50, 150)
+        res = "Você encontra uma aldeia! População: " + pop
+    } else if (rndInt[2] === 5){
+        pop = minMaxRandomizer(50, 200)
+        res = "Você encontra um grupo de trabalhadores! População: " + pop
+    } else if (rndInt[2] === 6){
+        pop = minMaxRandomizer(100, 300)
+        res = "Você encontra uma tropa militar estacionada! População: " + pop
+    } else if (rndInt[2] === 7){
+        pop = minMaxRandomizer(200, 400)
+        res = "Você encontra um forte! População: " + pop
+    } else if (rndInt[2] === 8){
+        pop = minMaxRandomizer(300, 1000)
+        res = "Você encontra uma vila! População: " + pop
+    } else if (rndInt[2] === 9){
+        pop = minMaxRandomizer(1000, 3000)
+        res = "Você encontra um exército acampado! População: " + pop
+    } else {
+        pop = minMaxRandomizer(500, 5000)
+        res = "Você encontra um acampamento de refugiados! População: " + pop
+    }
+} else {
+    res = "Nada encontrado!"
+}
