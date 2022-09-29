@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   get 'options/answer'
   get 'options/dices'
+  get 'options/travel'
 
 end

@@ -4,19 +4,29 @@
     <form>
         <div class="mb-3">
             <h3>Histórico:</h3>
-            <textarea class="form-control" id="message-text" disabled="disabled" rows="8"></textarea>
+            <textarea class="form-control" id="message-text" disabled="disabled" rows="10"></textarea>
         </div>
     </form>
     &nbsp
-    <div id="controlArea" style="display: flex;"><!-- Buttons area -->
-        <div id="Column" style="float: left; padding: 2px; height: 100%; overflow: auto; width: 100%"><!-- Column 1 -->
-            <div id="Row" class="mb-2"><!-- Row 1 -->
-                <span>Conseguir resposta</span>&nbsp
-                <%= render "static_pages/buttons/answer" %>
+    <div id="controlArea"><!-- Buttons area -->
+        <div class="row">
+            <div id="Column" class="col" style="padding-right:20px; border-right: 1px solid #ccc;"><!-- Column 1 -->
+                <div id="Row" style="padding-bottom:5px; border-bottom: 1px solid #ccc;"><!-- Row 1 -->
+                    <span class="small">Conseguir resposta</span><br>
+                    <%= render "static_pages/buttons/answer" %>
+                </div>
+                <div id="Row" class="mb-2" style="padding-top:5px; padding-bottom:5px; border-bottom: 1px solid #ccc;"><!-- Row 2 -->
+                    <span class="small">Rolar dado</span><br>
+                    <%= render "static_pages/buttons/dices" %>
+                </div>
             </div>
-            <div id="Row" class="mb-2"><!-- Row 2 -->
-                <span>Rolar dado</span>&nbsp
-                <%= render "static_pages/buttons/dices" %>
+            <div id="Column" class="col" style="padding-right:20px; border-right: 1px solid #ccc;"><!-- Column 2 -->
+                <div id="Row" style="padding-bottom:5px; border-bottom: 1px solid #ccc;"><!-- Row 1 -->
+                    <span class="small">Viagem</span><br>
+                    <%= render "static_pages/buttons/travel" %>
+                </div>
+            </div>
+            <div id="Column" class="col"><!-- Column 2 -->
             </div>
         </div>
     </div>
