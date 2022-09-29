@@ -13,12 +13,17 @@ $(function(){
         case 1:
             <%= render :partial => 'options/travel/climate' %>
             break;
+        //Encounters
         case 2:
-            res = rndInt-4;
+            <%= render :partial => 'options/travel/encounters' %>
             break;
         //Settlement
         case 3:
             <%= render :partial => 'options/travel/settlement' %>
+            break;
+        //Disturbance
+        case 4:
+            <%= render :partial => 'options/travel/disturbance' %>
             break;
     }
 
