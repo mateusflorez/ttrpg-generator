@@ -1,0 +1,241 @@
+if (rndInt[1] > 0 && rndInt[1] < 6) {
+    if (rndInt[2] > 0 && rndInt[2] < 11) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de acrobacia/DES ou teste de resistência. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 10 && rndInt[2] < 21) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de força ou atletismo. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 20 && rndInt[2] < 31) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de furtividade. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 30 && rndInt[2] < 41) {
+        res = "Algo ocorre, ou você encontra algo, que requer uma jogada de ataque. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 40 && rndInt[2] < 51) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de inteligência. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 50 && rndInt[2] < 61) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de investigação. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 60 && rndInt[2] < 71) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de arcanismo. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 70 && rndInt[2] < 81) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de história. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 80 && rndInt[2] < 91) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de natureza. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de religião. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    }
+} else if (rndInt[1] > 5 && rndInt[1] < 11) {
+    if (rndInt[2] > 0 && rndInt[2] < 11) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de manejo de animais. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 10 && rndInt[2] < 21) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de percepção. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 20 && rndInt[2] < 31) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de sobrevivência. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 30 && rndInt[2] < 41) {
+        res = "Algo ocorre, ou você encontra algo, que requer uma jogada de medicina. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 40 && rndInt[2] < 51) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de percepção. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 50 && rndInt[2] < 61) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de persuasão. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 60 && rndInt[2] < 71) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de atuação. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 70 && rndInt[2] < 81) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de enganação. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else if (rndInt[2] > 80 && rndInt[2] < 91) {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de intimidação. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    } else {
+        res = "Algo ocorre, ou você encontra algo, que requer um teste de carisma. Use testes de Perguntas/Respostas ou role Elemento da história para descobrir o quê.";
+    }
+} else if (rndInt[1] > 10 && rndInt[1] < 16) {
+    res = "Um NPC lhe dá informações sobre uma possível missão. Role uma missão, que você pode ou não aceitar. (Role o NPC também).";
+} else if (rndInt[1] > 15 && rndInt[1] < 21) {
+    res = "Monstro: Encontro fácil adequado ao nível.";
+} else if (rndInt[1] > 20 && rndInt[1] < 26) {
+    res = "Monstro: Encontro médio adequado ao nível.";
+} else if (rndInt[1] > 25 && rndInt[1] < 31) {
+    res = "Nível apropriado encontro difícil.";
+} else if (rndInt[1] > 30 && rndInt[1] < 36) {
+    res = "Nível apropriado encontro mortal. Seu personagem pode querer fugir!";
+} else if (rndInt[1] === 36) {
+    res = "Besta morta ou carcaça de monstro. O que aconteceu aqui?";
+} else if (rndInt[1] === 37) {
+    res = "Você encontra um crescimento estranho nesta área, nas paredes da masmorra. É algum tipo de musgo?";
+} else if (rndInt[1] === 38) {
+    res = "Parte do chão desmoronou, revelando um espaço preto e vazio abaixo.";
+} else if (rndInt[1] === 39) {
+    res = "Uma porta coberta de musgo, com uma grande aldrava. Parece que foi transplantado para cá do jardim de alguém.";
+} else if (rndInt[1] === 40) {
+    res = "Você entra em uma área semelhante a uma tumba. Todos os caixões são de tamanho infantil.";
+} else if (rndInt[1] === 41) {
+    res = "Videiras estranhas cresceram por aqui, rastejando ao redor da pedra e gradualmente, com o tempo, destruindo partes da alvenaria. Como eles entraram aqui?";
+} else if (rndInt[1] === 42) {
+    res = "Você vê uma estátua de um mago no meio desta área. A placa abaixo diz “Eu sou Fennishaw Eldsight. Fale meu nome e me dê vida, se você ousar!“";
+} else if (rndInt[1] === 43) {
+    res = "Você ouve vozes à frente e vira a esquina para ver um bárbaro conversando com um ogro! Aparentemente, eles estão discutindo qual é o preço do ogro para libertar o meio-orc que ele está mantendo como refém.";
+} else if (rndInt[1] === 44) {
+    res = "Uma voz sussurra repetidamente: “O que você procura?” Não importa como você responda, ele repete a mesma pergunta. A quem essa voz pertence, se é que alguém?";
+} else if (rndInt[1] === 45) {
+    res = "O teto acima de você se abre e um NPC inesperado cai gritando, atingindo o chão à sua frente! Role um NPC para descobrir quem é.";
+} else if (rndInt[1] === 46) {
+    res = "Esta área é o lar de uma operação de mineração. Crianças humanóides escravizadas estão trabalhando, carregando pedras em carrinhos de minas para processamento de minério. Seus mestres os chicoteiam e os forçam a continuar, apesar de sua óbvia fadiga.";
+} else if (rndInt[1] === 47) {
+    res = "Uma mulher de meia-idade está encostada na parede, soluçando. Ela está vestida com trapos.";
+} else if (rndInt[1] === 48) {
+    res = "Do nada, você ouve uma voz retumbante: “Pegue sua arma, aventureiro! Você se atreve a invadir aqui, agora você vai me enfrentar na batalha!” Mas ninguém aparece. Pelo menos ainda não... Você ouve risadas...";
+} else if (rndInt[1] === 49) {
+    res = "De repente, uma visão pisca diante de você, uma visão de seu objetivo final nesta masmorra. Você não reconhece a sala, mas obtém algumas informações prévias sobre para onde pode estar indo.";
+} else if (rndInt[1] > 49 && rndInt[1] < 56) {
+    res = "ARMADILHA! Role Armadilhas para descobrir o que.";
+} else if (rndInt[1] === 56) {
+    res = "Grafite na parede: “Pare! Ponte à frente! Volte, seu destino está próximo!”";
+} else if (rndInt[1] === 57) {
+    res = "Perto, você ouve um cachorro latindo loucamente, então outra voz mandando ele calar a boca!";
+} else if (rndInt[1] === 58) {
+    res = "Você ouve gritos, muito fracos, como se fossem de muito, muito longe.";
+} else if (rndInt[1] === 59) {
+    res = "Você vira a próxima esquina e vê dois humanóides envolvidos em uma briga acalorada.";
+} else if (rndInt[1] === 60) {
+    res = "Faça um teste de percepção, CD 14. Se não obtiver sucesso, você de repente percebe que sua mochila está mais leve. Escolha aleatoriamente um item do seu inventário (talvez use uma maneira de rolar aleatoriamente para ele). Foi roubado! Você pode recuperá-lo, mas de novo...";
+} else if (rndInt[1] === 61) {
+    res = "Você chega a uma porta na qual um pergaminho está pregado. “Guardião da masmorra. Dúvidas/reclamações dentro.”";
+} else if (rndInt[1] === 62) {
+    res = "De repente, a parede atrás de você explode e dois aventureiros entram por ela. Um é um golias que acabou de abrir caminho através da alvenaria, o outro parece ser um feiticeiro halfling.";
+} else if (rndInt[1] === 63) {
+    res = "À frente, dois guardas orcs estão sentados em um posto de guarda. Eles parecem estar jogando dados.";
+} else if (rndInt[1] === 64) {
+    res = "Um rato gigante passa correndo por você, seguido de perto por três goblins famintos. Eles não prestam atenção em você.";
+} else if (rndInt[1] === 65) {
+    res = "Conforme você se move por esta área, faça um teste de percepção, CD 15. Se você falhar, você não verá um glifo na parede e acionará um feitiço de alarme! O que vem verificar?";
+} else if (rndInt[1] === 66) {
+    res = "Em um canto, uma enorme pilha de lixo apodrece. Ele está sendo mexido por alguma besta horrível ou outra.";
+} else if (rndInt[1] === 67) {
+    res = "Você tem a nítida impressão de que está sendo seguido. Você até imagina que pode sentir o cheiro de quem quer que seja, e eles cheiram mal.";
+} else if (rndInt[1] === 68) {
+    res = "Você se depara com um massacre. Os cadáveres de uma dúzia de humanóides estão espalhados.";
+} else if (rndInt[1] === 69) {
+    res = "Uma névoa gira em torno de seus pés.";
+} else if (rndInt[1] === 70) {
+    res = "Você sente um forte empurrão nas costas. Quando você se vira para olhar, tem alguém lá?";
+} else if (rndInt[1] === 71) {
+    if (rndInt[2] > 0 && rndInt[2] < 51) {
+        res = "Teste a percepção, CD 14. Se for bem sucedido, você nota algo em com sua visão periférica. Uma pedra na parede se fecha com um arranhão. Teste de investigação, CD 12, para encontrar o mecanismo para abri-lo. Além é uma passagem.";
+    } else {
+        var temp = "";
+        if (rndInt[4] < 76) {
+            temp += " Role uma pista!";
+        }
+        if (rndInt[5] < 51) {
+            temp += " Role Saque!";
+        }
+        if (rndInt[3] > 0 && rndInt[3] < 26) {
+            res = "Teste a percepção, CD 14. Se for bem sucedido, você nota algo em com sua visão periférica. Uma pedra na parede se fecha com um arranhão. Teste de investigação, CD 12, para encontrar o mecanismo para abri-lo. Além é uma sala contendo um encontro fácil."+temp;
+        } else if (rndInt[3] > 25 && rndInt[3] < 51) {
+            res = "Teste a percepção, CD 14. Se for bem sucedido, você nota algo em com sua visão periférica. Uma pedra na parede se fecha com um arranhão. Teste de investigação, CD 12, para encontrar o mecanismo para abri-lo. Além é uma sala contendo um encontro médio."+temp;
+        } else if (rndInt[3] > 50 && rndInt[3] < 76) {
+            res = "Teste a percepção, CD 14. Se for bem sucedido, você nota algo em com sua visão periférica. Uma pedra na parede se fecha com um arranhão. Teste de investigação, CD 12, para encontrar o mecanismo para abri-lo. Além é uma sala contendo um encontro difícil."+temp;
+        } else {
+            res = "Teste a percepção, CD 14. Se for bem sucedido, você nota algo em com sua visão periférica. Uma pedra na parede se fecha com um arranhão. Teste de investigação, CD 12, para encontrar o mecanismo para abri-lo. Além é uma sala vazia."+temp;
+        }
+    }
+} else if (rndInt[1] === 72) {
+    res = "Um veterano, claramente louco, está empoleirado em uma caixa de sabão ao lado desta passagem, reclamando sobre o estado atual dos assuntos políticos para uma platéia de um bicho-papão levemente divertidos.";
+} else if (rndInt[1] === 73) {
+    res = "Ao virar a próxima esquina, você avista um humanóide solitário. Faça um teste de furtividade, CD 14. Se for bem sucedido, você fica escondido e observa enquanto eles movem uma pedra na parede, colocam algo atrás dela e então recolocam a pedra. Então eles partem.";
+} else if (rndInt[1] === 74) {
+    res = "Você se depara com uma masmorra adequada - uma sala trancada com barras, na qual você vê vários prisioneiros de aparência esfarrapada. “Rápido, nos liberte!” um deles exclama quando te vê.";
+} else if (rndInt[1] === 75) {
+    var temp = "";
+    if (rndInt[3] < 40) {
+        temp += " O chefe da masmorra está do outro lado da porta!";
+    }
+    if (rndInt[2] > 0 && rndInt[2] < 26) {
+        res = "Você se depara com uma porta ornamentada, acompanhada por uma figura espectral vestida com roupas opulentas. A coisa não é hostil, e está guarnecendo esta porta, como um porteiro. Ele elogia você e sua óbvia proeza como aventureiro. Ele parece saber muito. O porteiro espectral admite que abre a porta para você. O porteiro espectral não pode ser atacado ou movido. E a porta só se abre para ele."+temp;
+    } else if (rndInt[2] > 25 && rndInt[2] < 51) {
+        res = "Você se depara com uma porta ornamentada, acompanhada por uma figura espectral vestida com roupas opulentas. A coisa não é hostil, e está guarnecendo esta porta, como um porteiro. Ele começa a insultar você, apontando como suas roupas são horríveis, como você é feia, como você cheira mal! Faça um teste de sabedoria, CD 15. Se você tiver sucesso, ele o parabeniza por sua postura diante do abuso e o deixa passar pela porta. O porteiro espectral não pode ser atacado ou movido. E a porta só se abre para ele"+temp;
+    } else {
+        res = "Você se depara com uma porta ornamentada, acompanhada por uma figura espectral vestida com roupas opulentas. A coisa não é hostil, e está guarnecendo esta porta, como um porteiro. Ele começa a debater com você por que você não deveria ser admitido pela porta. Faça um teste de inteligência ou um teste de persuasão, CD 14. Se for bem sucedido, você vence o debate e ele o deixa passar pela porta. O porteiro espectral não pode ser atacado ou movido. E a porta só se abre para ele"+temp;
+    }
+} else if (rndInt[1] === 76) {
+    res = "Um goblin gentil aparece com o chapéu na mão e implora sua ajuda para livrá-lo de um problema. Ele acaba de voltar de uma viagem à cidade mais próxima e descobre que sua casa foi tomada! Dois níveis abaixo, sua humilde morada que ele compartilha com sua esposa e dois pequenos goblings, foi invadida por um horrível (Monstro - Encontro difícil adequado ao nível). Se ele conseguir sua ajuda para se livrar desse flagelo, ele o recompensará com todos os lucros de sua recente viagem de vendas - 250 po! E a esposa dele vai cozinhar para você uma deliciosa panela de cozido de lesmatunel, o melhor da masmorra, dizem eles!";
+} else if (rndInt[1] === 77) {
+    res = "Você encontra alguns aventureiros rivais, que estão lá seguindo as mesmas pistas que você. Você vai se juntar a esses NPCs? (Role para NPC's)";
+} else if (rndInt[1] === 78) {
+    res = "Você dá mais um passo e... bum! Você está em uma parte totalmente desconhecida da masmorra. Abandone o mapa que você tem até agora. Você atravessou um portal e agora nem tem certeza de que está na mesma masmorra, reino ou mundo! Para onde você foi transportado?";
+} else if (rndInt[1] === 79) {
+    res = "Você encontra uma entrada secreta para uma sala opulenta, repleta de estantes. Um fogo crepita na lareira e tapetes e móveis ricamente estampados decoram este espaço aconchegante. Quem vive aqui?";
+} else if (rndInt[1] === 80) {
+    temp1 = minMaxRandomizer(1, 8);
+    var temp2 = "";
+    if (temp1 === 1) {
+        temp2 = "infernal";
+    } else if (temp1 === 2) {
+        temp2 = "abissal";
+    } else if (temp1 === 3) {
+        temp2 = "Celestial";
+    } else if (temp1 === 4) {
+        temp2 = "Dracônico";
+    } else if (temp1 === 5) {
+        temp2 = "Druídico";
+    } else if (temp1 === 6) {
+        temp2 = "Gigante";
+    } else if (temp1 === 7) {
+        temp2 = "Primordial";
+    } else {
+        temp2 = "Subcomum";
+    }
+    res = "Você encontra pequenas aberturas circulares nas paredes. Cada um contém um pergaminho. Retirando-os, você vê que eles trazem escritos de alguma civilização antiga. Estes podem ser de grande valor para um arqueólogo, mas primeiro você precisará traduzi-los. Que segredos eles guardam? Os pergaminhos estão em "+temp2+". Se acontecer de você falar o idioma, use testes de perguntas e respostas para determinar o que eles contêm. Talvez uma missão! Ou algum conhecimento valioso. Eles também podem valer alguma coisa para o (comprador certo).";
+} else if (rndInt[1] === 81) {
+    temp1 = minMaxRandomizer(1, 4)+1;
+    var temp2 = "";
+    if (rndInt[2] < 26) {
+        temp2 = "fácil";
+    } else if (rndInt[2] < 26 && rndInt[2] < 26) {
+        temp2 = "médio";
+    } else {
+        temp2 = "difícil";
+    }
+    var temp3 = "";
+    if (rndInt[3] < 51) {
+        temp3 = " Rode saque!";
+    }
+    res = temp1+" humanóides estão discutindo e não percebem sua aproximação. Um é comandante, o(s) outro(s) subordinado(s). O subordinado falhou na execução de alguma tarefa. Esperamos que o resto de sua história forneça o contexto aqui. Se você escolher atacar, este será um encontro "+temp2+" apropriado ao nível."+temp3;
+} else if (rndInt[1] === 82) {
+    if (rndInt[2] < 31) {
+        res = "Você encontra o santuário de uma divindade há muito esquecida. Rode saque! Talvez esta divindade tente comungar com você, tentando encontrar um novo adorador?";
+    } else {
+        res = "Você encontra o santuário de uma divindade há muito esquecida. Talvez esta divindade tente comungar com você, tentando encontrar um novo adorador?";
+    }
+} else if (rndInt[1] === 83) {
+    res = "Você vê um mural histórico ornamentado em uma parede próxima, desbotado, mas obviamente pintado / esculpido por um artista mestre. Enquanto você assiste, as figuras do mural ganham vida e começam a representar uma cena até então desconhecida para você. Você ganha conhecimento desse episódio da história e, possivelmente, de algum local/missão/relíquia não descoberto anteriormente associado a ele.(Use testes de perguntas e respostas para descobrir qual... a escolha do jogador!)";
+} else if (rndInt[1] === 84) {
+    res = "Você entra em uma câmara onde uma cerimônia de sacrifício está ocorrendo. Vários humanóides estão reunidos em torno de um pedestal, prestes a sacrificar uma fera viva. Quem sabe qual será o resultado desse ritual?";
+} else if (rndInt[1] === 85) {
+    res = "Você tem a sensação de que está sendo perseguido por algo, alguma força invisível. Você vê sombras, ouve barulhos, sente uma presença, mas toda vez que se vira, não vê nada. Talvez ele se mostre eventualmente. Talvez seja outro aventureiro, ou talvez... algo mais sinistro.";
+} else if (rndInt[1] === 86) {
+    res = "Na sala ao lado, um gnomo está sentado em uma mesa em uma sala esparsa diante de um tabuleiro de xadrez. Ele te convida para jogar. Jogar requer um teste de decepção ou inteligência CD 15. Se for bem sucedido, o gnomo irá presenteá-lo com uma bugiganga útil de invenção gnômica, ou 50 po. Se não obtiver sucesso, você entrega um item no valor de 50 po. Você pode recusar este convite, se desejar.";
+} else if (rndInt[1] === 87) {
+    res = "Você encontra uma taverna subterrânea, onde os habitantes das masmorras gostam de parar e tomar uma cerveja de vez em quando antes de retornar às suas façanhas assassinas! Chama-se O Descanso de Delver e o patrocínio é constante!";
+} else if (rndInt[1] === 88) {
+    res = "Você encontra uma porta secreta para uma câmara onde um alquimista está ocupado preparando poções e tinturas de todos os tipos. Ele pode estar aberto a trocas, mas atualmente está tentando preparar algo que “impeça que todo o inferno aconteça neste lugar”. Se você tentar atacá-lo, descobrirá que ele está protegido por uma barreira mágica impenetrável, que só ele pode derrubar.";
+} else if (rndInt[1] === 89) {
+    res = "Você encontra uma porta dimensional para uma floresta, mas não pode ter certeza se esse artefato é real ou simplesmente uma ilusão para levá-lo a um perigo ainda maior.";
+} else if (rndInt[1] === 90) {
+    res = "Nesta área encontram-se algumas poças de lodo verde-acinzentado de natureza desconhecida. Faça testes de Perguntas/Respostas e natureza para determinar mais sobre sua natureza.";
+} else if (rndInt[1] === 91) {
+    res = "Se o grupo estiver segurando tochas, ou houver tochas ou velas presentes na área, algo os apaga de repente.";
+} else if (rndInt[1] === 92) {
+    res = "A área é preenchida com uma névoa/névoa espessa, que paira pesada e baixa no chão.";
+} else if (rndInt[1] === 93) {
+    res = "Ao longe, uma garotinha vestida de trapos pode ser vista de pé perto da parede. Se os jogadores se moverem em direção a ela, ela se virará e correrá pela parede mais próxima e desaparecerá.";
+} else if (rndInt[1] === 94) {
+    temp = minMaxRandomizer(1, 6);
+    res = "Do outro lado, três esqueletos estão pendurados em algemas, se eles forem inspecionados,"+ temp +" rato(s) saltarão para os personagens.";
+} else if (rndInt[1] === 95) {
+    res = "O solo aqui é de terra e coberto com um solo superior. Cheira muito a mofo e sujeira. Vinhas semelhantes a raízes começarão a aparecer do solo e começarão a crescer nas paredes.";
+} else if (rndInt[1] === 96) {
+    res = "Um jogador é mordido na mão (causando dano mínimo ou nenhum). O que fez?";
+} else if (rndInt[1] === 97) {
+    res = "Um estrondo baixo, então um ruído de estalo profundo é ouvido diretamente acima. A área treme levemente, poeira e pequenos detritos caem do teto e depois param.";
+} else if (rndInt[1] === 98) {
+    res = "Um bardo parou nesta área para cantar uma música rápida para tentar animar seu próprio espírito. Ele está perdido aqui há dias! Ele lhe diz que conseguiu encontrar o caminho até este nível com alguma dificuldade, mas que esta masmorra desce muitos níveis para baixo. Ele foi mantido em cativeiro por algum tipo de humanóide até recentemente. Ele está absolutamente faminto, tendo que subsistir de musgo de masmorra e túneis por semanas.";
+} else if (rndInt[1] === 99) {
+    res = "Você ouve o som de algo pesado sendo arrastado, vindo lá de cima.";
+} else {
+    res = "Um grande grupo de humanóides vem correndo pelo túnel em sua direção, suas expressões mostrando terror absoluto e abjeto. ”CORRE!” o líder grita com você. ”Salve-se, corra, agora!!!” Atrás deles, você vê algo GRANDE seguindo...";
+}

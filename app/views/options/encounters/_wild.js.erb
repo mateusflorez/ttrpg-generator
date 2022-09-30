@@ -1,0 +1,154 @@
+if (rndInt[1] < 5) {
+    res = "Pequena masmorra ou cripta encontrada. Propósito e história desconhecidos. Se entrar, role para gerar a masmorra!";
+} else if (rndInt[1] === 5) {
+    if (rndInt[2] < 51) {
+        res = "Acampamento pronto encontrado, ou caverna aconchegante, que poderia ser usado como abrigo para a noite, ou uma base durante a exploração. Aparentemente inabitado.";
+    } else {
+        res = "Acampamento pronto encontrado, ou caverna aconchegante, que poderia ser usado como abrigo para a noite, ou uma base durante a exploração. Aparentemente habitado!";
+    }
+} else if (rndInt[1] === 6) {
+    res = "Um pequeno riacho, balbuciando agradavelmente. Ou uma grande rachadura, borbulhando de forma pungente.";
+} else if (rndInt[1] === 7) {
+    res = "Uma tempestade no horizonte, relâmpagos dançando sob nuvens cinza-escuras.";
+} else if (rndInt[1] === 8) {
+    res = "Um sumidouro se abriu nas proximidades.";
+} else if (rndInt[1] === 9) {
+    res = "Cidade abandonada e vazia.";
+} else if (rndInt[1] > 9 && rndInt[1] < 16) {
+    res = "Encontro com NPC, que dá informações sobre uma possível missão. Role para gerar uma missão, que você pode ou não aceitar.";
+    break;
+} else if (rndInt[1] === 16) {
+    res = "Acampamento abandonado encontrado. Use testes de Perguntas/Respostas para descobrir mais.";
+} else if (rndInt[1] === 17) {
+    res = "Uma árvore com o que parece ser marcas de Druida.";
+} else if (rndInt[1] === 18) {
+    res = "Você encontra sobreviventes de algum tipo de ataque, e eles têm uma história para contar...";
+} else if (rndInt[1] === 19) {
+    if (rndInt[2] < 51) {
+        res = "Carrinho de mão/túmulo saqueado. Ainda resta saque! Role o tesouro!";
+    } else {
+        res = "Carrinho de mão/túmulo saqueado. Infelizmente levaram tudo.";
+    }
+} else if (rndInt[1] === 20) {
+    res = "Na estrada, um item caiu. Uma mochila, uma bolsa com conteúdos interessantes / um chapéu com um bilhete enfiado dentro / um anel gravado... pode ser qualquer coisa. Use o teste de Perguntas/Respostas para descobrir mais detalhes.";
+} else if (rndInt[1] === 21) {
+    res = "Um viajante interessante. Esse personagem obviamente viu algumas coisas...";
+} else if (rndInt[1] === 22) {
+    res = "Cemitério. Algumas das sepulturas foram saqueadas, e a maioria das lápides é tão antiga que os nomes se desgastaram.";
+} else if (rndInt[1] === 23) {
+    res = "Prisioneiro(s) sendo escoltado(s) em uma carroça fortemente blindada.";
+} else if (rndInt[1] === 24) {
+    res = "Característica geológica interessante. Role terreno.";
+} else if (rndInt[1] === 25) {
+    res = "Você encontra uma mochila descartada com alguns conteúdos intrigantes.";
+} else if (rndInt[1] === 26) {
+    res = "Um barulho estranho está vindo de alguma distância à frente...";
+} else if (rndInt[1] === 27) {
+    res = "Luzes estranhas nas colinas próximas estão atraindo sua atenção.";
+} else if (rndInt[1] === 28) {
+    res = "Você tropeça em um pomar, cheio de frutas maduras e deliciosas. O proprietário não está à vista.";
+} else if (rndInt[1] === 29) {
+    res = "Caçadores de recompensas, à procura de um fugitivo. “Você viu alguém?” (Para quem eles estão trabalhando não está claro)";
+} else if (rndInt[1] === 30) {
+    res = "Mudança repentina e abrupta no clima";
+} else if (rndInt[1] === 31) {
+    res = "Mina abandonada.";
+} else if (rndInt[1] === 32) {
+    res = "Você ouve uivos ao longe. Pode ser lobos, mas o som é estranho de alguma forma...";
+} else if (rndInt[1] === 33) {
+    res = "Detritos de uma grande batalha recente. Quem lutou aqui, e quem ganhou? Quão recente foi isso?";
+} else if (rndInt[1] === 34) {
+    if (rndInt[2] < 26) {
+        res = "Cadáver humanóide. Você encontra uma pista! Role pista.";
+    } else {
+        res = "Cadáver humanóide. Sem pistas.";
+    }
+} else if (rndInt[1] === 35) {
+    res = "Um pássaro (ou role Criatura) começa a falar com você, em Comum fluente! E não apenas um papagaio estúpido...";
+} else if (rndInt[1] === 36) {
+    res = "Um personagem real/nobre e sua comitiva passam em uma carruagem opulenta.";
+} else if (rndInt[1] === 37) {
+    res = "Um bando de pássaros (abutres? corvos?) circula sobre um ponto em algum lugar acima.";
+} else if (rndInt[1] === 38) {
+    res = "Você encontra um monumento antigo e em ruínas. É para um deus, uma figura local famosa ou alguma outra coisa?";
+} else if (rndInt[1] === 39) {
+    res = "Um viajante com informação/aviso sobre uma situação no próximo assentamento.";
+} else if (rndInt[1] === 40) {
+    res = "Assentamento não marcado. Role até encontrar um assentamento.";
+} else if (rndInt[1] === 41) {
+    res = "Você chega a uma ponte sobre um pequeno rio. A ponte foi destruída. Viajantes estão esperando aqui, sem saber o que fazer.";
+} else if (rndInt[1] === 42) {
+    res = "Você encontra uma fera ferida.";
+} else if (rndInt[1] === 43) {
+    res = "Um fazendeiro convida você para uma refeição em sua casa e, possivelmente, um pouco de cerveja/hidromel.";
+} else if (rndInt[1] === 44) {
+    res = "Carrinho virado/quebrado.";
+} else if (rndInt[1] > 44 && rndInt[1] < 51) {
+    res = "Emboscada de monstros. Encontro fácil de nível apropriado.";
+} else if (rndInt[1] === 51) {
+    res = "Um animal vagueia em seu caminho. Ele olha para você, mas não parece particularmente incomodado com a sua presença.";
+} else if (rndInt[1] === 52) {
+    res = "Criatura presa (humanóide? monstro? Que tipo de armadilha?)";
+} else if (rndInt[1] > 52 && rndInt[1] < 56) {
+    res = "Uma estrutura abandonada/arruinada de algum tipo, que pode ou não ter um componente subterrâneo.";
+} else if (rndInt[1] === 56) {
+    res = "Um velho eremita. Sobre o que ele está tagarelando?";
+} else if (rndInt[1] === 57) {
+    res = "Um símbolo/sinal assustador e inquietante.";
+} else if (rndInt[1] === 58) {
+    res = "Comerciante viajante.";
+} else if (rndInt[1] === 59) {
+    res = "Um aventureiro viajante que está impressionado e quer se juntar ao seu grupo.";
+} else if (rndInt[1] > 59 && rndInt[1] < 66) {
+    res = "Encontro de Monstros: Encontro médio de nível apropriado.";
+} else if (rndInt[1] === 66) {
+    res = "Um viajante, descansando à beira da estrada, começa a apontar e rir ruidosamente para você. Ela é louca?";
+} else if (rndInt[1] === 67) {
+    res = "Passes de transporte fortemente vigiados.";
+} else if (rndInt[1] === 68) {
+    res = "Sábio viajante/arquivista.";
+} else if (rndInt[1] === 69) {
+    res = "Bandidos (humanos ou não) exigem um pedágio de você.";
+} else if (rndInt[1] > 69 && rndInt[1] < 76) {
+    res = "Monstro: Encontro difícil de nível apropriado.";
+} else if (rndInt[1] === 76) {
+    res = "Uma família faminta implorando por comida ou ouro.";
+} else if (rndInt[1] === 77) {
+    res = "Uma tribo que possui a terra exige um tributo de você para a passagem (e em troca irá escoltá-lo - quer você goste ou não).";
+} else if (rndInt[1] === 78) {
+    if (rndInt[2] < 81) {
+        res = "Uma trupe itinerante de artistas amigáveis.";
+    } else {
+        res = "Uma trupe itinerante de artistas hostis.";
+    }
+} else if (rndInt[1] === 79) {
+    res = "Um comerciante viajante, mas suas mercadorias não são comuns. Na verdade, muito disso é ilegal de alguma forma. Ele é um contrabandista? Um traficante de drogas? Um ladrão de assalto?";
+} else if (rndInt[1] === 80) {
+    res = "Caçadores/viajantes/aventureiros. Acampando e relaxando.";
+} else if (rndInt[1] === 81) {
+    res = "Você vê uma colina rochosa baixa, onde os rostos foram esculpidos nas rochas, junto com as formas de vários animais. É artisticamente feito, e parece contar algum tipo de história.";
+} else if (rndInt[1] === 82) {
+    res = "Você vê uma trilha que se afasta da estrada e entra na floresta/colinas. Quem sabe onde isso leva...";
+} else if (rndInt[1] === 83) {
+    res = "Bandidos atacam você e exigem todo o seu dinheiro.";
+} else if (rndInt[1] === 84) {
+    res = "Em um trecho solitário da estrada, você vê uma cabana solitária, mas não sabe dizer se é habitada ou não.";
+} else if (rndInt[1] === 85) {
+    res = "Um campo de batalha há muito esquecido. Quantos morreram aqui?";
+} else if (rndInt[1] === 86) {
+    res = "Uma torre, visível da estrada a alguma distância.";
+} else if (rndInt[1] === 87) {
+    res = "Patrulha do povoado mais próximo.";
+} else if (rndInt[1] === 88) {
+    res = "Assentamento não marcado. Role até encontrar um assentamento.";
+} else if (rndInt[1] === 89) {
+    res = "A estrada desaparece e o lugar não se parece em nada com o mapa.";
+} else if (rndInt[1] > 89 && rndInt[1] < 95) {
+    res = "NPC aparece com uma missão!";
+} else {
+    if (rndInt[2] < 76) {
+        res = "Monstro! Encontro difícil adequado ao nível.";
+    } else {
+        res = "Monstro! Encontro mortal adequado ao nível.";
+    }
+}
