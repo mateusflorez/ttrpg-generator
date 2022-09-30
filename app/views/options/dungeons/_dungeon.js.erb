@@ -1,0 +1,53 @@
+//variables
+var size = ""
+var type = ""
+var rooms = ""
+
+//function
+if (rndInt[1] < 4) {
+    size = "Minúsculo(a)";
+    rooms = minMaxRandomizer(1, 4)+2;
+} else if (rndInt[1] > 3 && rndInt[1] < 9) {
+    size = "Pequeno(a)";
+    rooms = minMaxRandomizer(1, 6)+4;
+} else if (rndInt[1] > 8 && rndInt[1] < 17) {
+    size = "Médio(a)";
+    rooms = minMaxRandomizer(4, 16)+6;
+} else if (rndInt[1] > 16 && rndInt[1] < 19) {
+    size = "Grande";
+    rooms = minMaxRandomizer(5, 30)+12;
+} else if (rndInt[1] === 19) {
+    size = "Enorme";
+    rooms = minMaxRandomizer(10, 60)+24;
+} else {
+    size = "Ilimitado(a)";
+}
+
+if (rndInt[2] === 1) {
+    type = "Covil";
+} else if (rndInt[2] === 2) {
+    type = "Tumba / Cripta";
+} else if (rndInt[2] === 3) {
+    type = "Fortaleza abandonada";
+} else if (rndInt[2] === 4) {
+    type = "Templo ou santuário";
+} else if (rndInt[2] === 5) {
+    type = "Cavernas naturais";
+} else if (rndInt[2] === 6) {
+    type = "Labirinto";
+} else if (rndInt[2] === 7) {
+    type = "Mina";
+} else if (rndInt[2] === 8) {
+    type = "Portão Planar";
+} else if (rndInt[2] === 9) {
+    type = "Sede de guilda/culto";
+} else {
+    type = "Armadilha mortal";
+}
+
+if (rooms != ""){
+    res = type+" "+size+". "+rooms+" quartos";
+} else {
+    res = type+" "+size+".";
+}
+

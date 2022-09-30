@@ -1,0 +1,45 @@
+function passageRandomizer() {
+    var passage = "";
+    if (rndInt[1] === 1) {
+        passage = "A passagem continua "+minMaxRandomizer(1, 4)*10+" pés.";
+    } else if (rndInt[1] === 2) {
+        passage = "A passagem vai 15 pés e termina na porta. ???????.";
+    } else if (rndInt[1] === 3) {
+        passage = "A passagem vai 30 pés e termina em escadas. ???????.";
+    } else if (rndInt[1] === 4) {
+        passage = "Passagem vira à esquerda 90 graus.";
+    } else if (rndInt[1] === 5) {
+        passage = "Passagem vira à direita 90 graus.";
+    } else if (rndInt[1] === 6) {
+        passage = "Passagem sem saída. Retorne ao último recurso que deseja explorar. ???????.";
+    } else if (rndInt[1] === 7) {
+        passage = "A passagem continua "+minMaxRandomizer(1, 4)*10+" pés e chega a uma interseção de quatro vias.";
+    } else if (rndInt[1] === 8) {
+        passage = "A passagem continua "+minMaxRandomizer(1, 4)*10+" pés e chega a um entroncamento.";
+    } else if (rndInt[1] === 9) {
+        passage = "A passagem continua "+minMaxRandomizer(1, 6)*10+" pés e então você vê uma passagem lateral que leva à esquerda.";
+    } else if (rndInt[1] === 10) {
+        passage = "A passagem continua "+minMaxRandomizer(1, 6)*10+" pés e então você vê uma passagem lateral que leva à direita.";
+    } else if (rndInt[1] === 11) {
+        passage = "A passagem termina em uma entrada aberta para uma sala. Vá para a Mesa da Sala. ???????.";
+    } else if (rndInt[1] === 12) {
+        passage = "Porta na parede direita. ???????.";
+    } else if (rndInt[1] === 13) {
+        passage = "Porta na parede esquerda. ???????.";
+    } else if (rndInt[1] === 14) {
+        passage = "Porta secreta na parede da passagem (escolha do jogador qual parede). Role percepção CD 15. Se for bem sucedido, vá para a Porta Secreta ???????. Caso contrário, role novamente, continuando (já que seu personagem não percebeu).";
+    } else if (rndInt[1] === 15) {
+        passage = "Passagem estreita "+(minMaxRandomizer(1, 6)/2)*10+" pés";
+    } else if (rndInt[1] === 16) {
+        passage = "Passagem larga "+(minMaxRandomizer(1, 6)/2)*10+" pés";
+    } else if (rndInt[1] === 17) {
+        passage = "Abertura à esquerda, escada. ???????.";
+    } else if (rndInt[1] === 18) {
+        passage = "Abertura à direita, escada. ???????.";
+    } else if (rndInt[1] === 19) {
+        passage = "Abertura no chão, queda reta "+minMaxRandomizer(1, 10)*10+" pés para um (1d4 roll) 1-2: Passagem, 3-4: Sala. ???????.";
+    } else {
+        passage = "Rolar na tabela de arquitetura aleatória. ???????.";
+    }
+    return passage;
+}

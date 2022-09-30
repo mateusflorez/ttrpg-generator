@@ -1,0 +1,34 @@
+$(function(){
+
+    //Set dice
+    const dices = [20, 10];
+
+    //Randomize
+    <%= render :partial => 'options/shared/randomizer' %>
+
+    //Area randomizers
+    <%= render :partial => 'options/dungeons/passage' %>
+
+    //Option selector
+    var res;
+    switch (<%= @resp %>) {
+        //Mission
+        case 1:
+            <%= render :partial => 'options/dungeons/dungeon' %>
+            break;
+        //Source
+        case 2:
+            <%= render :partial => 'options/dungeons/area' %>
+            break;
+    }
+
+    //Set history
+    <%= render :partial => 'options/shared/set_history' %>
+
+    //Save
+    <%= render :partial => 'options/shared/save' %>
+
+    //Print
+    <%= render :partial => 'options/shared/print' %>
+
+});
