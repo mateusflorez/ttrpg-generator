@@ -28,4 +28,11 @@ class OptionsController < ApplicationController
     end
   end
 
+  def missions
+    @resp = params[:param1]
+    respond_to do |format|
+      format.js
+    end
+  end
+
 end

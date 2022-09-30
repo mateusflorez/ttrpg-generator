@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get 'options/dices'
   get 'options/travel'
   get 'options/encounters'
+  get 'options/missions'
 
 end
