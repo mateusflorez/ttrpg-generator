@@ -4,47 +4,66 @@ function stairRandomizer() {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
         if (temp1 < 3) {
-            temp2 = passageRandomizer();
+            rndInt[1] += 1;
+            temp2 = "passagem. "+passageRandomizer();
+        } else {
+            temp2 = "sala. "+roomRandomizer();
         }
-        stair = "Desce um nível até um (d4) 1-2: Sala, 3-4: Passagem. ???????."+temp2;
+        stair = "Escada. Desce um nível até uma "+temp2;
     } else if (rndInt[5] === 9) {
-        stair = "Descendo um nível para uma sala, adicione 15 à rolagem de Conteúdo da Sala. ???????."+temp2;
+        rndInt[7] += 15;
+        stair = "Escada descendo um nível para uma sala. "+roomRandomizer();
     }  else if (rndInt[5] === 10) {
-        stair = "Descendo um nível para uma sala, adicione 30 à rolagem de Conteúdo da Sala. ???????."+temp2;
+        rndInt[7] += 30;
+        stair = "Escada descendo um nível para uma sala. "+roomRandomizer();
     }  else if (rndInt[5] === 11) {
-        stair = "Desce um nível para uma passagem. "+passageRandomizer();
+        rndInt[1] += 1;
+        stair = "Escada. Desce um nível para uma passagem. "+passageRandomizer();
     }  else if (rndInt[5] === 12) {
+        rndInt[1] += 1;
         rndInt[3] += 15;
-        stair = "Desce um nível para uma passagem. "+passageRandomizer();
+        stair = "Escada. Desce um nível para uma passagem. "+passageRandomizer();
     }  else if (rndInt[5] === 13) {
+        rndInt[1] += 1;
         rndInt[3] += 30;
-        stair = "Desce um nível para uma passagem. "+passageRandomizer();
+        stair = "Escada. Desce um nível para uma passagem. "+passageRandomizer();
     }  else if (rndInt[5] === 14) {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
         if (temp1 < 3) {
-            temp2 = passageRandomizer();
+            rndInt[1] += 1;
+            temp2 = "passagem. "+passageRandomizer();
+        } else {
+            temp2 = "sala. "+roomRandomizer();
         }
-        stair = "Descendo dois níveis até um (d4) 1-2: Passagem, 3-4: Sala. ???????."+temp2;
+        stair = "Escada descendo dois níveis até uma "+temp2;
     }  else if (rndInt[5] === 15) {
-        stair = "Subindo um nível para uma sala, adicione 15 à rolagem de Conteúdo da Sala. ???????."+temp2;
-    }  else if (rndInt[5] === 16) {
-        stair = "Subindo um nível para uma sala, adicione 30 à rolagem de Conteúdo da Sala. ???????."+temp2;
-    }  else if (rndInt[5] === 17) {
-        stair = "Sobe um nível para uma passagem. "+passageRandomizer();
-    }  else if (rndInt[5] === 18) {
         rndInt[3] += 15;
-        stair = "Sobe um nível para uma passagem. "+passageRandomizer();
-    }  else if (rndInt[5] === 19) {
+        stair = "Escada subindo um nível para uma sala. "+roomRandomizer();
+    }  else if (rndInt[5] === 16) {
         rndInt[3] += 30;
-        stair = "Sobe um nível para uma passagem. "+passageRandomizer();
+        stair = "Escada subindo um nível para uma sala. "+roomRandomizer();
+    }  else if (rndInt[5] === 17) {
+        rndInt[1] += 1;
+        stair = "Escada. Sobe um nível para uma passagem. "+passageRandomizer();
+    }  else if (rndInt[5] === 18) {
+        rndInt[1] += 1;
+        rndInt[3] += 15;
+        stair = "Escada. Sobe um nível para uma passagem. "+passageRandomizer();
+    }  else if (rndInt[5] === 19) {
+        rndInt[1] += 1;
+        rndInt[3] += 30;
+        stair = "Escada. Sobe um nível para uma passagem. "+passageRandomizer();
     }  else {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
         if (temp1 < 3) {
-            temp2 = passageRandomizer();
+            rndInt[1] += 1;
+            temp2 = "passagem. "+passageRandomizer();
+        } else {
+            temp2 = "sala. "+roomRandomizer();
         }
-        stair = "Subindo dois níveis até um (d4) 1-2: Passagem, 3-4: Sala. ???????."+temp2;
+        stair = "Escada subindo dois níveis até uma "+temp2;
     }
     return stair;
 }

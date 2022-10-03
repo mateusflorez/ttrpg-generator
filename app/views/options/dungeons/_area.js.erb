@@ -1,3 +1,17 @@
-if (rndInt[2] < 11) {
+if (rndInt[2] < 3) {
+    res = passageRandomizer();
+} else if (rndInt[2] > 2 && rndInt[2] < 5) {
     res = roomRandomizer();
+} else if (rndInt[2] > 4 && rndInt[2] < 7) {
+    res = doorRandomizer();
+} else if (rndInt[2] > 6 && rndInt[2] < 9) {
+    res = stairRandomizer();
+} else {
+    temp1 = minMaxRandomizer(1, 100);
+    if (temp1 < 51) {
+       res = passageRandomizer();
+    }
+    else {
+        res = roomRandomizer();
+    }
 }
