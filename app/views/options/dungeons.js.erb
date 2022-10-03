@@ -1,7 +1,7 @@
 $(function(){
 
     //Set dice
-    const dices = [20, 10, 100, 100, 20, 20, 100];
+    const dices = [20, 10, 100, 100, 20, 20, 100, 20];
 
     //Randomize
     <%= render :partial => 'options/shared/randomizer' %>
@@ -11,6 +11,10 @@ $(function(){
     <%= render :partial => 'options/dungeons/door' %>
     <%= render :partial => 'options/dungeons/stair' %>
     <%= render :partial => 'options/dungeons/room' %>
+    <%= render :partial => 'options/dungeons/architecture' %>
+    <%= render :partial => 'options/dungeons/secretdoor' %>
+    //trap
+    //clue
 
     //Option selector
     var res;

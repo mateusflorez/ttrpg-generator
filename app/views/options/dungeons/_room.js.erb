@@ -4,50 +4,50 @@ function roomRandomizer() {
         temp1 = minMaxRandomizer(1, 4)*10;
         temp2 = minMaxRandomizer(1, 4)*10;
         temp3 = minMaxRandomizer(1, 6);
-        room = "Retangular, dimensões "+temp1+" metros x "+temp2+" metros. "+temp3+" saídas (incluindo a que você chegou)";
+        room = "Sala retangular, dimensões "+temp1+" metros x "+temp2+" metros. "+temp3+" saídas (incluindo a que você chegou)";
     } else if (rndInt[6] > 2 && rndInt[6] < 5) {
         temp1 = minMaxRandomizer(1, 4)+1*3;
         temp2 = minMaxRandomizer(1, 4);
-        room = "Quadrado, "+temp1+" metros em todos os lados, "+temp2+" saídas.";
+        room = "Sala quadrada, "+temp1+" metros em todos os lados, "+temp2+" saídas.";
     } else if (rndInt[6] > 4 && rndInt[6] < 7) {
         temp1 = minMaxRandomizer(1, 6)+1*3;
         temp2 = minMaxRandomizer(1, 6);
-        room = "Quadrado, "+temp1+" metros em todos os lados, "+temp2+" saídas.";
+        room = "Sala quadrada, "+temp1+" metros em todos os lados, "+temp2+" saídas.";
     } else if (rndInt[6] > 6 && rndInt[6] < 9) {
         temp1 = minMaxRandomizer(1, 8)+1*3;
         temp2 = minMaxRandomizer(1, 8);
-        room = "Quadrado, "+temp1+" metros em todos os lados, "+temp2+" saídas.";
+        room = "Sala quadrada, "+temp1+" metros em todos os lados, "+temp2+" saídas.";
     } else if (rndInt[6] > 8 && rndInt[6] < 11) {
         temp1 = minMaxRandomizer(1, 6)+1*10;
         temp2 = minMaxRandomizer(1, 6)+2*10;
         temp3 = minMaxRandomizer(1, 6);
-        room = "Retangular, dimensões "+temp1+" metros x "+temp2+" metros. "+temp3+" saídas (incluindo a que você chegou)";
+        room = "Sala retangular, dimensões "+temp1+" metros x "+temp2+" metros. "+temp3+" saídas (incluindo a que você chegou).";
     } else if (rndInt[6] > 10 && rndInt[6] < 13) {
         temp1 = minMaxRandomizer(1, 4)*10;
         temp2 = minMaxRandomizer(1, 4);
-        room = "Circular, "+temp1+" metros em todos os lados, "+temp2+" saídas.";
+        room = "Sala circular, "+temp1+" metros em todos os lados, "+temp2+" saídas.";
     } else if (rndInt[6] === 15) {
         temp1 = minMaxRandomizer(1, 6)*10;
         temp2 = minMaxRandomizer(1, 4);
-        room = "Triangular, "+temp1+" metros para baixo de um lado, outros lados qualquer forma que se encaixe melhor, "+temp2+" saídas.";
+        room = "Sala triangular, "+temp1+" metros para baixo de um lado, outros lados qualquer forma que se encaixe melhor, "+temp2+" saídas.";
     } else if (rndInt[6] === 16) {
         temp1 = minMaxRandomizer(1, 4)*10;
         temp2 = minMaxRandomizer(1, 4);
-        room = "Pentagonal, "+temp1+" metros de diâmetro, "+temp2+" saídas.";
+        room = "Sala pentagonal, "+temp1+" metros de diâmetro, "+temp2+" saídas.";
     } else if (rndInt[6] === 17) {
         temp1 = minMaxRandomizer(1, 6)*10;
         temp2 = minMaxRandomizer(1, 4);
-        room = "Hexagonal, "+temp1+" metros de diâmetro, "+temp2+" saídas.";
+        room = "Sala hexagonal, "+temp1+" metros de diâmetro, "+temp2+" saídas.";
     } else if (rndInt[6] === 18) {
         temp1 = minMaxRandomizer(1, 6)*10;
         temp2 = minMaxRandomizer(1, 4);
-        room = "Octogonal, "+temp1+" metros de diâmetro, "+temp2+" saídas.";
+        room = "Sala octogonal, "+temp1+" metros de diâmetro, "+temp2+" saídas.";
     } else if (rndInt[6] === 19) {
         temp1 = minMaxRandomizer(1, 6)*10;
-        room = "Trapezoidal, "+temp1+" metros aproximadamente em cada lado";
+        room = "Sala trapezoidal, "+temp1+" metros aproximadamente em cada lado.";
     } else {
         temp1 = minMaxRandomizer(1, 12)*10;
-        room = "Caverna áspera, "+temp1+" metros de largura";
+        room = "Caverna áspera, "+temp1+" metros de largura.";
     }
 
     if (rndInt[7] < 5) {
@@ -92,7 +92,7 @@ function roomRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 31) {
-            temp += " Porta secreta! ??????.";
+            temp += " Porta secreta! "+sdRandomizer();
         }
         room += " Encontro difícil de nível apropriado"+temp;
     } else if (rndInt[7] > 32 && rndInt[7] < 37) {
@@ -120,7 +120,7 @@ function roomRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 11) {
-            temp += " Porta secreta! ??????.";
+            temp += " Porta secreta! "+sdRandomizer();
         }
         room += " Encontro fácil de nível apropriado."+temp;
     } else if (rndInt[7] > 52 && rndInt[7] < 57) {
@@ -137,7 +137,7 @@ function roomRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 21) {
-            temp += " Porta secreta! ??????.";
+            temp += " Porta secreta! "+sdRandomizer();
         }
         room += " Encontro fácil de nível apropriado."+temp;
     } else if (rndInt[7] > 67 && rndInt[7] < 72) {

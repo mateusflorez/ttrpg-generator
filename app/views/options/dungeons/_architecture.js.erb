@@ -1,0 +1,45 @@
+function archRandomizer() {
+    var arch = "";
+    if (rndInt[8] === 1) {
+        arch = "Estátua";
+    } else if (rndInt[8] === 2) {
+        arch = "Série de alcovas.";
+    }  else if (rndInt[8] === 2) {
+        arch = "Fonte.";
+    }  else if (rndInt[8] === 2) {
+        arch = minMaxRandomizer(1, 4)+" sacos de dormir.";
+    }  else if (rndInt[8] === 2) {
+        arch = "Buraco no chão.";
+    }  else if (rndInt[8] === 2) {
+        arch = "Terrário subterrâneo.";
+    }  else if (rndInt[8] === 2) {
+        arch = "Pilares ao longo de cada lado. Alguma coisa escondida aí?.";
+    }  else if (rndInt[8] === 2) {
+        arch = "Catacumbas.";
+    }  else if (rndInt[8] === 2) {
+        arch = "Quebra-cabeça de algum tipo (requer verificação de int).";
+    }  else if (rndInt[8] === 2) {
+        arch = "Altar de sacrifício.";
+    }  else if (rndInt[8] === 2) {
+        arch = "Templo / santuário.";
+    }  else if (rndInt[8] === 2) {
+        arch = "Posto de guarda.";
+    }  else if (rndInt[8] === 2) {
+        arch = "Alçapão com escada. "+stairRandomizer();
+    }  else if (rndInt[8] === 2) {
+        arch = "Fluxo subterrâneo.";
+    }  else if (rndInt[8] === 2) {
+        arch = "Caverna natural.";
+    }  else if (rndInt[8] === 2) {
+        arch = "Poço de ventilação.";
+    }  else if (rndInt[8] === 2) {
+        arch = "Crescimento de cristal.";
+    }  else if (rndInt[8] === 2) {
+        arch = "Área de campismo, abandonado.";
+    }  else if (rndInt[8] === 2) {
+        arch = "Portal. Leva você para outra parte aleatória da masmorra.";
+    }  else {
+        arch = "Fungos Comestíveis / Fazenda de Musgo";
+    }
+    return arch;
+}
