@@ -111,7 +111,7 @@ function passageRandomizer() {
         }
         passage += " A passagem está vazia além dos inimigos. Encontro difícil apropriado ao nível."+temp2+temp3;
     } else if (rndInt[3] > 94 && rndInt[3] < 99) {
-        passage += " Armadilha! ???????.";
+        passage += " Armadilha! "+trapRandomizer();
     } else {
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 61) {

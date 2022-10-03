@@ -32,7 +32,7 @@ function doorRandomizer() {
         } else {
             temp2 = "sala. "+roomRandomizer();
         }
-        door = "Porta vazia. Talvez uma armadilha mágica de glifos, desencadeando um feitiço de ataque. Faça um teste de Perguntas/Respostas com o modificador difícil para determinar. Além da porta está uma "+temp2;
+        door = "Porta vazia. Talvez uma armadilha mágica de glifos, desencadeando um feitiço de ataque. Faça um teste de Perguntas/Respostas com o modificador difícil para determinar.";
     } else if (rndInt[4] > 30 && rndInt[4] < 36) {
         door = "Porta de madeira, trancada. Verificação das ferramentas dos ladrões CD 15, ou terá que ser esmagada. Porta tem AC 12 e 20 cv. Abre em uma sala.  "+roomRandomizer();
     } else if (rndInt[4] > 35 && rndInt[4] < 41) {
@@ -60,7 +60,7 @@ function doorRandomizer() {
         } else {
             temp2 = "sala. "+roomRandomizer();
         }
-        door = "Porta de pedra trancada e presa. Percepção CD 15 para encontrar armadilha. Se a armadilha for desarmada / evitada / acionada, abre para uma "+temp2;
+        door = "Porta de pedra trancada e presa. "+trapRandomizer()+"  Percepção CD 15 para encontrar armadilha. Se a armadilha for desarmada / evitada / acionada, abre para uma "+temp2;
     } else if (rndInt[4] > 45 && rndInt[4] < 51) {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
@@ -119,7 +119,7 @@ function doorRandomizer() {
         } else {
             temp2 = "sala. "+roomRandomizer();
         }
-        door = "Porta trancada. Percepção CD 15 para encontrar armadilha. Se a armadilha for desarmada / evitada / acionada, abre em uma "+temp2;
+        door = "Porta trancada. "+trapRandomizer()+" Percepção CD 15 para encontrar armadilha. Se a armadilha for desarmada / evitada / acionada, abre em uma "+temp2;
     } else if (rndInt[4] > 80 && rndInt[4] < 86) {
         door = "Porta trancada, só pode ser aberta com uma chave que está no corpo de um monstro humanóide em algum lugar desta masmorra. Há uma razão pela qual eles não querem que ninguém entre.";
     } else if (rndInt[4] > 85 && rndInt[4] < 91) {
