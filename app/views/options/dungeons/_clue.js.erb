@@ -1,0 +1,206 @@
+function clueRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var clue = "";
+    if (rand === 1) {
+        clue = "Pista: Uma flecha quebrada de um tipo distinto.";
+    } else if (rand === 2) {
+        clue = "Pista: A arma do monstro / NPCs tem sangue seco nela. Mas que tipo?";
+    }  else if (rand === 3) {
+        clue = "Pista: A carcaça ou área tem um odor estranho.";
+    }  else if (rand === 4) {
+        clue = "Pista: Há um barulho estranho vindo de algum lugar nesta área.";
+    }  else if (rand === 5) {
+        clue = "Pista: Você vê trilhas saindo desta área.";
+    }  else if (rand === 6) {
+        clue = "Pista: "+minMaxRandomizer(1, 10)+" peças de platina em uma bolsa ornamentada. O bordado menciona o nome de alguém.";
+    }  else if (rand === 7) {
+        clue = "Pista: Bússola mágica, o jogador tem que descobrir a palavra de comando para ativá-la.";
+    }  else if (rand === 8) {
+        clue = "Pista: O cadáver está segurando um envelope. A cera selada com um glífo desconhecido.";
+    }  else if (rand === 9) {
+        clue = "Pista: Você vê manchas de sangue fresco espalhadas na parede. Uma parte ainda está escorrendo quando você entra na sala.";
+    }  else if (rand === 10) {
+        clue = "Pista: O corpo está coberto de símbolos do mapa";
+    }  else if (rand === 11) {
+        clue = "Pista: O corpo está coberto de tatuagens rúnicas.";
+    }  else if (rand === 12) {
+        clue = "Pista: O corpo está contorcido, mostrando evidências de cirurgia reconstrutiva na cabeça e cavidade torácica, com acessórios e implantes abaixo da pele";
+    }  else if (rand === 13) {
+        clue = "Pista: O corpo é marcado com um número, logo atrás do pescoço.";
+    }  else if (rand === 14) {
+        clue = "Pista: O corpo tem um número significativo de feridas curadas, sugerindo punição contínua e chicotadas.";
+    }  else if (rand === 15) {
+        clue = "Pista: Um velho cavalo de brinquedo de madeira, com o qual você costumava brincar quando criança e que até agora esqueceu.";
+    }  else if (rand === 16) {
+        clue = "Pista: Você ouve corvos grasnando sem parar nas proximidades.";
+    }  else if (rand === 17) {
+        clue = "Pista: Você encontra um pingente com uma peça que faltava.";
+    }  else if (rand === 18) {
+        clue = "Pista: Você encontra sacos de milho e trigo ensanguentados.";
+    }  else if (rand === 19) {
+        clue = "Pista: Você percebe um flash brilhante de luz arroxeada no canto do olho.";
+    }  else if (rand === 20) {
+        clue = "Pista: O quarto/cadáver está coberto por uma fina camada de gelo.";
+    }  else if (rand === 21) {
+        clue = "Pista: Um bilhete com apenas o nome da cidade vizinha escrito nele.";
+    }  else if (rand === 22) {
+        clue = "Pista: Pedras estampadas em uma seta direcional com as palavras Ajude-me sob ela.";
+    }  else if (rand === 23) {
+        clue = "Pista: Parte de um mapa.";
+    }  else if (rand === 24) {
+        clue = "Pista: Arma quebrada com runas.";
+    }  else if (rand === 25) {
+        clue = "Pista: Um símbolo sagrado.";
+    }  else if (rand === 26) {
+        clue = "Pista: Uma mochila de aventureiro contendo um diário, com entradas que param abruptamente.";
+    }  else if (rand === 27) {
+        clue = "Pista: Uma corda pendurada em cima. Parece ter sido grosseiramente arrebentado na extremidade inferior.";
+    }  else if (rand === 28) {
+        clue = "Pista: Grafite na parede. “Cuidado com o Grande Salão!”";
+    }  else if (rand === 29) {
+        clue = "Pista: No chão há um buraco, e ao lado dele uma pá. Parece que alguém começou a cavar e depois desistiu. Ou...";
+    }  else if (rand === 30) {
+        clue = "Pista: Uma armadilha de urso ou homem sentado em uma poça de sangue. Talvez um membro decepado nas proximidades.";
+    }  else if (rand === 31) {
+        clue = "Pista: Faixas, só que são feitas em farinha.";
+    }  else if (rand === 32) {
+        clue = "Pista: Uma lanterna quebrada.";
+    }  else if (rand === 33) {
+        clue = "Pista: Um caixão vazio, a tampa quebrada.";
+    }  else if (rand === 34) {
+        clue = "Pista: Deitada no chão, uma peça de xadrez de vidro.";
+    }  else if (rand === 35) {
+        clue = "Pista: Lâmina quebrada de uma espada.";
+    }  else if (rand === 36) {
+        clue = "Pista: Cantando, distante e triste.";
+    }  else if (rand === 37) {
+        clue = "Pista: Sussurrando, de algum lugar da sala, desencarnado. Ele para e começa de novo, irritantemente.";
+    }  else if (rand === 38) {
+        clue = "Pista: Uma pilha de pedras cuidadosamente empilhadas está situada no meio desta área.";
+    }  else if (rand === 39) {
+        clue = "Pista: Batendo alto de cima ou de baixo da área atual em que você está.";
+    }  else if (rand === 40) {
+        clue = "Pista: Você percebe um tijolo solto na parede. Espiando atrás dele, você encontra um pergaminho escondido. O que está escrito nele? (Perguntas/Respostas ou situações)";
+    }  else if (rand === 41) {
+        clue = "Pista: Um buraco foi feito através da parede em uma câmara adjacente. Esta câmara não parece ter outra entrada ou saída.";
+    }  else if (rand === 42) {
+        clue = "Pista: Um pacote e seu conteúdo espalhados pelo chão. (Sugere NPC vivo ou morto em algum lugar da masmorra).";
+    }  else if (rand === 43) {
+        clue = "Pista: Há escombros aqui, mas foram varridos para as paredes em pilhas organizadas por alguém, obviamente usando uma vassoura.";
+    }  else if (rand === 44) {
+        clue = "Pista: Você ouve sussurros bem atrás de você, mas quando você se vira, ninguém está lá.";
+    }  else if (rand === 45) {
+        clue = "Pista: Uma mão cortada coberta de pontos está no chão.";
+    }  else if (rand === 46) {
+        clue = "Pista: Um livro de imagens esboçadas à mão de vários humanóides, alguns deles com grandes cruzes vermelhas.";
+    }  else if (rand === 47) {
+        clue = "Pista: Um corpo está aqui, e foi atacado, como se fosse por um animal selvagem.";
+    }  else if (rand === 48) {
+        clue = "Pista: Um escudo está no chão em duas partes. O que quer que tenha rasgado isso obviamente possui grande força.";
+    }  else if (rand === 49) {
+        clue = "Pista: Uma peça de platina, colada no chão.";
+    }  else if (rand === 50) {
+        clue = "Pista: Um pequeno raio de luz brilha através de uma rachadura no teto.";
+    }  else if (rand === 51) {
+        clue = "Pista: Um rastro de sangue, como se um corpo estivesse sendo arrastado, leva embora. Ele para de repente.";
+    }  else if (rand === 52) {
+        clue = "Pista: Uma longa lista de nomes, todos riscados, exceto os últimos 5-10. Perto do final está o nome do personagem.";
+    }  else if (rand === 53) {
+        clue = "Pista: Um mapa colorido detalhado da área local, marcado com várias ruínas anteriormente desconhecidas.";
+    }  else if (rand === 54) {
+        clue = "Pista: Um vento frio, como se alguém abrisse uma porta para uma tundra ártica, sopra brevemente nesta área.";
+    }  else if (rand === 55) {
+        clue = "Pista: Você ouve o som de metal sendo arrastado pela pedra. Continua por um tempo e depois para.";
+    }  else if (rand === 56) {
+        clue = "Pista: De repente você percebe que seus passos se tornaram completamente silenciosos.";
+    }  else if (rand === 57) {
+        clue = "Pista: Rolamentos de esferas ou estrepes sujam o chão nesta área.";
+    }  else if (rand === 58) {
+        clue = "Pista: Formas geométricas desenhadas com giz no chão.";
+    }  else if (rand === 59) {
+        clue = "Pista: O chão é coberto por um tapete. Uma inspeção cuidadosa revelará algumas manchas de um líquido escuro, possivelmente sangue...";
+    }  else if (rand === 60) {
+        clue = "Pista: Um mapa de um labirinto cuidadosamente feito em um pedaço de pergaminho.";
+    }  else if (rand === 61) {
+        clue = "Pista: Uma carta de recomendação de um nobre de quem ninguém ouviu falar.";
+    }  else if (rand === 62) {
+        clue = "Pista: Os restos de um aventureiro estão caídos contra a parede. Em sua mão ele segura um frasco ou uma nota.";
+    }  else if (rand === 63) {
+        clue = "Pista: Passos apressados, vindos de algum lugar à frente.";
+    }  else if (rand === 64) {
+        clue = "Pista: Uma pequena besta (barata?) senta-se em uma alcova. Conforme você passa, ele fala com você!";
+    }  else if (rand === 65) {
+        clue = "Pista: Balde de entranhas de uma criatura desconhecida.";
+    }  else if (rand === 66) {
+        clue = "Pista: O manequim de prática de tiro está próximo.";
+    }  else if (rand === 67) {
+        clue = "Pista: O som de vidro se quebrando vem de algum lugar, ecoando pelas paredes.";
+    }  else if (rand === 68) {
+        clue = "Pista: Um punhal fino com uma lâmina retrátil. A quem isso pertenceu?";
+    }  else if (rand === 69) {
+        clue = "Pista: Um pedaço de casca que parece ter vindo de um ovo grande.";
+    }  else if (rand === 70) {
+        clue = "Pista: A parede foi esculpida e uma grande pedra de pé foi colocada na alcova recém-formada. Está coberto de uma escrita estranha.";
+    }  else if (rand === 71) {
+        clue = "Pista: Uma grande refeição assada é colocada em uma mesa, completa com talheres. É fumegante e parece delicioso, mas totalmente intocado.";
+    }  else if (rand === 72) {
+        clue = "Pista: Graffiti Goblin nas paredes.";
+    }  else if (rand === 73) {
+        clue = "Pista: Uma grande coleção de ossos de animais, organizados em uma pilha.";
+    }  else if (rand === 74) {
+        clue = "Pista: Um caldeirão fica no canto.";
+    }  else if (rand === 75) {
+        clue = "Pista: Uma mão... parece decepada, mas o estranho é que é feita de pedra.";
+    }  else if (rand === 76) {
+        clue = "Pista: Você encontra uma jarra de pedra contendo dentes de todas as descrições.";
+    }  else if (rand === 77) {
+        clue = "Pista: Diário de um aventureiro. Lendo, você vê as entradas pararem de repente.";
+    }  else if (rand === 78) {
+        clue = "Pista: Uma mesa e uma única cadeira estão no canto. A mesa está salpicada de grandes bolhas de cera.";
+    }  else if (rand === 79) {
+        clue = "Pista: Uma rede vazia no chão, rasgada em pedaços.";
+    }  else if (rand === 80) {
+        clue = "Pista: Uma pilha de tabuletas de argila, todas com runas indecifráveis.";
+    }  else if (rand === 81) {
+        clue = "Pista: Um alaúde, mas o pescoço foi arrancado do corpo e está pendurado pelas cordas.";
+    }  else if (rand === 82) {
+        clue = "Pista: A cabeça encolhida de um kobold.";
+    }  else if (rand === 83) {
+        clue = "Pista: Livro contendo uma história do mundo - mas não deste mundo.";
+    }  else if (rand === 84) {
+        clue = "Pista: Um poço, no meio da masmorra. Uma corda pende de seu topo.";
+    }  else if (rand === 85) {
+        clue = "Pista: Você pisa em uma pedra e ouve um clique...";
+    }  else if (rand === 86) {
+        clue = "Pista: Um som tilintante, seguido por um som sibilante, vindo de algum lugar abaixo...";
+    }  else if (rand === 87) {
+        clue = "Pista: Um frasco de olhos em conserva.";
+    }  else if (rand === 88) {
+        clue = "Pista: Há um círculo de fogueira contendo um fogo preparado, mas não foi aceso.";
+    }  else if (rand === 89) {
+        clue = "Pista: Martelado em uma porta próxima ou afixado na parede está um pedaço de pergaminho emoldurado - completamente em branco.";
+    }  else if (rand === 90) {
+        clue = "Pista: Uma garrafa de conhaque vazia.";
+    }  else if (rand === 91) {
+        clue = "Pista: Um dado de seis faces que são todos uns.";
+    }  else if (rand === 92) {
+        clue = "Pista: O crânio de um halfling, intacto, exceto por um círculo perfeito removido no topo.";
+    }  else if (rand === 93) {
+        clue = "Pista: Uma grande variedade de potes de barro em alcovas, todos contendo líquidos com cheiro nocivo.";
+    }  else if (rand === 94) {
+        clue = "Pista: Um amontoado de armas está na parede, contendo várias armas antigas e enferrujadas. Alguns deles podem ser restauradas se levados a um especialista.";
+    }  else if (rand === 95) {
+        clue = "Pista: Um fluxo constante de umidade por uma parede próxima leva você a pensar que pode estar abaixo de um corpo de água.";
+    }  else if (rand === 96) {
+        clue = "Pista: O som do riso das crianças, ecoando de todas as direções.";
+    }  else if (rand === 97) {
+        clue = "Pista: Um saco de penas. Um teste de natureza bem sucedido (CD 12) revela que eles são de uma harpia.";
+    }  else if (rand === 98) {
+        clue = "Pista: Você encontra um pergaminho contendo o que parece ser uma receita para um tipo específico de poção.";
+    }  else if (rand === 99) {
+        clue = "Pista: Uma bolsa de componentes de feitiço.";
+    }  else {
+        clue = "Pista: Item mágico relevante para a missão. Role para item mágico";
+    }
+    return clue;
+}
