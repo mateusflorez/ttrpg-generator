@@ -1,0 +1,200 @@
+function roomRandomizer() {
+    var room = "";
+    if (rndInt[6] < 3) {
+        temp1 = minMaxRandomizer(1, 4)*10;
+        temp2 = minMaxRandomizer(1, 4)*10;
+        temp3 = minMaxRandomizer(1, 6);
+        room = "Retangular, dimensões "+temp1+" metros x "+temp2+" metros. "+temp3+" saídas (incluindo a que você chegou)";
+    } else if (rndInt[6] > 2 && rndInt[6] < 5) {
+        temp1 = minMaxRandomizer(1, 4)+1*3;
+        temp2 = minMaxRandomizer(1, 4);
+        room = "Quadrado, "+temp1+" metros em todos os lados, "+temp2+" saídas.";
+    } else if (rndInt[6] > 4 && rndInt[6] < 7) {
+        temp1 = minMaxRandomizer(1, 6)+1*3;
+        temp2 = minMaxRandomizer(1, 6);
+        room = "Quadrado, "+temp1+" metros em todos os lados, "+temp2+" saídas.";
+    } else if (rndInt[6] > 6 && rndInt[6] < 9) {
+        temp1 = minMaxRandomizer(1, 8)+1*3;
+        temp2 = minMaxRandomizer(1, 8);
+        room = "Quadrado, "+temp1+" metros em todos os lados, "+temp2+" saídas.";
+    } else if (rndInt[6] > 8 && rndInt[6] < 11) {
+        temp1 = minMaxRandomizer(1, 6)+1*10;
+        temp2 = minMaxRandomizer(1, 6)+2*10;
+        temp3 = minMaxRandomizer(1, 6);
+        room = "Retangular, dimensões "+temp1+" metros x "+temp2+" metros. "+temp3+" saídas (incluindo a que você chegou)";
+    } else if (rndInt[6] > 10 && rndInt[6] < 13) {
+        temp1 = minMaxRandomizer(1, 4)*10;
+        temp2 = minMaxRandomizer(1, 4);
+        room = "Circular, "+temp1+" metros em todos os lados, "+temp2+" saídas.";
+    } else if (rndInt[6] === 15) {
+        temp1 = minMaxRandomizer(1, 6)*10;
+        temp2 = minMaxRandomizer(1, 4);
+        room = "Triangular, "+temp1+" metros para baixo de um lado, outros lados qualquer forma que se encaixe melhor, "+temp2+" saídas.";
+    } else if (rndInt[6] === 16) {
+        temp1 = minMaxRandomizer(1, 4)*10;
+        temp2 = minMaxRandomizer(1, 4);
+        room = "Pentagonal, "+temp1+" metros de diâmetro, "+temp2+" saídas.";
+    } else if (rndInt[6] === 17) {
+        temp1 = minMaxRandomizer(1, 6)*10;
+        temp2 = minMaxRandomizer(1, 4);
+        room = "Hexagonal, "+temp1+" metros de diâmetro, "+temp2+" saídas.";
+    } else if (rndInt[6] === 18) {
+        temp1 = minMaxRandomizer(1, 6)*10;
+        temp2 = minMaxRandomizer(1, 4);
+        room = "Octogonal, "+temp1+" metros de diâmetro, "+temp2+" saídas.";
+    } else if (rndInt[6] === 19) {
+        temp1 = minMaxRandomizer(1, 6)*10;
+        room = "Trapezoidal, "+temp1+" metros aproximadamente em cada lado";
+    } else {
+        temp1 = minMaxRandomizer(1, 12)*10;
+        room = "Caverna áspera, "+temp1+" metros de largura";
+    }
+
+    if (rndInt[7] < 5) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp = "";
+        if (temp1 < 46) {
+            temp += " Role saque!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 76) {
+            temp += " Role uma pista!";
+        }
+        room += " Encontro mortal de nível apropriado."+temp;
+    } else if (rndInt[7] > 4 && rndInt[7] < 9) {
+        room += " Pistas do chefe. Parece que eles fizeram travessuras nesta sala.";
+    } else if (rndInt[7] > 8 && rndInt[7] < 13) {
+        room += " Lacaios de baixo nível do chefe nesta sala. Nível apropriado encontro fácil.";
+    } else if (rndInt[7] > 12 && rndInt[7] < 21) {
+        temp1 = minMaxRandomizer(1, 6);
+        var temp2 = "";
+        if (temp1 === 1) {
+            temp2 = "Sumidouro.";
+        } else if (temp1 === 2) {
+            temp2 = "Fungo.";
+        } else if (temp1 === 3) {
+            temp2 = "Armadilha.";
+        } else if (temp1 === 4) {
+            temp2 = "Alvenaria em colapso ou outro perigo natural.";
+        } else {
+            temp2 = "Monstro errante, dificuldade média de nível apropriado.";
+        }
+        room += " Perigo de Calabouço. "+temp2;
+    } else if (rndInt[7] > 20 && rndInt[7] < 33) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp = "";
+        if (temp1 < 31) {
+            temp += " Role saque!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 31) {
+            temp += " Role uma pista!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 31) {
+            temp += " Porta secreta! ??????.";
+        }
+        room += " Encontro difícil de nível apropriado"+temp;
+    } else if (rndInt[7] > 32 && rndInt[7] < 37) {
+        room += " NPC na sala investigando. Role pistas para descobrir o que eles estão investigando.";
+    } else if (rndInt[7] > 36 && rndInt[7] < 41) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp = "";
+        if (temp1 < 31) {
+            temp += " O inimigo está vivo!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 31) {
+            temp += " Role saque!";
+        }
+        room += " Uma armadilha previamente acionada está nesta sala, com um monstro difícil de nével apropriado preso nela."+temp;
+    } else if (rndInt[7] > 40 && rndInt[7] < 53) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp = "";
+        if (temp1 < 21) {
+            temp += " Role saque!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 31) {
+            temp += " Role uma pista!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 11) {
+            temp += " Porta secreta! ??????.";
+        }
+        room += " Encontro fácil de nível apropriado."+temp;
+    } else if (rndInt[7] > 52 && rndInt[7] < 57) {
+        room += " Obstáculo de algum tipo (por exemplo, entulho, fenda, sumidouro, córrego subterrâneo, campo de magia selvagem). A verificação de atletismo ou acrobacia pode ser necessária para passar, ou pode ser intransitável.";
+    } else if (rndInt[7] > 56 && rndInt[7] < 68) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp = "";
+        if (temp1 < 31) {
+            temp += " Role saque!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 31) {
+            temp += " Role uma pista!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 21) {
+            temp += " Porta secreta! ??????.";
+        }
+        room += " Encontro fácil de nível apropriado."+temp;
+    } else if (rndInt[7] > 67 && rndInt[7] < 72) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp = "";
+        if (temp1 < 51) {
+            temp += " Role saque!";
+        }
+        room += " NPC (inimigo ou aliado do Personagem) perto da morte inconsciente, Nível apropriado Encontro Difícil. Inimigo ou inimigos reduzidos para 50% hp. Uma batalha obviamente aconteceu aqui - o NPC lutou contra uma criatura poderosa e perdeu, mas a danificou um pouco."+temp;
+    } else if (rndInt[7] > 71 && rndInt[7] < 75) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp = "";
+        if (temp1 < 51) {
+            temp += "fácil";
+        } else {
+            temp += "médio";
+        }
+        room += " Duas criaturas apropriadas de nível "+temp+" estão engajadas em batalha umas com as outras. Você tropeça assim que a batalha começa. Como você reage? Esconder e esperar até que um vencedor apareça? Pelo que eles estão brigando? Como eles estão engajados de outra forma, você tem vantagem em testes de furtividade para se aproximar. (CD é a percepção passiva da criatura)";
+    } else if (rndInt[7] > 74 && rndInt[7] < 77) {
+        room += " Deserta, exceto por algumas runas e símbolos estranhos no chão. Mágico? Talvez.";
+    } else if (rndInt[7] > 76 && rndInt[7] < 81) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp = "";
+        if (temp1 < 51) {
+            temp += "Ele diz para você ir embora, ele reivindica esta masmorra e tudo dentro dela. Lutará se for desafiado. No entanto, também concordará em dividir o loot e seguir caminhos separados.";
+        } else {
+            temp += "Ele diz que se juntará a você pelo restante desta masmorra, dividirá o saque e partirá.";
+        }
+        room += " NPC forte acabou de derrotar um Encontro Mortal de Nível apropriado."+temp;
+    } else if (rndInt[7] > 80 && rndInt[7] < 85) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp = "";
+        if (temp1 < 31) {
+            temp += " Role saque!";
+        }
+        room += " Vazio."+temp;
+    } else if (rndInt[7] > 84 && rndInt[7] < 89) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp = "";
+        if (temp1 < 31) {
+            temp += " Role saque!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 31) {
+            temp += " Role uma pista!";
+        }
+        room += " Encontro fácil de nível apropriado."+temp;
+    } else if (rndInt[7] > 88 && rndInt[7] < 93) {
+        room += " Relíquia amaldiçoada ou abençoada, guardada por encontro mortal apropriado de nível. Testes de Perguntas/Respostas para determinar a natureza da relíquia.";
+    } else {
+        temp1 = minMaxRandomizer(1, 100);
+        temp2 = minMaxRandomizer(1, 4);
+        var temp = "";
+        if (temp1 < 91) {
+            temp += " Role saque "+temp2+" vezes!";
+        }
+        room += " Chefe ou NPC significante! "+temp;
+    }
+    return room;
+}
