@@ -3,56 +3,87 @@ function doorRandomizer() {
     if (rndInt[4] < 21) {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
-        if (temp1 < 3) {
-            temp2 = passageRandomizer();
+        if (temp1 === 1) {
+            rndInt[1] += 1;
+            temp2 = "passagem. "+passageRandomizer();
+        } else if (temp1 === 2) {
+            rndInt[1] += 1;
+            temp2 = "escada. "+stairRandomizer();
+        } else {
+            temp2 = "sala. "+roomRandomizer();
         }
-        door = "Porta de madeira padrão, reforçada com metal, desbloqueada. Abre para (role d4) 1: Passagem, 2: Escadas, 3-4: Sala. ???????."+temp2;
+        door = "Porta de madeira padrão, reforçada com metal, desbloqueada. Abre para uma "+temp2;
     } else if (rndInt[4] > 20 && rndInt[4] < 26) {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
         if (temp1 < 3) {
             temp2 = " Porta travada!";
         }
-        door = "Barras de ferro (portcullis) com alavanca ao lado. Você pode ver através do quarto. Puxar a alavanca levantará a porta levadiça."+temp2+" A alavanca está presa? Use Perguntas/Respostas e testes de investigação.";
+        door = "Barras de ferro (portcullis) com alavanca ao lado. Você pode ver através do quarto. Puxar a alavanca levantará a porta levadiça."+temp2+" A alavanca está presa? Use Perguntas/Respostas e testes de investigação. "+roomRandomizer();
     } else if (rndInt[4] > 25 && rndInt[4] < 31) {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
-        if (temp1 < 2) {
-            temp2 = passageRandomizer();
+        if (temp1 === 1) {
+            rndInt[1] += 1;
+            temp2 = "passagem. "+passageRandomizer();
+        } else if (temp1 === 2) {
+            rndInt[1] += 1;
+            temp2 = "escada. "+stairRandomizer();
+        } else {
+            temp2 = "sala. "+roomRandomizer();
         }
-        door = "Porta vazia. Talvez uma armadilha mágica de glifos, desencadeando um feitiço de ataque. Faça um teste de Perguntas/Respostas com o modificador Improvável (-2) para determinar. Além da porta está (d4) 1: Passagem, 2: Escadas, 3-4: Sala. ???????."+temp2;
+        door = "Porta vazia. Talvez uma armadilha mágica de glifos, desencadeando um feitiço de ataque. Faça um teste de Perguntas/Respostas com o modificador difícil para determinar. Além da porta está uma "+temp2;
     } else if (rndInt[4] > 30 && rndInt[4] < 36) {
-        door = "Porta de madeira, trancada. Verificação das ferramentas dos ladrões CD 15, ou terá que ser esmagada. Porta tem AC 12 e 20 cv. Abre em uma sala. ???????."+temp2;
+        door = "Porta de madeira, trancada. Verificação das ferramentas dos ladrões CD 15, ou terá que ser esmagada. Porta tem AC 12 e 20 cv. Abre em uma sala.  "+roomRandomizer();
     } else if (rndInt[4] > 35 && rndInt[4] < 41) {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
-        if (temp1 < 2) {
-            temp2 = passageRandomizer();
+        if (temp1 === 1) {
+            rndInt[1] += 1;
+            temp2 = "passagem. "+passageRandomizer();
+        } else if (temp1 === 2) {
+            rndInt[1] += 1;
+            temp2 = "escada. "+stairRandomizer();
+        } else {
+            temp2 = "sala. "+roomRandomizer();
         }
-        door = "Porta de ferro, trancada. Teste de ferramentas de ladrões CD 14. Abre para (role d4) 1: Passagem, 2-4: Sala. ??????."+temp2;
+        door = "Porta de ferro, trancada. Teste de ferramentas de ladrões CD 14. Abre para uma"+temp2;
     } else if (rndInt[4] > 40 && rndInt[4] < 46) {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
-        if (temp1 < 2) {
-            temp2 = passageRandomizer();
+        if (temp1 === 1) {
+            rndInt[1] += 1;
+            temp2 = "passagem. "+passageRandomizer();
+        } else if (temp1 === 2) {
+            rndInt[1] += 1;
+            temp2 = "escada. "+stairRandomizer();
+        } else {
+            temp2 = "sala. "+roomRandomizer();
         }
-        door = "Porta de pedra trancada e presa. Percepção CD 15 para encontrar armadilha. Se a armadilha for desarmada / evitada / acionada, role d4 para determinar o que está do outro lado. 1: Passagem, 2: Escadas, 3-4: Sala. ??????."+temp2;
+        door = "Porta de pedra trancada e presa. Percepção CD 15 para encontrar armadilha. Se a armadilha for desarmada / evitada / acionada, abre para uma "+temp2;
     } else if (rndInt[4] > 45 && rndInt[4] < 51) {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
-        if (temp1 < 2) {
-            temp2 = " Passagem escondida! "+passageRandomizer();
+        if (temp1 < 3) {
+            rndInt[1] += 1;
+            temp2 = "passagem secreta. "+passageRandomizer();
+        } else {
+            rndInt[4] = minMaxRandomizer(1, 100);
+            temp2 = "sala secreta. "+roomRandomizer();
         }
-        door = "Porta secreta. Seu PC sabe que está lá? Até (jogue d4) 1: passagem escondida, 2-4: Câmara escondida. ??????."+temp2;
+        door = "Porta secreta. Seu PC sabe que está lá? Do outro lado há uma "+temp2;
     } else if (rndInt[4] > 50 && rndInt[4] < 56) {
-        door = "Entrada, então 10 pés através de uma passagem adjacente. Sala vazia, sem porta.";
+        door = "Porta aberta, então 10 pés através de uma passagem adjacente. Sala vazia, sem porta.";
     } else if (rndInt[4] > 55 && rndInt[4] < 61) {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
-        if (temp1 < 2) {
-            temp2 = " Passagem escondida! "+passageRandomizer();
+        if (temp1 === 1) {
+            rndInt[1] += 1;
+            temp2 = "passagem. "+passageRandomizer();
+        } else {
+            temp2 = "sala. "+roomRandomizer();
         }
-        door = "Porta de pedra trancada, protegida com um quebra-cabeça. Uma verificação de inteligência CD 14 permitirá que o quebra-cabeça seja resolvido e a porta destrancada. Abre em 1: Passagem, 2-4: Sala. ??????."+temp2;
+        door = "Porta de pedra trancada, protegida com um quebra-cabeça. Uma verificação de inteligência CD 14 permitirá que o quebra-cabeça seja resolvido e a porta destrancada. Abre em uma "+temp2;
     } else if (rndInt[4] > 60 && rndInt[4] < 76) {
         temp1 = minMaxRandomizer(1, 6);
         var temp2 = "";
@@ -79,18 +110,24 @@ function doorRandomizer() {
     } else if (rndInt[4] > 75 && rndInt[4] < 81) {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
-        if (temp1 < 2) {
-            temp2 = passageRandomizer();
+        if (temp1 === 1) {
+            rndInt[1] += 1;
+            temp2 = "passagem. "+passageRandomizer();
+        } else if (temp1 === 2) {
+            rndInt[1] += 1;
+            temp2 = "escada. "+stairRandomizer();
+        } else {
+            temp2 = "sala. "+roomRandomizer();
         }
-        door = "Porta trancada. Percepção CD 15 para encontrar armadilha. Se a armadilha for desarmada / evitada / acionada, role d4 para determinar o que está do outro lado. 1: Passagem, 2-4: Sala. ??????."+temp2;
+        door = "Porta trancada. Percepção CD 15 para encontrar armadilha. Se a armadilha for desarmada / evitada / acionada, abre em uma "+temp2;
     } else if (rndInt[4] > 80 && rndInt[4] < 86) {
         door = "Porta trancada, só pode ser aberta com uma chave que está no corpo de um monstro humanóide em algum lugar desta masmorra. Há uma razão pela qual eles não querem que ninguém entre.";
     } else if (rndInt[4] > 85 && rndInt[4] < 91) {
         door = "Porta composta de energia elementar, como fogo ou relâmpago. Você pode se mover por ela, mas sofrerá 3d8 de dano de qualquer tipo de que ela seja composta.";
     } else if (rndInt[4] > 90 && rndInt[4] < 96) {
-        door = "Porta de pedra pesada, requer teste de atletismo para abrir (CD 16). -1 hp para cada 2 testes de força com falha. Abre no quarto.";
+        door = "Porta de pedra pesada, requer teste de atletismo para abrir (CD 16). -1 hp para cada 2 testes de força com falha. Abre em um quarto. "+roomRandomizer();
     } else {
-        door = "A porta está quebrada e pendurada nas dobradiças (por quê?). Leva a uma sala. ??????."+temp2;
+        door = "Porta está quebrada e pendurada nas dobradiças (por quê?). Leva a uma sala. "+roomRandomizer();
     }
     return door;
 }

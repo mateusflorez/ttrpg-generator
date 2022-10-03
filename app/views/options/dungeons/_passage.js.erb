@@ -29,17 +29,18 @@ function passageRandomizer() {
     } else if (rndInt[1] === 14) {
         passage = "Passagem. Porta secreta na parede da passagem (escolha do jogador qual parede). Role percepção CD 15. Se for bem sucedido, vá para a Porta Secreta ???????. Caso contrário, role novamente, continuando (já que seu personagem não percebeu).";
     } else if (rndInt[1] === 15) {
-        passage = "Passagem. Passagem estreita "+(minMaxRandomizer(1, 6)/2)*10+" pés";
+        passage = "Passagem. Passagem estreita "+(minMaxRandomizer(1, 6)/2)*10+" pés.";
     } else if (rndInt[1] === 16) {
-        passage = "Passagem. Passagem larga "+(minMaxRandomizer(1, 6)/2)*10+" pés";
+        passage = "Passagem. Passagem larga "+(minMaxRandomizer(1, 6)/2)*10+" pés.";
     } else if (rndInt[1] === 17) {
-        passage = "Passagem. Abertura à esquerda, escada. "+stairRandomizer();
+        passage = "Passagem. Abertura à esquerda, para uma escada. "+stairRandomizer();
     } else if (rndInt[1] === 18) {
-        passage = "Passagem. Abertura à direita, escada. "+stairRandomizer();
+        passage = "Passagem. Abertura à direita, para uma escada. "+stairRandomizer();
     } else if (rndInt[1] === 19) {
         temp1 = minMaxRandomizer(1, 100);
         var temp = "";
         if (temp1 < 51) {
+            rndInt[1] = minMaxRandomizer(1, 100);
             temp += "passagem. "+passageRandomizer();
         } else {
             temp += "sala. "+roomRandomizer();
