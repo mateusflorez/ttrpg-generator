@@ -1,13 +1,14 @@
 $(function(){
 
     //Set dice
-    const dices = [20, 10, 100];
+    const dices = [20, 10, 100, 100];
 
     //Randomize
     <%= render :partial => 'options/shared/randomizer' %>
 
     //Area randomizers
     <%= render :partial => 'options/dungeons/passage' %>
+    <%= render :partial => 'options/dungeons/door' %>
 
     //Option selector
     var res;
