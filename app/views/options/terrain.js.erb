@@ -1,0 +1,72 @@
+$(function(){
+
+    //Set dice
+    const dices = [100];
+
+    //Randomize
+    <%= render :partial => 'options/shared/randomizer' %>
+
+    //felledarea
+    //clearing
+    //gully
+    //hill
+    //landscape
+    //lake
+    //monument
+    //oasis
+    //rockyoutcrop
+    //mountainrange
+    //wood
+    //structure
+    //minorswamp
+    //settlement
+    //waterway
+    //clue
+
+    //Option selector
+    var res;
+    switch (<%= @resp %>) {
+        //Artic
+        case 1:
+            <%= render :partial => 'options/terrain/artic' %>
+            break;
+        //Coast
+        case 2:
+            <%= render :partial => 'options/terrain/coast' %>
+            break;
+        //Desert
+        case 3:
+            <%= render :partial => 'options/terrain/desert' %>
+            break;
+        //Forest
+        case 4:
+            <%= render :partial => 'options/terrain/forest' %>
+            break;
+        //Grassland
+        case 5:
+            <%= render :partial => 'options/terrain/grassland' %>
+            break;
+        //Mountains
+        case 6:
+            <%= render :partial => 'options/terrain/mountain' %>
+            break;
+        //Swamp
+        case 7:
+            <%= render :partial => 'options/terrain/swamp' %>
+            break;
+        //Active area
+        case 8:
+            <%= render :partial => 'options/terrain/active' %>
+            break;
+    }
+
+    //Set history
+    <%= render :partial => 'options/shared/set_history' %>
+
+    //Save
+    <%= render :partial => 'options/shared/save' %>
+
+    //Print
+    <%= render :partial => 'options/shared/print' %>
+
+});
