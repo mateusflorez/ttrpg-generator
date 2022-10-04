@@ -57,21 +57,21 @@ function passageRandomizer() {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 11) {
-            temp2 = " Pista! Teste de percepção CD 10 para encontrar.";
+            temp2 = " Pista! Teste de percepção CD 10 para encontrar. "+clueRandomizer();
         }
         passage += " A passagem está vazia além do entulho."+temp2;
     } else if (rndInt[3] > 80 && rndInt[3] < 85) {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 21) {
-            temp2 = " Pista no corpo!";
+            temp2 = " Pista no corpo! "+clueRandomizer();
         }
         passage += " A passagem está vazia além de um cadáver."+temp2;
     } else if (rndInt[3] > 84 && rndInt[3] < 89) {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 41) {
-            temp2 = " Pista nos corpos!";
+            temp2 = " Pista nos corpos! "+clueRandomizer();
         }
         passage += " A passagem está vazia além de vários cadáveres."+temp2;
     } else if (rndInt[3] > 88 && rndInt[3] < 91) {
@@ -83,7 +83,7 @@ function passageRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 16) {
-            temp3 = " Role pista!";
+            temp3 = " Pista! "+clueRandomizer();
         }
         passage += " A passagem está vazia além dos inimigos. Encontro fácil apropriado ao nível."+temp2+temp3;
     } else if (rndInt[3] > 90 && rndInt[3] < 93) {
@@ -95,7 +95,7 @@ function passageRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 26) {
-            temp3 = " Role pista!";
+            temp3 = " Pista! "+clueRandomizer();
         }
         passage += " A passagem está vazia além dos inimigos. Encontro médio apropriado ao nível."+temp2+temp3;
     } else if (rndInt[3] > 92 && rndInt[3] < 95) {
@@ -107,7 +107,7 @@ function passageRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 51) {
-            temp3 = " Role pista!";
+            temp3 = " Pista! "+clueRandomizer();
         }
         passage += " A passagem está vazia além dos inimigos. Encontro difícil apropriado ao nível."+temp2+temp3;
     } else if (rndInt[3] > 94 && rndInt[3] < 99) {

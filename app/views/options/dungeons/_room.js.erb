@@ -58,7 +58,7 @@ function roomRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 76) {
-            temp += " Role uma pista!";
+            temp += " Pista! "+clueRandomizer();
         }
         room += " Encontro mortal de nível apropriado."+temp;
     } else if (rndInt[7] > 4 && rndInt[7] < 9) {
@@ -88,7 +88,7 @@ function roomRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 31) {
-            temp += " Role uma pista!";
+            temp += " Pista! "+clueRandomizer();
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 31) {
@@ -96,7 +96,7 @@ function roomRandomizer() {
         }
         room += " Encontro difícil de nível apropriado"+temp;
     } else if (rndInt[7] > 32 && rndInt[7] < 37) {
-        room += " NPC na sala investigando. Role pistas para descobrir o que eles estão investigando.";
+        room += " NPC na sala investigando. Confira as pistas para descobrir o que eles estão investigando. "+clueRandomizer();
     } else if (rndInt[7] > 36 && rndInt[7] < 41) {
         temp1 = minMaxRandomizer(1, 100);
         var temp = "";
@@ -116,7 +116,7 @@ function roomRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 31) {
-            temp += " Role uma pista!";
+            temp += " Pista! "+clueRandomizer();
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 11) {
@@ -133,7 +133,7 @@ function roomRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 31) {
-            temp += " Role uma pista!";
+            temp += " Pista! "+clueRandomizer();
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 21) {
@@ -182,7 +182,7 @@ function roomRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 31) {
-            temp += " Role uma pista!";
+            temp += " _Pista! "+clueRandomizer();
         }
         room += " Encontro fácil de nível apropriado."+temp;
     } else if (rndInt[7] > 88 && rndInt[7] < 93) {
