@@ -5,6 +5,7 @@ function passageRandomizer() {
     } else if (rndInt[1] === 2) {
         passage = "Passagem. A passagem vai 15 pés e termina em uma porta. "+roomRandomizer();
     } else if (rndInt[1] === 3) {
+        rndInt[5] = minMaxRandomizer(1, 100);
         passage = "Passagem. A passagem vai 30 pés e termina em escadas. "+stairRandomizer();
     } else if (rndInt[1] === 4) {
         passage = "Passagem. Passagem vira à esquerda 90 graus.";
@@ -33,8 +34,10 @@ function passageRandomizer() {
     } else if (rndInt[1] === 16) {
         passage = "Passagem. Passagem larga "+(minMaxRandomizer(1, 6)/2)*10+" pés.";
     } else if (rndInt[1] === 17) {
+        rndInt[5] = minMaxRandomizer(1, 100);
         passage = "Passagem. Abertura à esquerda, para uma escada. "+stairRandomizer();
     } else if (rndInt[1] === 18) {
+        rndInt[5] = minMaxRandomizer(1, 100);
         passage = "Passagem. Abertura à direita, para uma escada. "+stairRandomizer();
     } else if (rndInt[1] === 19) {
         temp1 = minMaxRandomizer(1, 100);

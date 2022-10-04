@@ -4,7 +4,7 @@ function stairRandomizer() {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
         if (temp1 < 3) {
-            rndInt[1] += 1;
+            rndInt[1] = minMaxRandomizer(1, 100);
             temp2 = "passagem. "+passageRandomizer();
         } else {
             temp2 = "sala. "+roomRandomizer();
@@ -31,7 +31,7 @@ function stairRandomizer() {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
         if (temp1 < 3) {
-            rndInt[1] += 1;
+            rndInt[1] = minMaxRandomizer(1, 100);
             temp2 = "passagem. "+passageRandomizer();
         } else {
             temp2 = "sala. "+roomRandomizer();
@@ -58,7 +58,7 @@ function stairRandomizer() {
         temp1 = minMaxRandomizer(1, 4);
         var temp2 = "";
         if (temp1 < 3) {
-            rndInt[1] += 1;
+            rndInt[1] = minMaxRandomizer(1, 100);
             temp2 = "passagem. "+passageRandomizer();
         } else {
             temp2 = "sala. "+roomRandomizer();
