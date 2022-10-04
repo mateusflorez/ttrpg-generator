@@ -1,0 +1,64 @@
+function clearingRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var clearing = "";
+    if (rand < 53) {
+        clearing = "Clareira natural, sem árvores. Algo está te observando das árvores? Role Perguntas/Respostas. Você percebe isso?";
+    } else if (rand > 52 && rand < 59) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 21) {
+            temp2 = " Pista!";
+        }
+        clearing = "Círculo druida contendo pedras em pé. Teste de Perguntas/Respostas para ver o que você consegue discernir."+temp2;
+    }  else if (rand > 58 && rand < 66) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 41) {
+            temp2 += " Pista!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 11) {
+            temp2 += " encontro médio de nível apropriado!";
+        }
+        clearing = "Totens e outros símbolos sinistros, possivelmente rituais sombrios, acontecem aqui."+temp2;
+    }  else if (rand > 65 && rand < 72) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 21) {
+            temp2 += " Encontro fácil de nível apropriado(fera). Se deixado sozinho, provavelmente só tomará uma bebida e sairá.";
+        }
+        clearing = "A clareira contém uma lagoa, bebedouro para a vida selvagem local."+ temp2;
+    }  else if (rand > 71 && rand < 78) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 41) {
+            temp2 += " Pista!";
+        }
+        clearing = "Acampamento abandonado. Faça testes de perguntas e respostas, testes de investigação para descobrir mais."+temp2;
+    }  else if (rand > 77 && rand < 84) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Amigável!";
+        } else {
+            temp2 += " Hostil!";
+        }
+        clearing = "Acampamento ativo. Teste de percepção, CD 8, para determinar se você ouve os habitantes antes de vê-los."+temp2;
+    }  else if (rand > 83 && rand < 90) {
+        clearing = "Magia em ação aqui - algum tipo de fenda dimensional? Faça testes de Perguntas/Respostas para ver o que está acontecendo aqui!";
+    }  else if (rand > 89 && rand < 96) {
+        clearing = "Estrutura presente na clareira. Role na tabela de Estruturas.";
+    }  else if (rand > 95 && rand < 99) {
+        clearing = "Reunião de Treant atualmente em andamento. Testes de Perguntas/Respostas / Carisma para interagir?";
+    }  else {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Amigável!";
+        } else {
+            temp2 += " Hostil!";
+        }
+        clearing = "Clareira mágica. Um mago ou algum outro usuário de magia (ou criaturas feéricas) tem uma residência aqui."+temp2+" Testes de Perguntas/Respostas para determinar a interação. Talvez eles tenham uma missão para você!"
+    }
+    return clearing;
+}

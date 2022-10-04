@@ -1,9 +1,9 @@
 if (rndInt[1] < 53) {
   res = "Floresta contínua.";
 } else if (rndInt[1] > 52 && rndInt[1] < 57) {
-  res = "Pequena clareira.";
+  res = "Pequena clareira. "+clearingRandomizer();
 } else if (rndInt[1] > 56 && rndInt[1] < 61) {
-  res = "Grande clareira.";
+  res = "Grande clareira. "+clearingRandomizer();
 } else if (rndInt[1] > 60 && rndInt[1] < 65) {
   res = "Ravina arborizada pequena.";
 } else if (rndInt[1] > 64 && rndInt[1] < 69) {
@@ -13,7 +13,7 @@ if (rndInt[1] < 53) {
 } else if (rndInt[1] > 72 && rndInt[1] < 77) {
   res = "Lago.";
 } else if (rndInt[1] > 76 && rndInt[1] < 81) {
-  res = "Área derrubada.";
+  res = "Área derrubada. "+felledRandomizer();
 } else if (rndInt[1] > 80 && rndInt[1] < 85) {
   res = "Afloramento rochoso.";
 } else if (rndInt[1] > 84 && rndInt[1] < 89) {
