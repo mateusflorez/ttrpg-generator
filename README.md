@@ -17,7 +17,13 @@
 </table>
 
 ## Functionalities:
-+ D&D content generator based on [The Solo Adventurer's Toolbox](https://www.dmsguild.com/product/252355/The-Solo-Adventurers-Toolboxhttps://www.dmsguild.com/product/252355/The-Solo-Adventurers-Toolbox)
++ D&D content generator based on [The Solo Adventurer's Toolbox](https://www.dmsguild.com/product/252355/The-Solo-Adventurers-Toolboxhttps://www.dmsguild.com/product/252355/The-Solo-Adventurers-Toolbox).
++ Answer generator.
++ Dice roller.
++ Trip generator (Climate, Encounter, Settlement, Disturbance).
++ Encounter generator (Wild, Urban, Dungeon).
++ Mission generator (Mission, Source).
++ Dungeon generator (Dungeon, areas).
 
 ## Instalation instructions:
 ```
