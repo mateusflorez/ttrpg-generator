@@ -1,11 +1,11 @@
 if (rndInt[1] < 57) {
   res = "Pradaria contínua";
 } else if (rndInt[1] > 56 && rndInt[1] < 61) {
-  res = "Colinas.";
+  res = "Colinas. "+hillRandomizer();
 } else if (rndInt[1] > 60 && rndInt[1] < 65) {
   res = "Pântano.";
 } else if (rndInt[1] > 64 && rndInt[1] < 69) {
-  res = "Barranco.";
+  res = "Ravina. "+gullyRandomizer();
 } else if (rndInt[1] > 68 && rndInt[1] < 73) {
   res = "Via navegável.";
 } else if (rndInt[1] > 72 && rndInt[1] < 77) {

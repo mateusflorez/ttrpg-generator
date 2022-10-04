@@ -1,9 +1,9 @@
 if (rndInt[1] < 61) {
   res = "Continuação do terreno litorâneo.";
 } else if (rndInt[1] > 60 && rndInt[1] < 66) {
-  res = "Colinas.";
+  res = "Colinas. "+hillRandomizer();
 } else if (rndInt[1] > 65 && rndInt[1] < 71) {
-  res = "Barranco.";
+  res = "Ravina. "+gullyRandomizer();
 } else if (rndInt[1] > 70 && rndInt[1] < 76) {
   res = "Via navegável.";
 } else if (rndInt[1] > 75 && rndInt[1] < 81) {

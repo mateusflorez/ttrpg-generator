@@ -1,0 +1,55 @@
+function gullyRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var gully = "";
+    if (rand < 51) {
+        gully = "Ravina padrão.";
+    } else if (rand > 50 && rand < 58) {
+        gully = "Ravina com uma via navegável. Rolar na mesa de hidrovias";
+    }  else if (rand > 57 && rand < 65) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 26) {
+            temp2 += " Encontro fácil de nível apropriado!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 16) {
+            temp2 += " Cavernas levam a túneis!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 11) {
+            temp2 += " Você encontra um NPC!";
+        }
+        gully = "Barranco rochoso contendo cavernas. Testes de Perguntas/Respostas e investigação para investigar cavernas."+temp2;
+    }  else if (rand > 64 && rand < 72) {
+        gully = "Ravina que parece ter sido causada recentemente, talvez por um terremoto ou outro desastre natural... ou talvez por uma criatura enorme! Testes de Perguntas/Respostas ou natureza para discernir a causa";
+    }  else if (rand > 71 && rand < 79) {
+        gully = "Barranco seco contendo os ossos de muitos animais. Uma espécie de cemitério. Testes de natureza e Perguntas/Respostas para descobrir mais.";
+    }  else if (rand > 78 && rand < 86) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 26) {
+            temp2 += " Encontro fácil de nível apropriado!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 26) {
+            temp2 += " Pista!";
+        }
+        gully = "Ravina densamente arborizada, um oásis para uma determinada colônia de criaturas. Testes de natureza e Perguntas/Respostas para descobrir mais. Eles ainda estão aqui?"+temp2;
+    }  else if (rand > 85 && rand < 93) {
+        gully = "Ravina com evidência de mineração - uma operação de mineração abandonada. As minas podem levar muito longe no subsolo. Vá para o Gerador de Masmorras Aleatórias.";
+    }  else {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Amigável!";
+        } else {
+            temp2 += " Hostil!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 26) {
+            temp2 += " Pista!";
+        }
+        gully = "Ravina arborizada mágica. Um druida, ou mago, ou criaturas feéricas vivem aqui!"+temp2;
+    }
+    return gully;
+}
