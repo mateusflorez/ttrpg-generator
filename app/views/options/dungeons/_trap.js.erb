@@ -74,21 +74,21 @@ function trapRandomizer() {
     rand = minMaxRandomizer(1, 100);
     rand1 = minMaxRandomizer(1, 6);
     if (rand < 6) {
-        trap += "Dano: "+rend1+" X Nível do personagem -3 (mínimo 1)";
+        trap += "Dano: "+rand1+" X Nível do personagem -3 (mínimo 1)";
     } else if (rand > 6 && rand < 13) {
-        trap += "Dano: "+rend1+" X Nível do personagem -2 (mínimo 1)";
+        trap += "Dano: "+rand1+" X Nível do personagem -2 (mínimo 1)";
     } else if (rand > 12 && rand < 27) {
-        trap += "Dano: "+rend1+" X Nível do personagem -1 (mínimo 1)";
+        trap += "Dano: "+rand1+" X Nível do personagem -1 (mínimo 1)";
     } else if (rand > 26 && rand < 45) {
-        trap += "Dano: "+rend1+" X Nível do personagem";
+        trap += "Dano: "+rand1+" X Nível do personagem";
     } else if (rand > 44 && rand < 70) {
-        trap += "Dano: "+rend1+" X Nível do personagem +1";
+        trap += "Dano: "+rand1+" X Nível do personagem +1";
     } else if (rand > 69 && rand < 89) {
-        trap += "Dano: "+rend1+" X Nível do personagem +2";
+        trap += "Dano: "+rand1+" X Nível do personagem +2";
     } else if (rand > 88 && rand < 94) {
-        trap += "Dano: Nível do personagem X 1,5 X "+rend1;
+        trap += "Dano: Nível do personagem X 1,5 X "+rand1;
     } else {
-        trap += "Dano: Nível do personagem X 2 X "+rend1;
+        trap += "Dano: Nível do personagem X 2 X "+rand1;
     }
     return trap;
 }
