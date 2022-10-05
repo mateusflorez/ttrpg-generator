@@ -1,0 +1,56 @@
+function lakeRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var lake = "";
+    if (rand < 51) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 41) {
+            temp2 += " Encontro fácil de nível apropriado!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 11) {
+            temp2 += " NPC!";
+        }
+        lake = "Lago de tamanho médio, não marcado no mapa. Situado em terreno amplo."+temp2;
+    } else if (rand > 50 && rand < 56) {
+        lake = "Lago de tamanho médio, pequeno povoado nas suas margens. Role para assentamento.";
+    }  else if (rand > 55 && rand < 61) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 26) {
+            temp2 += " Encontro médio de nível apropriado!";
+        }
+        lake = "Pequeno lago / lagoa / bebedouro. Perguntas/Respostas para discernir se alguma coisa se esconde aqui."+temp2;
+    }  else if (rand > 60 && rand < 66) {
+        lake = "Lago grande e não mapeado, com um curso d'água saindo dele. Poderia ser montável em uma canoa. Teste de Sobrevivência CD 19 para criar uma canoa se houver árvores por perto.";
+    }  else if (rand > 65 && rand < 71) {
+        lake = "Lago de tamanho médio, pequeno povoado nas suas margens. Role para assentamento adicionando 20 ao lançamento.";
+    }  else if (rand > 70 && rand < 76) {
+        lake = "Grande lago não mapeado, com pequenas cadeias de montanhas nas margens. Role na mesa de cordilheira.";
+    }  else if (rand > 75 && rand < 81) {
+        lake = "Grande lago com pequenos bosques em suas margens. Rolar na mesa de bosque pequeno.";
+    }  else if (rand > 80 && rand < 86) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 26) {
+            temp2 += " Pista!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 41) {
+            temp2 += " NPC!";
+        }
+        lake = "Lagos de tamanho médio com muitos barcos. Testes de Perguntas/Respostas para determinar mais."+temp2;
+    }  else if (rand > 85 && rand < 91) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 26) {
+            temp2 += " Pista!";
+        }
+        lake = "Pequeno lago ou lagoa, serve de covil para alguma criatura aquática."+temp2;
+    }  else if (rand > 90 && rand < 96) {
+        lake = "Lago de tamanho médio, peixes pulando. Teste de Sobrevivência CD 15 para pegar um peixe.";
+    }  else {
+        lake = "Piscina sagrada de algum tipo. Mágico por natureza. Faça testes de Perguntas/Respostas para discernir se algum ritual está acontecendo / NPCs de usuários de magia nas proximidades.";
+    }
+    return lake;
+}

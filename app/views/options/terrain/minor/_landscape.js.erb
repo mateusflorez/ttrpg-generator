@@ -1,0 +1,46 @@
+function landscapeRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var landscape = "";
+    if (rand === 1) {
+        landscape = "Buraco.";
+    } else if (rand === 2) {
+        landscape = "Fenda causada pelo terremoto.";
+    } else if (rand === 3) {
+        landscape = "Geiser / Fontes Termais.";
+    } else if (rand === 4) {
+        landscape = "Deslizamento de terra.";
+    } else if (rand === 5) {
+        landscape = "Cascata.";
+    } else if (rand === 6) {
+        landscape = "Floresta dentro de Caverna.";
+    } else if (rand === 7) {
+        landscape = "Vulcão.";
+    } else if (rand === 8) {
+        landscape = "Lago.";
+    } else if (rand === 9) {
+        landscape = "Formações rochosas interessantes (causadas pelo fluxo de lava?).";
+    } else if (rand === 10) {
+        landscape = "Túnel louco.";
+    } else if (rand === 11) {
+        landscape = "Cratera (meteoro?).";
+    } else if (rand === 12) {
+        landscape = "Poço de Piche.";
+    } else if (rand === 13) {
+        landscape = "Nascente do rio / nascente / rio indo para o subsolo.";
+    } else if (rand === 14) {
+        landscape = "Areia movediça (verificação de percepção para perceber?).";
+    } else if (rand === 15) {
+        landscape = "Crânio / formação de rosto em rochas.";
+    } else if (rand === 16) {
+        landscape = "Rochas em forma de criatura. Vítima de Basilisco?";
+    } else if (rand === 17) {
+        landscape = "Floresta petrificada.";
+    } else if (rand === 18) {
+        landscape = "Um pilar solitário com runas.";
+    } else if (rand === 19) {
+        landscape = "Árvore suspensa, com laço.";
+    } else {
+        landscape = minMaxRandomizer(1, 4)+"marcos de pedra, dispostos simetricamente.";
+    }
+    return landscape;
+}
