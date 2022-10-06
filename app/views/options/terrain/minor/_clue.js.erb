@@ -1,0 +1,213 @@
+function clueRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var clue = "";
+    var temp2 = "";
+    if (rand === 1) {
+        clue = "Pista: "+minMaxRandomizer(1, 4)+" cadáveres, besta.";
+    } else if (rand === 2) {
+        clue = "Pista: "+minMaxRandomizer(1, 4)+" cadáveres, humanóide.";
+    }  else if (rand === 3) {
+        clue = "Pista: Membro decepado.";
+    }  else if (rand === 4) {
+        clue = "Pista: Extremidade cortada.";
+    }  else if (rand === 5) {
+        clue = "Pista: Buracos cavados no chão em uma variedade de locais.";
+    }  else if (rand === 6) {
+        clue = "Pista: Odor estranho no ar.";
+    }  else if (rand === 7) {
+        clue = "Pista: Você encontra um monumento bizarro e assustador, como um totem feito de cadáveres, ou algo igualmente assustador.";
+    }  else if (rand === 8) {
+        clue = "Pista: Um sinal tosco é fincado no chão, com a cabeça de um humanóide da mesma espécie que você em cima. Em qualquer idioma, as palavras “Aviso! Volte ou morra!” são rabiscados espalhafatosamente no pedaço de madeira que forma o sinal.";
+    }  else if (rand === 9) {
+        clue = "Pista: Rastros da criatura que você está procurando no momento.";
+    }  else if (rand === 10) {
+        clue = "Pista: Você encontra um NPC que viu a criatura ou alvo antes.";
+    }  else if (rand === 11) {
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 51) {
+            temp2 += " Eles o feriram e foram feridos por ele.";
+        } else {
+            temp2 += " Eles foram feridos e fugiram para salvar suas vidas.";
+        }
+        clue = "Pista: Você encontra um NPC que entrou em uma briga com o alvo."+temp2;
+    }  else if (rand === 12) {
+        clue = "Pista: Uma área queimada do solo, como uma bola de fogo ou explosão aconteceu aqui.";
+    }  else if (rand === 13) {
+        clue = "Pista: Besta ferida.";
+    }  else if (rand === 14) {
+        clue = "Pista: Excrementos de algum animal estranho.";
+    }  else if (rand === 15) {
+        clue = "Pista: Acampamento abandonado.";
+    }  else if (rand === 16) {
+        clue = "Pista: Os pertences do aventureiro, respingados de sangue.";
+    }  else if (rand === 17) {
+        clue = "Pista: Um laço pendurado em uma árvore, mas nenhum corpo.";
+    }  else if (rand === 18) {
+        clue = "Pista: Uma armadilha previamente acionada.";
+    }  else if (rand === 19) {
+        clue = "Pista: Trilhas de vagão saindo do caminho atual em que você está.";
+    }  else if (rand === 20) {
+        clue = "Pista: Marcas de espada no tronco de uma árvore.";
+    }  else if (rand === 21) {
+        clue = "Pista: Marcas rabiscadas às pressas no chão / no tronco de uma árvore... alguém tentando deixar instruções? Ou é um aviso? Existem palavras? Se sim, em que idioma?";
+    }  else if (rand === 22) {
+        clue = "Pista: Rabiscado em uma pedra: “Eu os encontrei. Continue indo para o leste, você vai me alcançar eventualmente.”";
+    }  else if (rand === 23) {
+        clue = "Pista: Uma pedra com runas antigas inscritas.";
+    }  else if (rand === 24) {
+        clue = "Pista: Uma pequena ruína, como de um santuário ou pequeno templo. Inscrições/graffiti interessantes.";
+    }  else if (rand === 25) {
+        clue = "Pista: Arma quebrada.";
+    }  else if (rand === 26) {
+        clue = "Pista: Moeda antiga.";
+    }  else if (rand === 27) {
+        clue = "Pista: Um manto do tamanho de um halfling / gnomo, mas a borda inferior está rasgada e rasgada.";
+    }  else if (rand === 28) {
+        clue = "Pista: Um diário incompleto. O que há nele? As entradas param abruptamente";
+    }  else if (rand === 29) {
+        clue = "Pista: Um mapa de um labirinto";
+    }  else if (rand === 30) {
+        clue = "Pista: Um conjunto de pergaminho e 3 frascos de tinta. Todo o vermelho está esgotado.";
+    }  else if (rand === 31) {
+        clue = "Pista: Uma peruca de cabelo humano, qualquer cor.";
+    }  else if (rand === 32) {
+        clue = "Pista: Um cachimbo descartado com forte cheiro de tabaco, usado recentemente.";
+    }  else if (rand === 33) {
+        clue = "Pista: Vários galhos quebrados - parece que alguém ou algo atacou de forma imprudente por aqui. Se não estiver na floresta, você notará grandes áreas de terra revolvidas.";
+    }  else if (rand === 34) {
+        clue = "Pista: Um pôster que parece ter sido arrancado de uma parede de uma cidade próxima. Poster de procurado? Aventureiros queriam? Talvez uma fonte de busca.";
+    }  else if (rand === 35) {
+        clue = "Pista: Um anel de chaves, aparentemente de origem goblin ou orc.";
+    }  else if (rand === 36) {
+        clue = "Pista: Uma caixa de joias vazia, mas ornamentada.";
+    }  else if (rand === 37) {
+        clue = "Pista: Um saco de provisões, rasgado e espalhado.";
+    }  else if (rand === 38) {
+        clue = "Pista: Uma bota descartada.";
+    }  else if (rand === 39) {
+        clue = "Pista: Uma boneca de criança.";
+    }  else if (rand === 40) {
+        clue = "Pista: Uma barra de ouro (aproximadamente 100 po) com as palavras “Barra de ouro imperial” gravadas no metal.";
+    }  else if (rand === 41) {
+        clue = "Pista: Um amuleto de ferro em forma de cobra comendo a si mesma.";
+    }  else if (rand === 42) {
+        clue = "Pista: Uma chave de prata em uma tanga de couro.";
+    }  else if (rand === 43) {
+        clue = "Pista: Um frasco que parece vazio, mas a tampa está travada e não pode ser aberta, não importa o quão forte você seja. Ele é fechado magicamente?";
+    }  else if (rand === 44) {
+        clue = "Pista: Uma árvore com a casca desgastada de um lado.";
+    }  else if (rand === 45) {
+        clue = "Pista: Um grande tufo de pelo de algum tipo de criatura.";
+    }  else if (rand === 46) {
+        clue = "Pista: O que parece ser uma grande pele de cobra.";
+    }  else if (rand === 47) {
+        clue = "Pista: Uma pilha perturbadoramente grande de cocô";
+    }  else if (rand === 48) {
+        clue = "Pista: Esta área está repleta de ossos de muitas criaturas diferentes.";
+    }  else if (rand === 49) {
+        clue = "Pista: Uma fogueira, fumegante, grande roedor em um espeto que é queimado até ficar crocante, não comestível.";
+    }  else if (rand === 50) {
+        clue = "Pista: Uma bússola, mas o vidro está quebrado.";
+    }  else if (rand === 51) {
+        clue = "Pista: Uma rocha com um alvo, cercada por uma massa de pedras de funda.";
+    }  else if (rand === 52) {
+        clue = "Pista: Grande quantidade de sangue respingado no chão/folhas nesta área.";
+    }  else if (rand === 53) {
+        clue = "Pista: Os restos de um bivaque construído naturalmente.";
+    }  else if (rand === 54) {
+        clue = "Pista: De longe, um uivo assustador.";
+    }  else if (rand === 55) {
+        clue = "Pista: Rabiscado em uma pedra em tinta vermelha, escrito grosseiramente em Comum: “Pare! Não vá mais longe se você valoriza sua vida!!”";
+    }  else if (rand === 56) {
+        clue = "Pista: Vários odres vazios e taças descartadas.";
+    }  else if (rand === 57) {
+        clue = "Pista: "+minMaxRandomizer(1, 10)+" flechas, de alta qualidade, todas saindo do chão nesta área.";
+    }  else if (rand === 58) {
+        clue = "Pista: Convite para um evento em uma cidade próxima.";
+    }  else if (rand === 59) {
+        clue = "Pista: Uma pequena estatueta de ônix de uma fera de algum tipo (escolha do jogador)";
+    }  else if (rand === 60) {
+        clue = "Pista: Um bosque de cogumelos grandes, mas a maioria deles foi pisoteada ou destruída.";
+    }  else if (rand === 61) {
+        clue = "Pista: Vários planos, como se fossem de uma carroça ou de um barco, suas extremidades queimadas.";
+    }  else if (rand === 62) {
+        clue = "Pista: Um medalhão com uma foto de uma fêmea humanóide dentro.";
+    }  else if (rand === 63) {
+        clue = "Pista: Uma pedra perfeitamente esférica. É natural? No entanto, definitivamente chama sua atenção.";
+    }  else if (rand === 64) {
+        clue = "Pista: Um livro sobre como aprender a língua subcomum.";
+    }  else if (rand === 65) {
+        clue = "Pista: Uma ficha de madeira com o símbolo de uma poderosa organização ou facção.";
+    }  else if (rand === 66) {
+        clue = "Pista: Marcas pioneiras.";
+    }  else if (rand === 67) {
+        clue = "Pista: Um frasco cheio de algum tipo de seiva de árvore. Na inspeção, você vê que foi coletado de uma determinada espécie de árvore que cresce nesta área (embora não seja comum).";
+    }  else if (rand === 68) {
+        clue = "Pista: Flechas de besta com penas pretas saindo de um tronco de árvore.";
+    }  else if (rand === 69) {
+        clue = "Pista: Uma espada do tamanho de uma criança.";
+    }  else if (rand === 70) {
+        clue = "Pista: Uma pequena bolsa de sementes.";
+    }  else if (rand === 71) {
+        clue = "Pista: Uma área de grama pressionada, como se um humanóide estivesse deitado aqui.";
+    }  else if (rand === 72) {
+        clue = "Pista: Uma barraca vazia e abandonada.";
+    }  else if (rand === 73) {
+        clue = "Pista: Uma runa, soletrada em pedras no chão.";
+    }  else if (rand === 74) {
+        clue = "Pista: Um pote de doces, meio vazio.";
+    }  else if (rand === 75) {
+        clue = "Pista: Um maxilar de uma criatura de algum tipo.";
+    }  else if (rand === 76) {
+        clue = "Pista: A lâmina quebrada de uma espada.";
+    }  else if (rand === 77) {
+        clue = "Pista: Marcas de espada em um tronco de árvore.";
+    }  else if (rand === 78) {
+        clue = "Pista: Uma bolsa de cinto cheia de moedas de prata de uma terra desconhecida.";
+    }  else if (rand === 79) {
+        clue = "Pista: Cerca de uma milha à frente, você vê abutres circulando no ar.";
+    }  else if (rand === 80) {
+        clue = "Pista: Uma cova recém-cavada, vazia.";
+    }  else if (rand === 81) {
+        clue = "Pista: Pira funerária. O que quer que foi queimado aqui agora é apenas cinzas.";
+    }  else if (rand === 82) {
+        clue = "Pista: Carrinho virado. Ninguém aqui, apenas alguns pertences aleatórios.";
+    }  else if (rand === 83) {
+        clue = "Pista: Um lobo (ou outro animal às vezes domesticado) começa a segui-lo. Parece abandonado, como se tivesse perdido seu mestre.";
+    }  else if (rand === 84) {
+        clue = "Pista: Um bosque de árvores frutíferas.";
+    }  else if (rand === 85) {
+        clue = "Pista: Ao longe, o som de uma pedra rolando pela floresta, árvores quebrando etc.";
+    }  else if (rand === 86) {
+        clue = "Pista: Fumaça subindo cerca de três quilômetros à frente. Muita fumaça, de um ponto específico.";
+    }  else if (rand === 87) {
+        clue = "Pista: Uma árvore de médio porte derrubada e colocada sobre um rio que está em plena vazão.";
+    }  else if (rand === 88) {
+        clue = "Pista: Cogumelos colhidos deitados em um toco para secar.";
+    }  else if (rand === 89) {
+        clue = "Pista: Musgo colhido disposto em uma área, possivelmente como uma cama.";
+    }  else if (rand === 90) {
+        clue = "Pista: Enorme teia de aranha com pertences humanóides presos a ela.";
+    }  else if (rand === 91) {
+        clue = "Pista: Vozes desencarnadas flutuam na brisa... o que estão dizendo?";
+    }  else if (rand === 92) {
+        clue = "Pista: Se por água, você vê a superfície se mexer. Se estiver em terra, você sente vibrações sob seus pés.";
+    }  else if (rand === 93) {
+        clue = "Pista: Cerca de 500 metros à frente, um bando de pássaros sobe de repente no ar como se algo os tivesse perturbado.";
+    }  else if (rand === 94) {
+        clue = "Pista: "+minMaxRandomizer(1, 4)+" cadáveres, todos sem cabeça.";
+    }  else if (rand === 95) {
+        clue = "Pista: Grandes faixas de inicialização na lama.";
+    }  else if (rand === 96) {
+        clue = "Pista: Barraco abandonado.";
+    }  else if (rand === 97) {
+        clue = "Pista: Criança humanóide perdida / traumatizada que não fala uma palavra.";
+    }  else if (rand === 98) {
+        clue = "Pista: Caverna vazia, recentemente habitada.";
+    }  else if (rand === 99) {
+        clue = "Pista: Uma ponte, lavada ou deliberadamente destruída / queimada.";
+    }  else {
+        clue = "Pista: Item mágico relevante para a missão. Role para item mágico";
+    }
+    return clue;
+}

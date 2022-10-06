@@ -1,0 +1,49 @@
+function settlementRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var settlement = "";
+    var temp2 = "";
+    if (rand < 53) {
+        settlement = "Aldeia. Situado em terreno amplo. Role Perguntas/Respostas para saber mais.";
+    } else if (rand > 52 && rand < 57) {
+        settlement = "Acampamento nômade.";
+    }  else if (rand > 56 && rand < 61) {
+        settlement = "Aldeia abandonada. Role Perguntas/Respostas para discernir a causa do abandono e também como há muito tempo foi abandonado.";
+    }  else if (rand > 60 && rand < 64) {
+        settlement = "Torre. Parece desabitado. Role Perguntas/Respostas para discernir se alguma coisa se esconde aqui.";
+    }  else if (rand > 63 && rand < 68) {
+        settlement = "Torre. Parece habitado. Role Perguntas/Respostas para discernir mais.";
+    }  else if (rand > 67 && rand < 72) {
+        settlement = "Acampamento de operários.";
+    }  else if (rand > 71 && rand < 75) {
+        settlement = "Aldeia, habitada. Assentamento fundado na indústria envolvente.";
+    }  else if (rand > 74 && rand < 79) {
+        settlement = "Aldeia, mas há algum tipo de aflição sobre os habitantes. Role Perguntas/Respostas para discernir mais.";
+    }  else if (rand > 78 && rand < 83) {
+        settlement = "Aldeia não mapeada, habitada. Assentamento fundado na indústria envolvente.";
+    }  else if (rand > 82 && rand < 87) {
+        settlement = "Aldeia, mas em discórdia/conflito. Role Perguntas/Respostas para discernir mais.";
+    }  else if (rand > 86 && rand < 91) {
+        settlement = "Cidade oculta / colônia humanóide. Uma boa quantidade de habitantes. Como eles permaneceram escondidos, e por quê? Role Perguntas/Respostas para discernir mais.";
+    }  else if (rand > 90 && rand < 95) {
+        settlement = "Aldeia de cabana de árvore.";
+    }  else {
+        temp1 = minMaxRandomizer(1, 6);
+        if (temp1 === 1) {
+            temp2 += "A cidade está aqui magicamente.";
+        } else if (temp1 === 2) {
+            temp2 += "Resultado de uma fenda dimensional.";
+        } else if (temp1 === 3) {
+            temp2 += "A cidade é ilusória, mas os habitantes ainda interagem com você.";
+        } else if (temp1 === 4) {
+            temp2 += "Cidade flutuante, suspensa por magia.";
+        } else {
+            temp2 += "A cidade é um paraíso para mortos-vivos.";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 51) {
+            temp2 += " Encontro difícil de nível apropriado.";
+        }
+        settlement = temp2+" Role Perguntas/Respostas para discernir mais."+temp3;
+    }
+    return settlement;
+}
