@@ -13,9 +13,9 @@ if (rndInt[1] < 57) {
 } else if (rndInt[1] > 76 && rndInt[1] < 81) {
   res = "Bosque pequeno.";
 } else if (rndInt[1] > 80 && rndInt[1] < 85) {
-  res = "Afloramento rochoso.";
+  res = "Afloramento rochoso. "+rockyoutcropRandomizer();
 } else if (rndInt[1] > 84 && rndInt[1] < 89) {
-  res = "Pequena cordilheira / Sopé.";
+  res = "Pequena cordilheira. "+mountainrangeRandomizer();
 } else if (rndInt[1] > 88 && rndInt[1] < 93) {
   res = "Assentamento Não Marcado.";
 } else if (rndInt[1] > 92 && rndInt[1] < 97) {

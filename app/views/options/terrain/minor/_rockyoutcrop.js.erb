@@ -1,0 +1,41 @@
+function rockyoutcropRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var rockyoutcrop = "";
+    if (rand < 53) {
+        rockyoutcrop = "Afloramento rochoso. Projetando-se acima do terreno abrangente.";
+    } else if (rand > 52 && rand < 59) {
+        rockyoutcrop = "Afloramento serve como ponto de observação para batedores humanóides. Teste de percepção CD 14 para ver se o seu personagem percebe. Perguntas/Respostas para discernir mais.";
+    }  else if (rand > 58 && rand < 66) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " estrutura!";
+        } else {
+            temp2 += " monumento!";
+        }
+        rockyoutcrop = "Se dimensionado, o PC pode encontrar uma estrutura ou monumento no topo desse recurso."+temp2;
+    }  else if (rand > 65 && rand < 72) {
+        rockyoutcrop = "Pequeno bosque no topo deste afloramento";
+    }  else if (rand > 71 && rand < 78) {
+        rockyoutcrop = "Afloramento rochoso é na verdade uma ilha no meio de um lago. "+lakeRandomizer();
+    }  else if (rand > 77 && rand < 84) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 26) {
+            temp2 += " Encontro médio de nível apropriado!";
+        }
+        rockyoutcrop = "Afloramento rochoso é na verdade uma variedade de grandes pedregulhos espalhados ao redor. Perguntas/Respostas para determinar mais. Como eles chegaram aqui?"+temp2;
+    }  else if (rand > 83 && rand < 90) {
+        rockyoutcrop = "Formação interessante de pedras em pé no topo do afloramento. Teste de Sobrevivência CD 12 para dimensionar este recurso e investigar mais.";
+    }  else if (rand > 89 && rand < 96) {
+        rockyoutcrop = "Um NPC está no topo deste afloramento e está chamando por você, chamando você para se juntar a eles lá em cima. Perguntas/Respostas para determinar mais.";
+    }  else {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Fiéis presentes.";
+        }
+        rockyoutcrop = "Afloramento foi moldado no rosto ou forma de um deus bem conhecido. Santuário no topo do afloramento? Perguntas/Respostas para determinar mais."+temp2;
+    }
+    return rockyoutcrop;
+}

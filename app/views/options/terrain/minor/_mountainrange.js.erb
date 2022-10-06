@@ -1,0 +1,53 @@
+function mountainrangeRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var mountainrange = "";
+    if (rand < 56) {
+        mountainrange = "Cordilheira pequena padrão, tamanho principalmente uniforme, sem grandes picos. Vai ter neve se for inverno ou próximo ao inverno. Teste de Sobrevivência CD 16 em escalada (equipamento de escalada também é necessário).";
+    } else if (rand > 55 && rand < 61) {
+        mountainrange = "Pequena cordilheira com alguns grandes picos. Vai ter neve se for inverno ou próximo ao inverno. Teste de Sobrevivência CD 16 em escalada (equipamento de escalada também é necessário).";
+    }  else if (rand > 60 && rand < 66) {
+        mountainrange = "Pequena cordilheira que parece possuir uma grande quantidade de cavernas. Cavernas podem levar a túneis / masmorras.";
+    }  else if (rand > 65 && rand < 71) {
+        mountainrange = "A cordilheira parece ser o lar de uma colônia / assentamento de algum tipo. Anão? Algum tipo de criatura da montanha. Role assentamento.";
+    }  else if (rand > 70 && rand < 76) {
+        mountainrange = "Pequena serra coberta por floresta. Role bosque pequeno.";
+    }  else if (rand > 75 && rand < 81) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Encontro difícil de nível apropriado!";
+        }
+        mountainrange = "Pequena serra, acidentada e perigosa, parcialmente arborizada. Águias gigantes e afins."+temp2;
+    }  else if (rand > 80 && rand < 86) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 71) {
+            temp2 += " Encontro difícil de nível apropriado!";
+        }
+        mountainrange = "Bandidos usando essas montanhas como esconderijo. Mas o seu personagem sabe? Percepção CD 18 para discernir."+temp2;
+    }  else if (rand > 85 && rand < 91) {
+        mountainrange = "Pequena cordilheira à beira do lago. "+lakeRandomizer();
+    }  else if (rand > 90 && rand < 96) {
+        mountainrange = "Pequena cadeia de montanhas com colônia de gigantes (ou testes de perguntas/respostas para saber mais, talvez outros humanóides)!";
+    }  else {
+        temp1 = minMaxRandomizer(1, 8);
+        var temp2 = "";
+        if (temp1 === 1) {
+            temp2 += "mosteiro";
+        } else if (temp1 === 2) {
+            temp2 += "torre do mago";
+        } else if (temp1 === 3) {
+            temp2 += "cidade oculta";
+        } else if (temp1 === 4) {
+            temp2 += "comunidade de druidas";
+        } else if (temp1 === 5) {
+            temp2 += "reino secreto dos anões";
+        } else if (temp1 === 6) {
+            temp2 += "reino secreto dos gnomos";
+        } else {
+            temp2 += "cidadela para a ordem de um assassino";
+        }
+        mountainrange = "Pequena cadeia de montanhas contendo um(a) "+temp2+". Testes de Perguntas/Respostas para determinar mais";
+    }
+    return mountainrange;
+}
