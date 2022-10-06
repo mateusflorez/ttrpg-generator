@@ -1,0 +1,54 @@
+function woodRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var wood = "";
+    if (rand < 56) {
+        wood = "Tipo de bosque padrão para esta área.";
+    } else if (rand > 55 && rand < 61) {
+        wood = "Árvores mortas, como se por alguma doença misteriosa. Use testes de Perguntas/Respostas para ver se você pode determinar a natureza da aflição.";
+    }  else if (rand > 60 && rand < 66) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 26) {
+            temp2 += " Pista!";
+        }
+        wood = "Bosque antigo, árvores retorcidas"+temp2;
+    }  else if (rand > 65 && rand < 71) {
+        wood = "Bosque sereno, madeira silvestre. Testes de Perguntas/Respostas para verificar se há sinais de vida.";
+    }  else if (rand > 70 && rand < 76) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Encontro difícil adequado ao nível.";
+        }
+        wood = "Bosque escura e denso, cheio de ameaças."+temp2;
+    }  else if (rand > 75 && rand < 71) {
+        wood = "Bosque que está em processo de derrubada para madeira. Testes de perguntas/respostas para determinar quem está derrubando e por quê.";
+    }  else if (rand > 80 && rand < 86) {
+        wood = "Bosque que foi devastada pelo fogo florestal. Testes de Perguntas/Respostas para determinar a causa do incêndio.";
+    }  else if (rand > 85 && rand < 91) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Pista!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 36) {
+            temp2 += " Encontro médio adequado ao nível.";
+        }
+        wood = "Bosque no qual um bando de humanóides invasores está atualmente escondido."+temp2;
+    }  else if (rand > 90 && rand < 96) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 11) {
+            temp2 += " Pista!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 26) {
+            temp2 += " Encontro médio adequado ao nível.";
+        }
+        wood = "Bosque com uma clareira contendo totem / pedras de pé"+temp2;
+    }  else {
+        wood = "Bosque habitado por assentamentos humanóides, como elfos, gnomos, halflings. Testes de Perguntas/Respostas para determinar se você os conhece.";
+    }
+    return wood;
+}

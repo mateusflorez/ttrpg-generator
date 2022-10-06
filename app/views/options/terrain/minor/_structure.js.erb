@@ -1,0 +1,162 @@
+function structureRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var structure = "";
+    if (rand < 5) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 11) {
+            temp2 += " Habitada.";
+        }
+        structure = "Mina."+temp2;
+    } else if (rand > 4 && rand < 9) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 31) {
+            temp2 += " Assombrado/morto-vivo.";
+        }
+        structure = "Cemitério / Tumba."+temp2;
+    }  else if (rand > 8 && rand < 13) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 31) {
+            temp2 += " Deserto (com possíveis habitantes monstros).";
+        }
+        structure = "Pequeno castelo / fortaleza."+temp2;
+    }  else if (rand > 12 && rand < 17) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Habitada.";
+        }
+        structure = "Mansão."+temp2;
+    }  else if (rand > 16 && rand < 21) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 91) {
+            temp2 += " Habitada.";
+        }
+        structure = "Mosteiro."+temp2;
+    }  else if (rand > 20 && rand < 25) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Habitado.";
+        }
+        structure = "Santuário / Templo."+temp2;
+    }  else if (rand > 24 && rand < 29) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Habitada.";
+        }
+        structure = "Torre de vigia."+temp2;
+    }  else if (rand > 28 && rand < 33) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 81) {
+            temp2 += " Habitada.";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 6) {
+            temp2 += " Atualmente sob ataque!";
+        }
+        structure = "Casa de fazenda."+temp2;
+    }  else if (rand > 32 && rand < 37) {
+        structure = "Cerca. Teste de Perguntas/Respostas / teste de natureza para determinar seu propósito";
+    }  else if (rand > 36 && rand < 41) {
+        structure = "Moinho de vento.";
+    }  else if (rand > 40 && rand < 45) {
+        structure = "Moinho de água. Rolar hidrovia";
+    }  else if (rand > 44 && rand < 49) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Caverna / túnel escondido na parte inferior..";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 31) {
+            temp2 += " Pista!";
+        }
+        structure = "Poço velho."+temp2;
+    }  else if (rand > 48 && rand < 53) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 71) {
+            temp2 += " Habitada.";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 41) {
+            temp2 += " Pista!";
+        }
+        structure = "Cabana / Caverna do Eremita."+temp2;
+    }  else if (rand > 54 && rand < 57) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 91) {
+            temp2 += " Habitada.";
+        }
+        structure = "Taverna solitária / pousada. Perguntas/Respostas para discernir mais."+temp2;
+    }  else if (rand > 56 && rand < 61) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += "Cabana de caça.";
+        } else {
+            temp2 += "Cabana de Pesca.";
+        }
+        structure = temp2+" Pode conter suprimentos básicos. Teste de Perguntas/Respostas para determinar.";
+    }  else if (rand > 60 && rand < 65) {
+        structure = "Esconderijo / Bunker. Teste de percepção CD 16 para notar. Se estiver em terreno familiar/favorecido, tire vantagem.";
+    }  else if (rand > 64 && rand < 69) {
+        structure = "Parada para correios/comerciante de cavalos. Teste de Perguntas/Respostas para discernir mais.";
+    }  else if (rand > 68 && rand < 73) {
+        structure = "Campo de treinamento. Teste de Perguntas/Respostas para discernir mais.";
+    }  else if (rand > 72 && rand < 77) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += "Hidrovia pequena.";
+        } else if (temp1 > 50 && temp1 < 76) {
+            temp2 += "Hidrovia média.";
+        } else {
+            temp2 += "Hidrovia grande.";
+        }
+        structure = temp2+" Role hidrovias.";
+    }  else if (rand > 76 && rand < 81) {
+        structure = "Ponte média. Role hidrovias.";
+    }  else if (rand > 80 && rand < 85) {
+        structure = "Ponte grande. Role hidrovias.";
+    }  else if (rand > 84 && rand < 89) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 81) {
+            temp2 += " Habitado.";
+        } else {
+            temp2 += " Habitado, porém não por humanoides...";
+        }
+        structure = "Grande Castelo / Fortaleza."+temp2;
+    }  else if (rand > 88 && rand < 93) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 11) {
+            temp2 += " Encontro mortal adequado ao nível.";
+        } else if (temp1 > 10 && temp1 < 61) {
+            temp2 += " Encontro difícil adequado ao nível.";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 61) {
+            temp2 += " Pista!";
+        }
+        structure = "Ruínas."+temp2;
+    }  else if (rand > 92 && rand < 97) {
+        structure = "Sepulturas. O que está por baixo?";
+    }  else {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 81) {
+            temp2 += " Amigável.";
+        }
+        structure = "Torre de feiticeiro. Habitado."+temp2;
+    }
+    return structure;
+}
