@@ -1,0 +1,47 @@
+function minorswampRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var minorswamp = "";
+    var temp2 = "";
+    if (rand < 51) {
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 26) {
+            temp2 += " Encontro fácil de nível apropriado.";
+        }
+        minorswamp = "pântano padrão. Terreno difícil (meio movimento)."+temp2;
+    } else if (rand > 50 && rand < 58) {
+        minorswamp = "Pântano espesso e denso, quase impossível de atravessar, estendendo-se em todas as direções para a frente. Terreno extremamente difícil, movimento desacelerado para um quarto do normal.";
+    }  else if (rand > 57 && rand < 65) {
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 51) {
+            temp2 += " Encontro difícil de nível apropriado.";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 31) {
+            temp2 += " Pista!";
+        }
+        minorswamp = "Pântano irregular com áreas secas. Área perfeita para bandidos ou invasores terem um acampamento."+temp2;
+    }  else if (rand > 64 && rand < 72) {
+        minorswamp = "Zona húmida contendo muitas lagoas e uma rede de vias navegáveis. Pode precisar de um pequeno barco para atravessar. Teste de sobrevivência, CD 19, para criar um pequeno caiaque. Caso contrário, pode ser necessário dar a volta, adicionando tempo de viagem.";
+    }  else if (rand > 71 && rand < 79) {
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 11) {
+            temp2 += " Pista!";
+        }
+        minorswamp = "Pântano escuro e misterioso, com uma aura sobrenatural. Algo maligno se esconde aqui... Testes de Perguntas/Respostas para determinar o quê!"+temp2;
+    }  else if (rand > 78 && rand < 86) {
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 51) {
+            temp2 += " Encontro difícil de nível apropriado.";
+        }
+        minorswamp = "Uma terra esquecida pelo tempo! Pântano antigo, pequena parte de um deserto mais primitivo que estava aqui antes."+temp2;
+    }  else if (rand > 85 && rand < 93) {
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 51) {
+            temp2 += " Encontro com fadas.";
+        }
+        minorswamp = "Oásis feérico. Teste de Sabedoria (CD 16) ou você fica totalmente perdido."+temp2;
+    }  else {
+        minorswamp = "Pântano habitado por humanóides que desejam permanecer escondidos do mundo. Testes de Perguntas/Respostas para determinar se você os conhece.";
+    }
+    return minorswamp;
+}

@@ -1,0 +1,67 @@
+function waterwayRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var waterway = "";
+    var temp2 = "";
+    if (rand < 51) {
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 16) {
+            temp2 += " Cachoeira nas proximidades.";
+        }
+        waterway = "Córrego/rio que atravessa terrenos amplos."+temp2;
+    } else if (rand > 50 && rand < 56) {
+        waterway = "Rio um pouco maior, pode ser difícil de navegar. Teste de sobrevivência, CD 12 para navegar. Em uma falha você perde 1d4 bens perecíveis a jusante e fica encharcado. Se estiver frio, talvez seja necessário parar e fazer uma fogueira para secar.";
+    }  else if (rand > 55 && rand < 61) {
+        waterway = "Algum tipo de hidrovia artificial, talvez um canal de irrigação? Testes de Perguntas/Respostas para discernir o propósito";
+    }  else if (rand > 60 && rand < 66) {
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 51) {
+            temp2 += " Pista!";
+        } else {
+            temp2 += " Apenas um ramo.";
+        }
+        waterway = "Fluxo profundo, mas estreito. Você vê algo flutuando! Teste de destreza para pegá-lo."+temp2;
+    }  else if (rand > 65 && rand < 71) {
+        waterway = "Rio grande e não mapeado. Poderia ser montável em canoa. Teste de Sobrevivência CD 19 para criar barco (se estiver em floresta ou árvores próximas). Testes de Perguntas/Respostas e teste de História CD 12 para discernir mais sobre este rio.";
+    }  else if (rand > 70 && rand < 76) {
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 51) {
+            temp2 += " Encontro médio de nível apropriado.";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 26) {
+            temp2 += " Pista!";
+        }
+        waterway = "Rio considerável com áreas de lagoa. Provavelmente muito bom para pescar ou nadar."+temp2;
+    }  else if (rand > 75 && rand < 81) {
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 26) {
+            temp2 += " Encontro fácil de nível apropriado.";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 36) {
+            temp2 += " Assentamento não marcado nas proximidades.";
+        }
+        waterway = "Rio grande e não mapeado, atravessado por uma ponte. Teste de Perguntas/Respostas para discernir quem construiu a ponte e para qual propósito"+temp2;
+    }  else if (rand > 80 && rand < 86) {
+        waterway = "Rio sinuoso com cais onde são amarrados pequenos barcos. Barqueiro? Testes de Perguntas/Respostas para determinar a finalidade dos barcos.";
+    }  else if (rand > 85 && rand < 91) {
+        waterway = "Este parece ser um canal de drenagem para um assentamento próximo. Role para assentamento não marcado.";
+    }  else if (rand > 90 && rand < 96) {
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 26) {
+            temp2 += " Fogem ao se aproximar.";
+        }
+        waterway = "Humanóides ou fadas (elfos? dríades?) brincando no água."+temp2;
+    }  else {
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 21) {
+            temp2 += " Saque!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 41) {
+            temp2 += " Pista!";
+        }
+        waterway = "Riacho raso... o que é isso que você vê lá entre os seixos?"+temp2;
+    }
+    return waterway;
+}
