@@ -1,0 +1,51 @@
+function oasisRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var oasis = "";
+    if (rand < 47) {
+        oasis = "Oásis com piscina de água refrescante no centro. Acampamento ideal. Bom lugar para um longo descanso, especialmente em um deserto.";
+    } else if (rand > 46 && rand < 53) {
+        oasis = "Ao alcançá-lo, você descobre que é uma miragem. Apenas desertos.";
+    }  else if (rand > 52 && rand < 59) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 31) {
+            temp2 += " Água envenenada, ou outra coisa.";
+        } else {
+            temp1 = minMaxRandomizer(1, 100);
+            if (temp1 < 51) {
+            temp2 += " Efeito fávorável. (Efeito de um descanso longo, ou outra coisa.)";
+            }
+        }
+        oasis = "Oásis com piscina, mas a água não é muito boa. Testes de Perguntas/Respostas outeste de Natureza para discernir mais."+temp2;
+    }  else if (rand > 58 && rand < 65) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 91) {
+            temp2 += " Amigável.";
+        }
+        oasis = "Oasis contém uma caravana itinerante de mercadores do deserto. Você é capaz de se aproximar furtivamente para que eles não percebam você?"+temp2;
+    }  else if (rand > 64 && rand < 71) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Amigável.";
+        }
+        oasis = "Oasis contém um grande acampamento de nômades do deserto. Você é capaz de se aproximar furtivamente para que eles não percebam você?"+temp2;
+    }  else if (rand > 70 && rand < 77) {
+        oasis = "Oasis contém um santuário ou templo de alguns ordenar. Teste de Perguntas/Respostas / Investigação para descobrir mais.";
+    }  else if (rand > 76 && rand < 83) {
+        oasis = "Oasis contém uma ruína de algum tipo. Teste de Perguntas/Respostas / Investigação para descobrir mais.";
+    }  else if (rand > 82 && rand < 89) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Amigável.";
+        }
+        oasis = "Oásis com bandidos / invasores / outros aventureiros usando-o como ponto de parada. Você é capaz de se aproximar furtivamente para que eles não percebam você?"+temp2;
+    }  else if (rand > 88 && rand < 95) {
+        oasis = "Oásis com uma parada / cavalos frescos / suprimentos. Reabasteça recursos básicos! Teste de Perguntas/Respostas para discernir mais.";
+    }  else {
+        oasis = "Algum tipo de barreira mágica aqui... só poderia ser descrito como um protetor. Teste de Perguntas/Respostas para discernir a natureza da barreira.";
+    }
+    return oasis;
+}

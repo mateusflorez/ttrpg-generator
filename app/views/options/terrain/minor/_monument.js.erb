@@ -1,0 +1,95 @@
+function monumentRandomizer() {
+    rand = minMaxRandomizer(1, 100);
+    var monument = "";
+    if (rand === 1) {
+        monument = "Pedras em pé / Obeliscos / Grandes esculturas em pedra. Perguntas/Respostas para discernir mais. Pode ter runas inscritas.";
+    } else if (rand === 2) {
+        monument = "Monte de carvão. Testes de Perguntas/Respostas para determinar o que está sendo queimado aqui? Orcs?";
+    } else if (rand === 3) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 26) {
+            temp2 += " Encontro fácil de nível apropriado!";
+        }
+        monument = "Totem tribal. Perguntas/Respostas para determinar quem está por perto, se houver."+temp2;
+    } else if (rand === 4) {
+        monument = "Santuário Pequeno. Perguntas/Respostas para determinar deus a quem é dedicado e também se atualmente é atendido.";
+    } else if (rand === 5) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Assentamento não marcado!";
+        }
+        temp1 = minMaxRandomizer(1, 100);
+        if (temp1 < 11) {
+            temp2 += " Pista!";
+        }
+        monument = "Sinal para mostrar assentamentos próximos.";
+    } else if (rand === 6) {
+        monument = "Rosto de penhasco com rostos esculpidos de deuses. Perguntas/Respostas para determinar deus a quem é dedicado e também se atualmente é atendido.";
+    } else if (rand === 7) {
+        monument = "Estátua do antigo líder. Testes de Perguntas/Respostas ou /História para discernir mais";
+    } else if (rand === 8) {
+        monument = "Estátua do famoso aventureiro. Alguma coisa escondida aqui?";
+    } else if (rand === 9) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 71) {
+            temp2 += " guardado por tribos / bárbaros.";
+        }
+        monument = "Árvore significativa / tribalmente importante ou outra característica natural."+temp2;
+    } else if (rand === 10) {
+        monument = "Pilares de pedra antigos. Parte das ruínas? Testes de Perguntas/Respostas ou História para discernir mais.";
+    } else if (rand === 11) {
+        monument = "Paredes de pedra arruinadas. Testes de Perguntas/Respostas ou História para discernir mais.";
+    } else if (rand === 12) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Corado com sangue.";
+        }
+        monument = "Altar / Pedestal. Sacrificial?"+temp2;
+    } else if (rand === 13) {
+        monument = "Pedregulhos grandes e espalhados de formas interessantes. Testes de Perguntas/Respostas ou Natureza para discernir mais.";
+    } else if (rand === 14) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 26) {
+            temp2 += " Já saqueado.";
+        }
+        monument = "Túmulo único de identidade notável."+temp2;
+    } else if (rand === 15) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 26) {
+            temp2 += " Pista!";
+        }
+        monument = "Montanha de ossos. Testes de Perguntas/Respostas ou Natureza para discernir mais."+temp2;
+    } else if (rand === 16) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 26) {
+            temp2 += " Pista!";
+        }
+        monument = "Campo de batalha antigo, com monumento em memória dos mortos. Testes de Perguntas/Respostas ou História para discernir mais."+temp2;
+    } else if (rand === 17) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 51) {
+            temp2 += " Pista!";
+        }
+        monument = "Edifício incendiado."+temp2;
+    } else if (rand === 18) {
+        temp1 = minMaxRandomizer(1, 100);
+        var temp2 = "";
+        if (temp1 < 26) {
+            temp2 += " Encontro fácil de nível apropriado! (com algum inseto talvez?).";
+        }
+        monument = "Cupim ou outro monte de insetos. Verificação da natureza para discernir mais."+temp2;
+    } else if (rand === 19) {
+        monument = "Linhas Ley. Perguntas/Respostas para discernir mais, como quem os desenhou aqui e há quanto tempo?";
+    } else {
+        monument = "Um arco solitário no meio do nada! Portal?";
+    }
+    return monument;
+}
