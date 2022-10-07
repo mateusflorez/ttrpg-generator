@@ -4,7 +4,7 @@ function gullyRandomizer() {
     if (rand < 51) {
         gully = "Ravina padrão.";
     } else if (rand > 50 && rand < 58) {
-        gully = "Ravina com uma via navegável. Rolar na mesa de hidrovias.";
+        gully = "Ravina com uma via navegável. "+waterwayRandomizer();
     }  else if (rand > 57 && rand < 65) {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
@@ -32,7 +32,7 @@ function gullyRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 26) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         gully = "Ravina densamente arborizada, um oásis para uma determinada colônia de criaturas. Testes de natureza e Perguntas/Respostas para descobrir mais. Eles ainda estão aqui?"+temp2;
     }  else if (rand > 85 && rand < 93) {
@@ -47,7 +47,7 @@ function gullyRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 26) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         gully = "Ravina arborizada mágica. Um druida, ou mago, ou criaturas feéricas vivem aqui!"+temp2;
     }

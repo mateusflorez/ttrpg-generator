@@ -9,13 +9,13 @@ function rockyoutcropRandomizer() {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 51) {
-            temp2 += " estrutura!";
+            temp2 += " estrutura! "+structureRandomizer();
         } else {
-            temp2 += " monumento!";
+            temp2 += " monumento! "+monumentRandomizer();
         }
         rockyoutcrop = "Se dimensionado, o PC pode encontrar uma estrutura ou monumento no topo desse recurso."+temp2;
     }  else if (rand > 65 && rand < 72) {
-        rockyoutcrop = "Pequeno bosque no topo deste afloramento";
+        rockyoutcrop = "Pequeno bosque no topo deste afloramento. "+woodRandomizer();
     }  else if (rand > 71 && rand < 78) {
         rockyoutcrop = "Afloramento rochoso é na verdade uma ilha no meio de um lago. "+lakeRandomizer();
     }  else if (rand > 77 && rand < 84) {

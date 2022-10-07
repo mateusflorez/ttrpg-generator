@@ -8,9 +8,9 @@ function mountainrangeRandomizer() {
     }  else if (rand > 60 && rand < 66) {
         mountainrange = "Pequena cordilheira que parece possuir uma grande quantidade de cavernas. Cavernas podem levar a túneis / masmorras.";
     }  else if (rand > 65 && rand < 71) {
-        mountainrange = "A cordilheira parece ser o lar de uma colônia / assentamento de algum tipo. Anão? Algum tipo de criatura da montanha. Role assentamento.";
+        mountainrange = "A cordilheira parece ser o lar de uma colônia / assentamento de algum tipo. Anão? Algum tipo de criatura da montanha. "+settlementRandomizer();
     }  else if (rand > 70 && rand < 76) {
-        mountainrange = "Pequena serra coberta por floresta. Role bosque pequeno.";
+        mountainrange = "Pequena serra coberta por floresta. "+woodRandomizer();
     }  else if (rand > 75 && rand < 81) {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";

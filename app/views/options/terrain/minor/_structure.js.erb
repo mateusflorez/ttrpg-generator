@@ -66,7 +66,7 @@ function structureRandomizer() {
     }  else if (rand > 36 && rand < 41) {
         structure = "Moinho de vento.";
     }  else if (rand > 40 && rand < 45) {
-        structure = "Moinho de água. Rolar hidrovia";
+        structure = "Moinho de água. "+waterwayRandomizer();
     }  else if (rand > 44 && rand < 49) {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
@@ -75,7 +75,7 @@ function structureRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 31) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         structure = "Poço velho."+temp2;
     }  else if (rand > 48 && rand < 53) {
@@ -86,7 +86,7 @@ function structureRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 41) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         structure = "Cabana / Caverna do Eremita."+temp2;
     }  else if (rand > 54 && rand < 57) {
@@ -121,11 +121,11 @@ function structureRandomizer() {
         } else {
             temp2 += "Hidrovia grande.";
         }
-        structure = temp2+" Role hidrovias.";
+        structure = temp2+" "+waterwayRandomizer();
     }  else if (rand > 76 && rand < 81) {
-        structure = "Ponte média. Role hidrovias.";
+        structure = "Ponte média. "+waterwayRandomizer();
     }  else if (rand > 80 && rand < 85) {
-        structure = "Ponte grande. Role hidrovias.";
+        structure = "Ponte grande. "+waterwayRandomizer();
     }  else if (rand > 84 && rand < 89) {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
@@ -145,7 +145,7 @@ function structureRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 61) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         structure = "Ruínas."+temp2;
     }  else if (rand > 92 && rand < 97) {

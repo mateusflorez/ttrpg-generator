@@ -13,7 +13,7 @@ function lakeRandomizer() {
         }
         lake = "Lago de tamanho médio, não marcado no mapa. Situado em terreno amplo."+temp2;
     } else if (rand > 50 && rand < 56) {
-        lake = "Lago de tamanho médio, pequeno povoado nas suas margens. Role para assentamento.";
+        lake = "Lago de tamanho médio, pequeno povoado nas suas margens. "+settlementRandomizer();
     }  else if (rand > 55 && rand < 61) {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
@@ -24,16 +24,16 @@ function lakeRandomizer() {
     }  else if (rand > 60 && rand < 66) {
         lake = "Lago grande e não mapeado, com um curso d'água saindo dele. Poderia ser montável em uma canoa. Teste de Sobrevivência CD 19 para criar uma canoa se houver árvores por perto.";
     }  else if (rand > 65 && rand < 71) {
-        lake = "Lago de tamanho médio, pequeno povoado nas suas margens. Role para assentamento adicionando 20 ao lançamento.";
+        lake = "Lago de tamanho médio, pequeno povoado nas suas margens. "+settlementRandomizer();
     }  else if (rand > 70 && rand < 76) {
-        lake = "Grande lago não mapeado, com pequenas cadeias de montanhas nas margens. Role na mesa de cordilheira.";
+        lake = "Grande lago não mapeado, com pequenas cadeias de montanhas nas margens. "+mountainrangeRandomizer();
     }  else if (rand > 75 && rand < 81) {
-        lake = "Grande lago com pequenos bosques em suas margens. Rolar na mesa de bosque pequeno.";
+        lake = "Grande lago com pequenos bosques em suas margens. "+woodRandomizer();
     }  else if (rand > 80 && rand < 86) {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 26) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 41) {
@@ -44,7 +44,7 @@ function lakeRandomizer() {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 26) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         lake = "Pequeno lago ou lagoa, serve de covil para alguma criatura aquática."+temp2;
     }  else if (rand > 90 && rand < 96) {

@@ -7,14 +7,14 @@ function clearingRandomizer() {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 21) {
-            temp2 = " Pista!";
+            temp2 = " Pista! "+clueRandomizer();
         }
         clearing = "Círculo druida contendo pedras em pé. Teste de Perguntas/Respostas para ver o que você consegue discernir."+temp2;
     }  else if (rand > 58 && rand < 66) {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 41) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 11) {
@@ -32,7 +32,7 @@ function clearingRandomizer() {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 41) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         clearing = "Acampamento abandonado. Faça testes de perguntas e respostas, testes de investigação para descobrir mais."+temp2;
     }  else if (rand > 77 && rand < 84) {
@@ -47,7 +47,7 @@ function clearingRandomizer() {
     }  else if (rand > 83 && rand < 90) {
         clearing = "Magia em ação aqui - algum tipo de fenda dimensional? Faça testes de Perguntas/Respostas para ver o que está acontecendo aqui!";
     }  else if (rand > 89 && rand < 96) {
-        clearing = "Estrutura presente na clareira. Role na tabela de Estruturas.";
+        clearing = "Estrutura presente na clareira. "+structureRandomizer();
     }  else if (rand > 95 && rand < 99) {
         clearing = "Reunião de Treant atualmente em andamento. Testes de Perguntas/Respostas / Carisma para interagir?";
     }  else {

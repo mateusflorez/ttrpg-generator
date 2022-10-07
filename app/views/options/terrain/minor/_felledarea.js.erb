@@ -8,11 +8,11 @@ function felledRandomizer() {
     }  else if (rand > 60 && rand < 71) {
         felled = "Esta área limpa é o resultado de um incêndio florestal, não de desmatamento ativo. Teste de natureza CD 12 para discernir a causa. Testes de Perguntas/Respostas para determinar causa.";
     }  else if (rand > 70 && rand < 81) {
-        felled = "A área derrubada contém um assentamento não marcado. Role até encontrar um.";
+        felled = "A área derrubada contém um assentamento não marcado. "+settlementRandomizer();
     }  else if (rand > 80 && rand < 91) {
         felled = "Área sendo derrubada atualmente. Contratado por um grande assentamento próximo. Faça testes de Perguntas/Respostas para saber mais";
     }  else {
-        felled = "Área sendo derrubada atualmente. A madeira irá para a construção de um novo Assentamento Não Marcado. Role na tabela de assentamentos. Trabalhadores acampam nas proximidades."
+        felled = "Área sendo derrubada atualmente. A madeira irá para a construção de um novo Assentamento Não Marcado. "+settlementRandomizer()+". Trabalhadores acampam nas proximidades."
     }
     return felled;
 }

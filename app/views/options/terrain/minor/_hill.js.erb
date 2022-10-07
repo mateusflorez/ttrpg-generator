@@ -7,7 +7,7 @@ function hillRandomizer() {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 26) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         hill = "Colinas rochosas abundantes em cavernas, também podem possuir uma rede de túneis naturais. Testes de Perguntas/Respostas para ver se os túneis estão presentes e se estão habitados."+temp2;
     }  else if (rand > 57 && rand < 65) {
@@ -23,7 +23,7 @@ function hillRandomizer() {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 26) {
-            temp2 += " Monumento!";
+            temp2 += " Monumento! "+monumentRandomizer();
         }
         hill = "Seco, planalto baixo."+temp2;
     }  else if (rand > 78 && rand < 86) {
@@ -32,7 +32,7 @@ function hillRandomizer() {
         if (temp1 < 26) {
             temp2 += " Encontro fácil de nível apropriado!";
         }
-        hill = "Colinas pouco arborizadas, pequenas manchas de floresta. Mesa de bosque."+temp2;
+        hill = "Colinas pouco arborizadas, pequenos bosques. "+woodRandomizer()+" "+temp2;
     }  else if (rand > 85 && rand < 93) {
         hill = "Não colinas, mas sim montes de terra de algum tipo, possivelmente túmulos! Testes de Perguntas/Respostas para determinar a natureza desses montes. Pode levar a túneis.";
     }  else {

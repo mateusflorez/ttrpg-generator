@@ -17,7 +17,7 @@ function minorswampRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 31) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         minorswamp = "Pântano irregular com áreas secas. Área perfeita para bandidos ou invasores terem um acampamento."+temp2;
     }  else if (rand > 64 && rand < 72) {
@@ -25,7 +25,7 @@ function minorswampRandomizer() {
     }  else if (rand > 71 && rand < 79) {
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 11) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         minorswamp = "Pântano escuro e misterioso, com uma aura sobrenatural. Algo maligno se esconde aqui... Testes de Perguntas/Respostas para determinar o quê!"+temp2;
     }  else if (rand > 78 && rand < 86) {

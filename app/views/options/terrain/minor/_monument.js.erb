@@ -18,11 +18,11 @@ function monumentRandomizer() {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 51) {
-            temp2 += " Assentamento não marcado!";
+            temp2 += " Assentamento não marcado! "+settlementRandomizer();
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 11) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         monument = "Sinal para mostrar assentamentos próximos.";
     } else if (rand === 6) {
@@ -62,21 +62,21 @@ function monumentRandomizer() {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 26) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         monument = "Montanha de ossos. Testes de Perguntas/Respostas ou Natureza para discernir mais."+temp2;
     } else if (rand === 16) {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 26) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         monument = "Campo de batalha antigo, com monumento em memória dos mortos. Testes de Perguntas/Respostas ou História para discernir mais."+temp2;
     } else if (rand === 17) {
         temp1 = minMaxRandomizer(1, 100);
         var temp2 = "";
         if (temp1 < 51) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         monument = "Edifício incendiado."+temp2;
     } else if (rand === 18) {

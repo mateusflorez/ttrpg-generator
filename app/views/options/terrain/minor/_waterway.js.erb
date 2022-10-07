@@ -15,7 +15,7 @@ function waterwayRandomizer() {
     }  else if (rand > 60 && rand < 66) {
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 51) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         } else {
             temp2 += " Apenas um ramo.";
         }
@@ -29,7 +29,7 @@ function waterwayRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 26) {
-            temp2 += " Pista!";
+            temp2 += " Pista! "+clueRandomizer();
         }
         waterway = "Rio considerável com áreas de lagoa. Provavelmente muito bom para pescar ou nadar."+temp2;
     }  else if (rand > 75 && rand < 81) {
@@ -39,13 +39,13 @@ function waterwayRandomizer() {
         }
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 36) {
-            temp2 += " Assentamento não marcado nas proximidades.";
+            temp2 += " Assentamento não marcado nas proximidades. "+settlementRandomizer();
         }
         waterway = "Rio grande e não mapeado, atravessado por uma ponte. Teste de Perguntas/Respostas para discernir quem construiu a ponte e para qual propósito"+temp2;
     }  else if (rand > 80 && rand < 86) {
         waterway = "Rio sinuoso com cais onde são amarrados pequenos barcos. Barqueiro? Testes de Perguntas/Respostas para determinar a finalidade dos barcos.";
     }  else if (rand > 85 && rand < 91) {
-        waterway = "Este parece ser um canal de drenagem para um assentamento próximo. Role para assentamento não marcado.";
+        waterway = "Este parece ser um canal de drenagem para um assentamento próximo. "+settlementRandomizer();
     }  else if (rand > 90 && rand < 96) {
         temp1 = minMaxRandomizer(1, 100);
         if (temp1 < 26) {
