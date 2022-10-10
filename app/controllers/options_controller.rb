@@ -1,26 +1,21 @@
 class OptionsController < ApplicationController
   before_action :option_view
 
-  def answer
-  end
+  def answer; end
 
-  def dices
-  end
+  def dices; end
 
-  def travel
-  end
+  def travel; end
 
-  def encounters
-  end
+  def encounters; end
 
-  def missions
-  end
+  def missions; end
 
-  def dungeons
-  end
+  def dungeons; end
 
-  def terrain
-  end
+  def terrain; end
+
+  def city; end
 
   private
 

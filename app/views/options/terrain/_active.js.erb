@@ -1,29 +1,56 @@
+var temp2 = ""
 if (rndInt[1] < 27) {
-  res = "Esta área contém mais provas dos rumores / pistas que você está investigando. Jogue uma vez na Tabela de Pistas (neste capítulo), ou nas mesas do Capítulo 14, depois jogue novamente nesta mesa.";
+  res = "Esta área contém mais provas dos rumores / pistas que você está investigando. "+clueRandomizer();
 } else if (rndInt[1] > 25 && rndInt[1] < 54) {
-  res = "Você encontra a besta/monstro/causa do problema que está procurando. Jogue d6. 1-3: Encontro Médio. 4-5: Encontro Difícil. 6: Encontro mortal. (Use o Capítulo 16). 50% de chance de você não ter sido notado. Em um teste de furtividade bem sucedido (CD = percepção passiva da criatura), ataque com surpresa.";
+  temp1 = minMaxRandomizer(1, 6);
+  if (temp1 < 4) {
+      temp2 += " Encontro médio de nível apropriado.";
+  } else if (temp1 > 3 && temp1 < 6) {
+      temp2 += " Encontro difícil de nível apropriado.";
+  } else {
+      temp2 += " Encontro mortal de nível apropriado.";
+  }
+  temp1 = minMaxRandomizer(1, 100);
+  if (temp1 < 51) {
+      temp2 += " Você não foi notado. Em um teste de furtividade bem sucedido (CD = percepção passiva da criatura), ataque com surpresa.";
+  }
+  res = "Você encontra a besta/monstro/causa do problema que está procurando."+temp2+" Role novamente para Área ativa";
 } else if (rndInt[1] > 53 && rndInt[1] < 81) {
-  res = "Você encontra a besta / monstro / causa do problema que está procurando e uma estrutura ou habitação associada, como um covil ou ruínas que eles habitam. (Você pode ir para o Capítulo 8: Geração de Masmorras daqui) Quando você encontrá-los, role d6. 1-3: Encontro Médio. 4-5: Encontro Difícil. 6: Encontro mortal. (Use o Capítulo 16).";
+  temp1 = minMaxRandomizer(1, 6);
+  if (temp1 < 4) {
+      temp2 += " Chefe: Encontro médio de nível apropriado.";
+  } else if (temp1 > 3 && temp1 < 6) {
+      temp2 += " Chefe: Encontro difícil de nível apropriado.";
+  } else {
+      temp2 += " Chefe: Encontro mortal de nível apropriado.";
+  }
+  res = "Você encontra a besta / monstro / causa do problema que está procurando e uma estrutura ou habitação associada, como um covil ou ruínas que eles habitam. (Use o gerador de masmorras)."+temp2;
 } else if (rndInt[1] > 80 && rndInt[1] < 83) {
   res = "Você encontra um covil ou habitação, mas parece atualmente desabitado. Talvez a criatura que você procura esteja longe causando travessuras agora!";
 } else if (rndInt[1] > 82 && rndInt[1] < 85) {
   res = "Verificação de furtividade de todos os seus personagens. Se um teste for menor que 14, então a criatura notou a chegada de seus personagens e os está perseguindo, preparando um ataque. Eles provavelmente vão se surpreender!";
 } else if (rndInt[1] > 84 && rndInt[1] < 87) {
-  res = "Esta área não é o que diziam ser. Faça uma jogada de d100. Se for 25 ou menos, role na Tabela de Encontros na Terra Selvagem. Após resolver o encontro, continue explorando a área e faça um teste de investigação, CD 15. Se for bem sucedido, role novamente nesta tabela. Se não obtiver sucesso, faça outra rolagem de d100 (como acima)";
+  res = "Esta área não é o que diziam ser. role Encontro Selvagem na Terra Selvagem. Após resolver o encontro, continue explorando a área e faça um teste de investigação, CD 15. Se for bem sucedido, role novamente Área ativa. Senão role outro encontro até conseguir.";
 } else if (rndInt[1] > 86 && rndInt[1] < 89) {
-  res = "Você encontra outro grupo de aventureiros investigando os mesmos rumores / pistas que você está investigando. Eles são (d4) 1: Hostil, 2-4: Amigável. Existem 1d4 membros no grupo. Role nas tabelas dos NPCs (pule profissões e role nas tabelas de classe) para determinar quem eles são, então role novamente nesta tabela.";
+  temp1 = minMaxRandomizer(1, 6);
+  if (temp1 < 4) {
+      temp2 += "hostís";
+  } else {
+      temp2 += "amigáveis";
+  }
+  res = "Você encontra outro grupo de aventureiros investigando os mesmos rumores / pistas que você está investigando. Eles são "+temp2+". Existem "+minMaxRandomizer(1, 4)+" membros no grupo. Role NPCs para determinar quem eles são, então role novamente Área ativa.";
 } else if (rndInt[1] > 88 && rndInt[1] < 91) {
-  res = "Você encontra um grupo morto de 1d4 aventureiros (use tabelas de NPCs se desejar). Eles foram mutilados selvagemente, e parece que todas as suas armas e pertences foram roubados.";
+  res = "Você encontra um grupo morto de "+minMaxRandomizer(1, 4)+" aventureiros (role NPCs se desejar). Eles foram mutilados selvagemente, e parece que todas as suas armas e pertences foram roubados.";
 } else if (rndInt[1] > 90 && rndInt[1] < 93) {
-  res = "Você encontra um grupo morto de 1d4 aventureiros.";
+  res = "Você encontra um grupo morto de "+minMaxRandomizer(1, 4)+" aventureiros.";
 } else if (rndInt[1] > 92 && rndInt[1] < 95) {
-  res = "Você encontra um NPC, que lhe dá detalhes de outra missão muito mais importante relacionada a esta. Vá para o Capítulo 7: Geração de Missões para descobrir o que é.";
+  res = "Você encontra um NPC, que lhe dá detalhes de outra missão muito mais importante relacionada a esta. Role Geração de Missões para descobrir o que é.";
 } else if (rndInt[1] > 94 && rndInt[1] < 97) {
-  res = "Você descobre que a criatura ou alvo que procura descobriu que algo os está rastreando e saiu da área. Você pode prosseguir (testes adicionais nas tabelas de geração da Terra Selvagem,acima), ou você pode declarar o assunto resolvido (10% de chance de eles retornarem quando você se for).";
+  res = "Você descobre que a criatura ou alvo que procura descobriu que algo os está rastreando e saiu da área. Você pode prosseguir, ou você pode declarar o assunto resolvido.";
 } else if (rndInt[1] > 96 && rndInt[1] < 99) {
-  res = "Um misterioso NPC, um aventureiro solitário, está presente aqui e resolveu o problema. Eles dão provas também (carcaça / espólios da missão concluída). Eles dizem que você pode reivindicar a fama de completar isso, desde que os acompanhe.";
+  res = "Um misterioso NPC, um aventureiro solitário, está presente aqui e resolveu o problema. Ele dá provas também (carcaça / espólios da missão concluída). Ele diz que você pode reivindicar a fama de completar isso, desde que o acompanhe.";
 } else if (rndInt[1] > 25 && rndInt[1] < 54) {
   res = "O alvo ou criatura que você já procura está morto (possivelmente por outro grupo de aventureiros, que você pode encontrar nas proximidades), mas na investigação você descobre que a criatura não merecia morrer e provavelmente era inocente ou estava apenas cuidando de seus próprios negócios. Quem lhe deu esses rumores ou o colocou nessa missão ou está iludido, ou deliberadamente o enganando por algum motivo.";
 } else {
-  res = "O boato acaba sendo algum tipo de armadilha desonesta para atrair seus PCs para uma emboscada! Encontro mortal de nível apropriado.";
+  res = "O boato acaba sendo algum tipo de armadilha desonesta para atrair seus personagens para uma emboscada! Encontro mortal de nível apropriado.";
 }

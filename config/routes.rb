@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get 'options/missions'
   get 'options/dungeons'
   get 'options/terrain'
+  get 'options/city'
 
 end
