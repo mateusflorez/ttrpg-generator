@@ -1,0 +1,37 @@
+rand = minMaxRandomizer(1, 4);
+if (rand === 1) {
+    res += "Pessoa (role NPC), ";
+} else if (rand === 2) {
+    res += "Criatura (role Criaturas), ";
+} else if (rand === 3) {
+    res += "Lugar, ";
+    rand = minMaxRandomizer(1, 12);
+    if (rand === 1) {
+        res += "neste assentamento/área. ";
+    } else if (rand === 2) {
+        res += "fora do assentamento. ";
+    } else if (rand === 3) {
+        res += minMaxRandomizer(1, 4)+"milhas de distância, em uma estrutura. ";
+    } else if (rand === 4) {
+        res += "na floresta mais próxima. ";
+    } else if (rand === 5) {
+        res += "nas colinas mais próximas. ";
+    } else if (rand === 6) {
+        res += "nas montanhas mais próximas. ";
+    } else if (rand === 7) {
+        res += "no pântano mais próximo. ";
+    } else if (rand === 8) {
+        res += "ao lado do corpo de água mais próximo. ";
+    } else if (rand === 9) {
+        res += "na próxima aldeia. ";
+    } else if (rand === 10) {
+        res += "na próxima grande cidade. ";
+    } else if (rand === 11) {
+        res += "na capital do reino. ";
+    } else {
+        res += "no próximo reino. ";
+    }
+} else {
+    res += "Coisa, ";
+}
+res += "Para a substância do boato, role Situações."
