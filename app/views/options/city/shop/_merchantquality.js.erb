@@ -1,0 +1,16 @@
+function merchantQualityRandomizer() {
+    rand = minMaxRandomizer(1, 20);
+    var quality = "";
+    if (rand < 6) {
+        quality += " §Qualidade: Terrível. "+itemQualityRandomizer(1);
+    } else if (rand > 5 && rand < 10) {
+        quality += " §Qualidade: Pobre. "+itemQualityRandomizer(2);
+    } else if (rand > 9 && rand < 14) {
+        quality += " §Qualidade: Médio. "+itemQualityRandomizer(3);
+    } else if (rand > 13 && rand < 18) {
+        quality += " §Qualidade: Bom. "+itemQualityRandomizer(4);
+    } else {
+        quality += " §Qualidade: Excelente. "+itemQualityRandomizer(5);
+    }
+    return quality;
+}

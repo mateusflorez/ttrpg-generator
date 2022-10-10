@@ -1,0 +1,38 @@
+$(function(){
+
+    //Set dice
+    const dices = [20];
+
+    //Randomize
+    <%= render :partial => 'options/shared/randomizer' %>
+
+    <%= render :partial => 'options/city/shop/merchantquality' %>
+    <%= render :partial => 'options/city/shop/itemquality' %>
+
+    //Option selector
+    var res;
+    switch (<%= @resp %>) {
+        //Shops
+        case 1:
+            <%= render :partial => 'options/city/shops' %>
+            break;
+        //Merchant
+        case 2:
+            <%= render :partial => 'options/terrain/coast' %>
+            break;
+        //Rumors
+        case 3:
+            <%= render :partial => 'options/terrain/desert' %>
+            break;
+    }
+
+    //Set history
+    <%= render :partial => 'options/shared/set_history' %>
+
+    //Save
+    <%= render :partial => 'options/shared/save' %>
+
+    //Print
+    <%= render :partial => 'options/shared/print' %>
+
+});

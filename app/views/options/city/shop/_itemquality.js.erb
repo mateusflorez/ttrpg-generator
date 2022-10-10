@@ -1,0 +1,62 @@
+function itemQualityRandomizer(merchantquality) {
+    rand = minMaxRandomizer(1, 20);
+    var quality = " §Raridade de item máxima:";
+    switch (merchantquality) {
+        case 1:
+            if (rand < 15) {
+                quality += " Comum.";
+            } else if (rand > 14 && rand < 19) {
+                quality += " Incomum.";
+            } else {
+                quality += " Raro.";
+            }
+            return quality;
+            break;
+        case 2:
+            if (rand < 13) {
+                quality += " Comum.";
+            } else if (rand > 12 && rand < 18) {
+                quality += " Incomum.";
+            } else {
+                quality += " Raro.";
+            }
+            return quality;
+            break;
+        case 3:
+            if (rand < 11) {
+                quality += " Comum.";
+            } else if (rand > 10 && rand < 16) {
+                quality += " Incomum.";
+            } else if (rand > 15 && rand < 19) {
+                quality += " Raro.";
+            } else {
+                quality += " Lendário.";
+            }
+            return quality;
+            break;
+        case 4:
+            if (rand < 9) {
+                quality += " Comum.";
+            } else if (rand > 8 && rand < 14) {
+                quality += " Incomum.";
+            } else if (rand > 13 && rand < 18) {
+                quality += " Raro.";
+            } else {
+                quality += " Lendário.";
+            }
+            return quality;
+            break;
+        case 5:
+            if (rand < 7) {
+                quality += " Comum.";
+            } else if (rand > 6 && rand < 13) {
+                quality += " Incomum.";
+            } else if (rand > 12 && rand < 17) {
+                quality += " Raro.";
+            } else {
+                quality += " Lendário.";
+            }
+            return quality;
+            break;
+    }
+}
