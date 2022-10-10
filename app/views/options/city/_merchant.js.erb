@@ -1,0 +1,39 @@
+//race
+rand = minMaxRandomizer(1, 10);
+if (rand === 1 || rand === 8) {
+    res += "Gnomo,";
+} else if (rand === 2 || rand === 7) {
+    res += "Halfling,";
+} else if (rand === 3) {
+    res += "Anão,";
+} else if (rand === 4) {
+    res += "Tiefling,";
+} else if (rand === 5 || rand === 6) {
+    res += "Humano,";
+} else {
+    res += "Orc ou Meio-orc,";
+}
+
+//sex
+rand = minMaxRandomizer(1, 10);
+if (rand < 6) {
+    res += " fêmea,";
+} else {
+    res += " macho,";
+}
+
+//treatment
+rand = minMaxRandomizer(1, 10);
+if (rand === 1) {
+    res += " atendimento hostil.";
+} else if (rand === 2 || rand === 3) {
+    res += " atendimento neutro.";
+} else if (rand === 4 || rand === 5) {
+    res += " atendimento civil.";
+} else if (rand === 6 || rand === 7) {
+    res += " atendimento cordial.";
+} else if (rand === 8 || rand === 9) {
+    res += " atendimento acolhedor.";
+} else {
+    res += " atende o personagem como um monarca.";
+}

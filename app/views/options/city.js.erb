@@ -10,7 +10,7 @@ $(function(){
     <%= render :partial => 'options/city/shop/itemquality' %>
 
     //Option selector
-    var res;
+    var res = "";
     switch (<%= @resp %>) {
         //Shops
         case 1:
@@ -18,7 +18,7 @@ $(function(){
             break;
         //Merchant
         case 2:
-            <%= render :partial => 'options/terrain/coast' %>
+            <%= render :partial => 'options/city/merchant' %>
             break;
         //Rumors
         case 3:
