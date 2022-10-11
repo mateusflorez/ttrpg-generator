@@ -1,0 +1,40 @@
+$(function(){
+
+    //Set dice
+    const dices = [20];
+
+    //Randomize
+    <%= render :partial => 'options/shared/randomizer' %>
+
+    <%= render :partial => 'options/npcs/shared/alignment' %>
+    <%= render :partial => 'options/npcs/shared/gender' %>
+    <%= render :partial => 'options/npcs/shared/race' %>
+    <%= render :partial => 'options/npcs/shared/profession' %>
+
+    //Option selector
+    var res = "";
+    switch (<%= @resp %>) {
+        //Random
+        case 1:
+            <%= render :partial => 'options/npcs/random' %>
+            break;
+        //Worker
+        case 2:
+            <%= render :partial => 'options/npcs/random' %>
+            break;
+        //Adventurer
+        case 3:
+            <%= render :partial => 'options/city/merchant' %>
+            break;
+    }
+
+    //Set history
+    <%= render :partial => 'options/shared/set_history' %>
+
+    //Save
+    <%= render :partial => 'options/shared/save' %>
+
+    //Print
+    <%= render :partial => 'options/shared/print' %>
+
+});

@@ -17,6 +17,8 @@ class OptionsController < ApplicationController
 
   def city; end
 
+  def npcs; end
+
   private
 
   def option_view

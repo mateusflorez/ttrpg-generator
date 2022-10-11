@@ -1,0 +1,18 @@
+//Race
+res += raceRandomizer();
+
+//Gender
+res += genderRandomizer();
+
+//Alignment
+res += alignmentRandomizer();
+
+//Profession
+rand = minMaxRandomizer(1, 100);
+if (rand < 26) {
+    res += "plebeu (desempregado).";
+} else if (rand > 25 && rand < 91) {
+    res += professionRandomizer();
+} else {
+    res += "aventureiro, ";
+}

@@ -1,0 +1,10 @@
+function genderRandomizer() {
+    var gender = "";
+    rand = minMaxRandomizer(1, 100);
+    if (rand < 51) {
+        gender += "macho, ";
+    } else {
+        gender += "fêmea, ";
+    }
+    return gender;
+}
