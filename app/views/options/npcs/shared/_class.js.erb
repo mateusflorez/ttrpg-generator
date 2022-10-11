@@ -1,0 +1,84 @@
+function adventurerClassRandomizer() {
+    var adventurerClass = "";
+    rand = minMaxRandomizer(1, 12);
+    if (rand === 1) {
+        adventurerClass += "bárbaro, ";
+    } else if (rand === 2) {
+        adventurerClass += "bardo, ";
+    } else if (rand === 3) {
+        adventurerClass += "clérigo, ";
+    } else if (rand === 4) {
+        adventurerClass += "druida, ";
+    } else if (rand === 5) {
+        adventurerClass += "guerreiro, ";
+    } else if (rand === 6) {
+        adventurerClass += "monge, ";
+    } else if (rand === 7) {
+        adventurerClass += "paladino, ";
+    } else if (rand === 8) {
+        adventurerClass += "patrulheiro, ";
+    } else if (rand === 9) {
+        adventurerClass += "ladino, ";
+    } else if (rand === 10) {
+        adventurerClass += "feiticeiro, ";
+    } else if (rand === 11) {
+        adventurerClass += "bruxo, ";
+    } else {
+        adventurerClass += "mago, ";
+    }
+
+    rand = minMaxRandomizer(1, 20);
+    if (rand < 15) {
+        rand = minMaxRandomizer(1, 20);
+        if (rand < 7) {
+            adventurerClass += "nível 1.";
+        } else if (rand < 6 && rand < 12) {
+            adventurerClass += "nível 2.";
+        } else if (rand < 11 && rand < 16) {
+            adventurerClass += "nível 3.";
+        } else if (rand < 15 && rand < 19) {
+            adventurerClass += "nível 4.";
+        } else {
+            adventurerClass += "nível 5.";
+        }
+    } else if (rand < 14 && rand < 19) {
+        rand = minMaxRandomizer(1, 20);
+        if (rand < 4) {
+            adventurerClass += "nível 5.";
+        } else if (rand < 3 && rand < 7) {
+            adventurerClass += "nível 6.";
+        } else if (rand < 6 && rand < 9) {
+            adventurerClass += "nível 7.";
+        } else if (rand < 8 && rand < 11) {
+            adventurerClass += "nível 8.";
+        } else if (rand < 10 && rand < 13) {
+            adventurerClass += "nível 9.";
+        } else if (rand < 12 && rand < 15) {
+            adventurerClass += "nível 10.";
+        } else if (rand < 14 && rand < 17) {
+            adventurerClass += "nível 11.";
+        } else if (rand === 17) {
+            adventurerClass += "nível 12.";
+        } else if (rand === 18) {
+            adventurerClass += "nível 13.";
+        } else if (rand === 19) {
+            adventurerClass += "nível 14.";
+        } else {
+            adventurerClass += "nível 15.";
+        }
+    } else {
+        rand = minMaxRandomizer(1, 20);
+        if (rand < 7) {
+            adventurerClass += "nível 16.";
+        } else if (rand < 6 && rand < 12) {
+            adventurerClass += "nível 17.";
+        } else if (rand < 11 && rand < 16) {
+            adventurerClass += "nível 18.";
+        } else if (rand < 15 && rand < 19) {
+            adventurerClass += "nível 19.";
+        } else {
+            adventurerClass += "nível 20.";
+        }
+    }
+    return adventurerClass;
+}
