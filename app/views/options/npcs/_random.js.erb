@@ -10,9 +10,15 @@ res += alignmentRandomizer();
 //Profession
 rand = minMaxRandomizer(1, 100);
 if (rand < 26) {
-    res += "plebeu (desempregado).";
+    res += "Plebeu (desempregado).";
 } else if (rand > 25 && rand < 91) {
     res += professionRandomizer();
 } else {
     res += adventurerClassRandomizer();
 }
+
+//Disposition
+res += dispositionRandomizer();
+
+//Economic status
+res += economicStatusRandomizer();

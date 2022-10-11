@@ -2,23 +2,23 @@ function alignmentRandomizer() {
     var alignment = "";
     rand = minMaxRandomizer(1, 100);
     if (rand < 16) {
-        alignment += "leal bom.§";
+        alignment += "Leal bom.§";
     } else if (rand > 15 && rand < 21) {
-        alignment += "neutro bom.§";
+        alignment += "Neutro bom.§";
     } else if (rand > 20 && rand < 26) {
-        alignment += "caótico bom.§";
+        alignment += "Caótico bom.§";
     } else if (rand > 25 && rand < 31) {
-        alignment += "leal neutro.§";
+        alignment += "Leal neutro.§";
     } else if (rand > 30 && rand < 51) {
-        alignment += "neutro.§";
+        alignment += "Neutro.§";
     } else if (rand > 50 && rand < 56) {
-        alignment += "caótico neutro.§";
+        alignment += "Caótico neutro.§";
     } else if (rand > 55 && rand < 71) {
-        alignment += "leal mal.§";
+        alignment += "Leal mal.§";
     } else if (rand > 70 && rand < 91) {
-        alignment += "neutro mal.§";
+        alignment += "Neutro mal.§";
     } else {
-        alignment += "caótico mal.§";
+        alignment += "Caótico mal.§";
     }
     return alignment;
 }

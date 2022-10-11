@@ -1,0 +1,24 @@
+function economicStatusRandomizer() {
+    var economicStatus = "";
+    rand = minMaxRandomizer(1, 100);
+    if (rand < 5) {
+        economicStatus += "§Status: Indigente / sem-teto.";
+    } else if (rand > 4 && rand < 13) {
+        economicStatus += "§Status: Pobre.";
+    } else if (rand > 12 && rand < 31) {
+        economicStatus += "§Status: Pode se sustentar.";
+    } else if (rand > 30 && rand < 41) {
+        economicStatus += "§Status: Classe média.";
+    } else if (rand > 40 && rand < 53) {
+        economicStatus += "§Status: Confortável.";
+    } else if (rand > 52 && rand < 63) {
+        economicStatus += "§Status: Abastado.";
+    } else if (rand > 62 && rand < 75) {
+        economicStatus += "§Status: Rico.";
+    } else if (rand > 74 && rand < 89) {
+        economicStatus += "§Status: Extremamente rico.";
+    } else {
+        economicStatus += "§Status: Riqueza em nível de realeza.";
+    }
+    return economicStatus;
+}
