@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get 'options/terrain'
   get 'options/city'
   get 'options/npcs'
+  get 'options/element'
 
 end

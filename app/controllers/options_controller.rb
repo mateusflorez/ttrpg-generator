@@ -19,6 +19,8 @@ class OptionsController < ApplicationController
 
   def npcs; end
 
+  def element; end
+
   private
 
   def option_view

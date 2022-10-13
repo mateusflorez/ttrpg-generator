@@ -1,0 +1,39 @@
+$(function(){
+
+    //Set dice
+    const dices = [20];
+
+    //Randomize
+    <%= render :partial => 'options/shared/randomizer' %>
+
+    //Option selector
+    var res = "";
+    switch (<%= @resp %>) {
+        //Urban event
+        case 1:
+            <%= render :partial => 'options/element/urbanevent' %>
+            break;
+        //Wild event
+        case 2:
+            <%= render :partial => 'options/npcs/worker' %>
+            break;
+        //Creatures
+        case 3:
+            <%= render :partial => 'options/npcs/worker' %>
+            break;
+        //Situations
+        case 4:
+            <%= render :partial => 'options/npcs/adventurer' %>
+            break;
+    }
+
+    //Set history
+    <%= render :partial => 'options/shared/set_history' %>
+
+    //Save
+    <%= render :partial => 'options/shared/save' %>
+
+    //Print
+    <%= render :partial => 'options/shared/print' %>
+
+});
