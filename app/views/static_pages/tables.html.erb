@@ -104,5 +104,265 @@
       </table>
     </div>
   <%= render "static_pages/shared/accordion_end" %>
+  <%= render "static_pages/shared/accordion_start", number: "Three" %>
+    Atividades de inatividade
+  <%= render "static_pages/shared/accordion_mid", number: "Three" %>
+    <div class="row justify-content-center">
+      <table class="table table-hover table-sm table-bordered w-75">
+        <thead>
+          <tr class="table-info">
+            <th scope="col">Atividade</th>
+            <th scope="col">Tempo ocupado</th>
+            <th scope="col">Resultado</th>
+            <th scope="col">Cooperação</th>
+            <th scope="col">Requisitos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Treinamento animal</th>
+            <td>Depende do treino.</td>
+            <td>Animal companheiro treinado.</td>
+            <td>Possivelmente, auxiliando (concedendo vantagem) em testes de adestrar animais do treinador.</td>
+            <td>Você deve possuir o animal que deseja treinar, e também precisa de um treinador e dinheiro para pagar o treinador.</td>
+          </tr>
+          <tr>
+            <th scope="row">Construção</th>
+            <td>1 dia por 5 metros quadrados de construção. 20po por m2 de área de construção. De um lar(16000 po) para um palácio (500k po).</td>
+            <td>Casa / Mosteiro / Salão de guilda / Mansão / Posto avançado / Castelo / Torre / etc.</td>
+            <td>Definitivamente, mais eficaz por garantir sua força de rabalho e materiais. Personagens de alto carisma podem ser capazes de obter alguns bons negócios.</td>
+            <td>Um terreno, uma carta régia (autorização das autoridades locais), uma concessão de terra ou uma escritura. Materiais de construção e rabalhadores.</td>
+          </tr>
+          <tr>
+            <th scope="row">Comprar um item mágico</th>
+            <td>1 semana de trabalho.</td>
+            <td>Encontrar item mágico.</td>
+            <td>Sim, desde que os aliados estejam preparados para dedicar tempo de inatividade. Possível vantagem concedida a verificações de persuasão.</td>
+            <td>100 po em despesas para encontrar, à depender da qualidade do vendedor.</td>
+          </tr>
+          <tr>
+            <th scope="row">Farra</th>
+            <td>Qualquer quantidade de tempo</td>
+            <td>Imprevisível, role situações.</td>
+            <td>Amigos de bebida são sempre bem-vindos. Talvez eles possam mantê-lo longe de problemas.</td>
+            <td>Dinheiro para o estilo de vida, mais um pouco mais para financiar o hedonismo.</td>
+          </tr>
+          <tr>
+            <th scope="row">Criar item mágico</th>
+            <td>1 semana para um item comum, até 50 semanas para um item lendário.</td>
+            <td>Você possui e pode vender o item.</td>
+            <td>Sim, desde que sejam proficientes no tipo de fabricação e estejam dispostos a dedicar o tempo de inatividade para a confecção. Poderia reduzir o tempo pela metade.</td>
+            <td>Formula para criar o item, materiais para a contrução do item. (Geralmente altamente exóticos, exigindo viagens.)</td>
+          </tr>
+          <tr>
+            <th scope="row">Criar item não mágico</th>
+            <td>1 dia por 5po de valor de item, + metade do valor em matérias primas</td>
+            <td>Você possui e pode vender o item.</td>
+            <td>Sim, desde que sejam proficientes no tipo de fabricação e estejam dispostos a dedicar o tempo de inatividade para a confecção. Poderia reduzir o tempo pela metade.</td>
+            <td>Proficiência com o tipo de fabricação.</td>
+          </tr>
+          <tr>
+            <th scope="row">Jogos de azar</th>
+            <td>1 semana.</td>
+            <td>Consultar jogos de azar(Guia de xanathar página 130).</td>
+            <td>Não.</td>
+            <td>Uma aposta entre 10po e 1000po, depois testes de percepção, intuição e intimidação. Caso o personagem for proficiente com o conjunto de jogos, pode adicionar esta proficiencia em um dos testes.</td>
+          </tr>
+          <tr>
+            <th scope="row">Hospedar banquete / torneio</th>
+            <td>1 dia.</td>
+            <td>Aumenta renome e ganha contatos.</td>
+            <td>Possivelmente.</td>
+            <td>Dinheiro para pagar a todos, uma grande propriedade para sediar o evento e uma série de testes de carisma.</td>
+          </tr>
+          <tr>
+            <th scope="row">Luta de poço</th>
+            <td>1 semana de esforço.</td>
+            <td>Nenhum sucesso = 0po. 1 vitória = 50po. 2 vitória = 100po. 3 vitória = 200po. Rolar situações para se envolver nas lutas.</td>
+            <td>Não.</td>
+            <td>Uma série de testes com base na oposição, aleatóriamente entre atletismo, acrobacia e constituição com um bonûs igual a uma jogada do maior dado de vida.</td>
+          </tr>
+          <tr>
+            <th scope="row">Praticar profissão</th>
+            <td>Você passa seus dias trabalhando em vez de algo mais.</td>
+            <td>Estilo de vida confortável.</td>
+            <td>Depende da profissão.</td>
+            <td>Conhecimento que o trabalho exige.</td>
+          </tr>
+          <tr>
+            <th scope="row">Recuperação</th>
+            <td>2 dias.</td>
+            <td>Recuperar-se de uma doença ou veneno.</td>
+            <td>Não.</td>
+            <td>Após 3 dias se recuperando faça um teste de constituição CD 15. Termina o efeito. Ganha vantagem em testes de resistencia contra doença ou veneno pelas próximas 24 horas.</td>
+          </tr>
+          <tr>
+            <th scope="row">Serviço religioso</th>
+            <td>1 semana.</td>
+            <td>Se teste de religião ou persuasão 1-10: Nada. 11-20: 1 favor; 20+: 2 favores. (Um favor pode ser um ponto de inspiração ou um auxilio futuro do templo.)</td>
+            <td>Não.</td>
+            <td>Presença de um templo cujas crenças se alinhem com o do personagem. Ao final de uma semana o personagem faz um teste de religião ou persuasão.</td>
+          </tr>
+          <tr>
+            <th scope="row">Pesquisa</th>
+            <td>Faça testes de Perguntas/Respostas. Você pode precisar viajar para coletar informações.</td>
+            <td>Mais conhecimento sobre os mistérios que vieram à tona durante a campanha. Talvez vantagem em testes de inteligência/história.</td>
+            <td>Possivelmente, desde que tenha o carisma/inteligência necessária para auxiliar.</td>
+            <td>Declare a coisa que está pesquisando. depois visite bibliotecas, converse com moradores, colete informações. Faça testes de inteligência, investigação e carisma.</td>
+          </tr>
+          <tr>
+            <th scope="row">Executar negócio</th>
+            <td>-</td>
+            <td>Desconto em determinado tipo de produto / acesso a clientela e informações / renome.</td>
+            <td>Sim.</td>
+            <td>Experiência na área de negócios, disposição para sustentar o negócio caso haja perda de dinheiro.</td>
+          </tr>
+          <tr>
+            <th scope="row">Escrever pergaminho de feitiço</th>
+            <td>1 dia + 15po para um truque, até 48 semanas + 450k po para um feitiço nível 9.</td>
+            <td>Um pergaminho de feitiço.</td>
+            <td>Possivelmente, desde que possuam os requisitos.</td>
+            <td>Você deve ser um conjurador, ter a magia em questão preparada, possuir componentes para a magia e ter proficiência na perícia arcanismo.</td>
+          </tr>
+          <tr>
+            <th scope="row">Vender item mágico</th>
+            <td>10 dias por verificação de investigação, pode achar comprador ou vários compradores de uma vez.</td>
+            <td>Venda de um item mágico.</td>
+            <td>Sim, outro personagem pode usar seu tempo de inatividade para ajudar a encontrar um comprador.</td>
+            <td>Um item mágico para vender, um comprador para o item (CD 20 para encontrar comprador para item não lendário).</td>
+          </tr>
+          <tr>
+            <th scope="row">Treinamento de habilidade</th>
+            <td>250 dias.</td>
+            <td>Aprende nova língua ou um novo conjunto de ferramentas</td>
+            <td>Não.</td>
+            <td>1po por dia.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <%= render "static_pages/shared/accordion_end" %>
+  <%= render "static_pages/shared/accordion_start", number: "Four" %>
+    Formas de ganhar renome
+  <%= render "static_pages/shared/accordion_mid", number: "Four" %>
+    <div class="row justify-content-center">
+      <table class="table table-hover table-sm table-bordered w-75">
+        <thead>
+          <tr class="table-info">
+            <th scope="col">Atividade</th>
+            <th scope="col">Renome local</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Hospedar torneio</th>
+            <td>Consulte eventos.</td>
+          </tr>
+          <tr>
+            <th scope="row">Hospedar banquete</th>
+            <td>Consulte eventos.</td>
+          </tr>
+          <tr>
+            <th scope="row">Vencer 4 lutas de poço</th>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th scope="row">Construir fortaleza</th>
+            <td>6</td>
+          </tr>
+          <tr>
+            <th scope="row">Construir abadia</th>
+            <td>4</td>
+          </tr>
+          <tr>
+            <th scope="row">Criar e vender um item mágico</th>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th scope="row">Farra</th>
+            <td>Para cada 3 resultados desfavoráveis, -1 e +1 para cada 3 resultados favoráveis.</td>
+          </tr>
+          <tr>
+            <th scope="row">Exercer profissão</th>
+            <td>1 a cada 50 dias.</td>
+          </tr>
+          <tr>
+            <th scope="row">Serviço religioso</th>
+            <td>1 por cada 2 favores.</td>
+          </tr>
+          <tr>
+            <th scope="row">Administrar negócio</th>
+            <td>1 para cada 90 dias rentáveis.</td>
+          </tr>
+          <tr>
+            <th scope="row">Vender item mágico</th>
+            <td>1 para cada 2 transações bem-sucedidas.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <%= render "static_pages/shared/accordion_end" %>
+  <%= render "static_pages/shared/accordion_start", number: "Five" %>
+    Eventos
+  <%= render "static_pages/shared/accordion_mid", number: "Five" %>
+    <div class="row justify-content-center">
+    <h4>Orçamentos</h4>
+      <table class="table table-hover table-sm table-bordered w-75">
+        <thead>
+          <tr class="table-info">
+            <th scope="col">Evento hospedado</th>
+            <th scope="col">Custo</th>
+            <th scope="col">CD para teste de carisma</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Banquete</th>
+            <td>750 po.</td>
+            <td>2d10+5</td>
+          </tr>
+          <tr>
+            <th scope="row">Banquete com torneio</th>
+            <td>3000 po.</td>
+            <td>2d10+3</td>
+          </tr>
+          <tr>
+            <th scope="row">Grande banquete com torneio</th>
+            <td>6000 po.</td>
+            <td>2d10</td>
+          </tr>
+          <tr>
+            <th scope="row">Banquete real com torneio</th>
+            <td>8000 po.</td>
+            <td>2d10-3</td>
+          </tr>
+        </tbody>
+      </table>
+      <br><br>
+      <h4 class="mt-3">Resultados</h4>
+      <table class="table table-hover table-sm table-bordered w-75">
+        <thead>
+          <tr class="table-info">
+            <th scope="col">Verificações bem-sucedidas</th>
+            <th scope="col">Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1 sucesso</th>
+            <td>1d4-2 contatos (mínimo 1), 1d4-2 de renome (mínimo 1).</td>
+          </tr>
+          <tr>
+            <th scope="row">2 sucessos</th>
+            <td>1d4 contatos, 1d4 de renome.</td>
+          </tr>
+          <tr>
+            <th scope="row">3 sucessos</th>
+            <td>1d4+1 contatos, 1d4+1 de renome.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <%= render "static_pages/shared/accordion_end" %>
 </div>
 </div>
