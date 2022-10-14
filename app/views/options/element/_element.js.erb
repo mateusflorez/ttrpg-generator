@@ -1,0 +1,16 @@
+function elementRandomizer() {
+    rand = minMaxRandomizer(1, 20);
+    var element = "";
+    if (rand < 7){
+        element = "Evento";
+    } else if (rand > 6 && rand < 9){
+        element = "Criatura";
+    } else if (rand > 8 && rand < 13){
+        element = "Pessoa";
+    } else {
+        element = "Situação";
+    }
+    return element;
+}
+
+res += elementRandomizer()+", "+elementRandomizer()+", "+elementRandomizer()+", "+elementRandomizer()+".";
