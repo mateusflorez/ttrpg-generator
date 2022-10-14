@@ -1,5 +1,5 @@
 ### TTRPG Generator
-> Status: Incomplete ⚠️
+> Status: Complete :heavy_check_mark:
 
 <table>
   <tr>
@@ -20,10 +20,17 @@
 + D&D content generator based on [The Solo Adventurer's Toolbox](https://www.dmsguild.com/product/252355/The-Solo-Adventurers-Toolboxhttps://www.dmsguild.com/product/252355/The-Solo-Adventurers-Toolbox).
 + Answer generator.
 + Dice roller.
-+ Trip generator (Climate, Encounter, Settlement, Disturbance).
-+ Encounter generator (Wild, Urban, Dungeon).
-+ Mission generator (Mission, Source).
++ Trip generator (Climate, encounter, settlement, disturbance).
++ Encounter generator (Wild, urban, dungeon).
++ Mission generator (Mission, source).
 + Dungeon generator (Dungeon, areas).
++ Terrain generator (Artic, coast, desert, forest, grassland, mountains, swamp, active area).
++ Mission generator (Mission, source).
++ City generator (Shops, merchant, rumors).
++ NPC generator (worker, adventurer, random).
++ Story elements generator (Elements, urban event, wild event, creatures, people, situations).
+
+![Index page](https://user-images.githubusercontent.com/54851249/195923450-dcb26a2a-a1af-4755-856f-87592266672d.png)
 
 ## Instalation instructions:
 ```
